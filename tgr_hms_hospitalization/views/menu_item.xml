@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    
+    <menuitem name="Hospitalización" id="tgr_inpatient_menu" parent="tgr_hms.menu_hms" sequence="2" groups="tgr_hms_hospitalization.group_tgr_hms_hospitalization_user"/>
+    <menuitem id="tgr_conf_inpatient_add" name="Hospitalización" action="tgr_action_form_inpatient" parent="tgr_hms_hospitalization.tgr_inpatient_menu" sequence="1"/>
+
+    <!-- Hospitalization --> 
+    <menuitem id="main_menu_hospitalization" name="Hospitalización" sequence="26" groups="tgr_hms_hospitalization.group_tgr_hms_hospitalization_user" web_icon="tgr_hms_hospitalization,static/description/icon.png"/>
+
+    <menuitem id="menu_hospitalization" name="Hospitalización" action="tgr_action_form_inpatient" parent="main_menu_hospitalization"/>
+
+    <menuitem id="tgr_health_surgery" name="Cirugía" action="tgr_hms_surgery.action_hms_surgery" parent="main_menu_hospitalization" groups="tgr_hms.group_hms_nurse"/>
+
+    <menuitem id="menuitem_action_hos_bed" name="Camas" parent="main_menu_hospitalization" action="action_bed" groups="tgr_hms_hospitalization.group_tgr_hms_hospitalization_executive"/>
+
+    <menuitem id="menuitem_action_ward" name="Salas/Habitaciones" parent="main_menu_hospitalization" action="actions_ward" groups="tgr_hms_hospitalization.group_tgr_hms_hospitalization_executive"/>
+
+    <menuitem id="menuitem_action_death_register" name="Registro de Defunción" parent="main_menu_hospitalization" action="hms_action_death_register" groups="tgr_hms_hospitalization.group_tgr_hms_hospitalization_executive"/>
+
+    <!-- Configuration -->
+    <menuitem id="menu_hospitalization_cofig" name="Configuración" parent="main_menu_hospitalization" sequence="50" groups="tgr_hms_hospitalization.group_tgr_hms_hospitalization_manager"/>
+
+    <!-- Health Center -->
+    <menuitem id="health_center" name="Centro de Salud" parent="menu_hospitalization_cofig" sequence="45"/>
+    <menuitem id="hos_building" name="Edificio del Hospital" parent="health_center" action="act_open_hospital_building_view"/>
+    <menuitem id="hos_ot" name="Quirófano del Hospital" parent="health_center" action="act_open_tgr_hospital_ot"/>
+
+    <!-- Checklists -->
+    <menuitem id="checklist_configuration" name="Listas de Verificación" parent="menu_hospitalization_cofig" sequence="50"/>
+    <menuitem id="conf_check_list12" name="Lista de Verificación de Admisión" parent="checklist_configuration" action="action_check_list_conf_view12" />
+    <menuitem id="conf_ward_check_list" name="Lista de Verificación Pre-Sala" parent="checklist_configuration" action="action_ward_check_list_conf_view" />
+
+    <!-- Surgery -->
+    <menuitem id="tgr_health_surgery_template" name="Plantilla de Cirugía" action="tgr_hms_surgery.action_hms_surgery_template" parent="menu_hospitalization_cofig" sequence="27" />
+    <menuitem id="tgr_care_plan_template" name="Plantilla de Plan de Cuidados" action="tgr_hms_hospitalization.view_tgr_care_plan_action" parent="menu_hospitalization_cofig" sequence="30" />    
+
+</odoo>

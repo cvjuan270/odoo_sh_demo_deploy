@@ -1,0 +1,1229 @@
+<odoo>
+    <data noupdate="1">
+        <record id="lab_test_critearea_81000_1" model="lab.test.critearea">
+            <field name="name">Color</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_81000"></field>
+        </record>
+        <record id="lab_test_critearea_81000_2" model="lab.test.critearea">
+            <field name="name">Aspecto</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_81000"></field>
+        </record>
+        <record id="lab_test_critearea_81000_3" model="lab.test.critearea">
+            <field name="name">Olor</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_81000"></field>
+        </record>
+        <record id="lab_test_critearea_81000_4" model="lab.test.critearea">
+            <field name="name">pH</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_81000"></field>
+            <field name="minimum_range">4,5</field>
+            <field name="maximum_range">8</field>
+        </record>
+        <record id="lab_test_critearea_81000_5" model="lab.test.critearea">
+            <field name="name">Gravedad específica</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_81000"></field>
+            <field name="minimum_range">1001</field>
+            <field name="maximum_range">1035</field>
+        </record>
+        <record id="lab_test_critearea_81000_6" model="lab.test.critearea">
+            <field name="name">Proteína</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_81000"></field>
+        </record>
+        <record id="lab_test_critearea_81000_7" model="lab.test.critearea">
+            <field name="name">Glucosa</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_81000"></field>
+        </record>
+        <record id="lab_test_critearea_81000_8" model="lab.test.critearea">
+            <field name="name">Cuerpos cetónico</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_81000"></field>
+        </record>
+        <record id="lab_test_critearea_81000_9" model="lab.test.critearea">
+            <field name="name">Bilirrubina</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_81000"></field>
+        </record>
+        <record id="lab_test_critearea_81000_10" model="lab.test.critearea">
+            <field name="name">Urobilinógeno</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_81000"></field>
+        </record>
+        <record id="lab_test_critearea_81000_11" model="lab.test.critearea">
+            <field name="name">Hemoglobina (Hematíes)</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_81000"></field>
+        </record>
+        <record id="lab_test_critearea_81000_12" model="lab.test.critearea">
+            <field name="name">Esterasa leucocitaria</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_81000"></field>
+        </record>
+        <record id="lab_test_critearea_81000_13" model="lab.test.critearea">
+            <field name="name">Nitritos</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_81000"></field>
+        </record>
+        <record id="lab_test_critearea_81000_14" model="lab.test.critearea">
+            <field name="name">Células epiteliales</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_81000"></field>
+        </record>
+        <record id="lab_test_critearea_81000_15" model="lab.test.critearea">
+            <field name="name">Leucocitos</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_81000"></field>
+        </record>
+        <record id="lab_test_critearea_81000_16" model="lab.test.critearea">
+            <field name="name">Hematíes</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_81000"></field>
+        </record>
+        <record id="lab_test_critearea_81000_17" model="lab.test.critearea">
+            <field name="name">Gérmenes</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_81000"></field>
+        </record>
+        <record id="lab_test_critearea_81000_18" model="lab.test.critearea">
+            <field name="name">Cristales</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_81000"></field>
+        </record>
+        <record id="lab_test_critearea_81000_19" model="lab.test.critearea">
+            <field name="name">Otros</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_81000"></field>
+        </record>
+        <record id="lab_test_critearea_81015_20" model="lab.test.critearea">
+            <field name="name">Células epiteliales</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_81015"></field>
+        </record>
+        <record id="lab_test_critearea_81015_21" model="lab.test.critearea">
+            <field name="name">Leucocitos</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_81015"></field>
+        </record>
+        <record id="lab_test_critearea_81015_22" model="lab.test.critearea">
+            <field name="name">Hematíes</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_81015"></field>
+        </record>
+        <record id="lab_test_critearea_81015_23" model="lab.test.critearea">
+            <field name="name">Gérmenes</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_81015"></field>
+        </record>
+        <record id="lab_test_critearea_81015_24" model="lab.test.critearea">
+            <field name="name">Cristales</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_81015"></field>
+        </record>
+        <record id="lab_test_critearea_81015_25" model="lab.test.critearea">
+            <field name="name">Otros</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_81015"></field>
+        </record>
+        <record id="lab_test_critearea_82040_26" model="lab.test.critearea">
+            <field name="name">Albumina en sangre</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_82040"></field>
+            <field name="minimum_range">3,5</field>
+            <field name="maximum_range">5</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_01"></field>
+        </record>
+        <record id="lab_test_critearea_82043_27" model="lab.test.critearea">
+            <field name="name">Microalbuminuria</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_82043"></field>
+            <field name="minimum_range">0</field>
+            <field name="maximum_range">30</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_02"></field>
+        </record>
+        <record id="lab_test_critearea_82150_28" model="lab.test.critearea">
+            <field name="name">Amilasa</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_82150"></field>
+            <field name="minimum_range">30</field>
+            <field name="maximum_range">170</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_03"></field>
+        </record>
+        <record id="lab_test_critearea_82247_29" model="lab.test.critearea">
+            <field name="name">Bilirrubina total</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_82247"></field>
+            <field name="minimum_range">0</field>
+            <field name="maximum_range">1,3</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_04"></field>
+        </record>
+        <record id="lab_test_critearea_82248_30" model="lab.test.critearea">
+            <field name="name">Bilirrubina directa</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_82248"></field>
+            <field name="minimum_range">0</field>
+            <field name="maximum_range">0,5</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_04"></field>
+        </record>
+        <record id="lab_test_critearea_82271_31" model="lab.test.critearea">
+            <field name="name">Sangre Oculta en Heces (Thevenon)</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_82271"></field>
+        </record>
+        <record id="lab_test_critearea_82310_32" model="lab.test.critearea">
+            <field name="name">Calcio sérico</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_82310"></field>
+            <field name="minimum_range">8</field>
+            <field name="maximum_range">10,5</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_04"></field>
+        </record>
+        <record id="lab_test_critearea_82465_33" model="lab.test.critearea">
+            <field name="name">Colesterol total</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_82465"></field>
+            <field name="minimum_range">0</field>
+            <field name="maximum_range">200</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_04"></field>
+        </record>
+        <record id="lab_test_critearea_82565_34" model="lab.test.critearea">
+            <field name="name">Creatinina en sangre</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_82565"></field>
+            <field name="minimum_range">0</field>
+            <field name="maximum_range">1,2</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_04"></field>
+        </record>
+        <record id="lab_test_critearea_82570_02_35" model="lab.test.critearea">
+            <field name="name">Creatinina en orina 24 horas</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_82570_02"></field>
+            <field name="minimum_range">0,6</field>
+            <field name="maximum_range">2,4</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_05"></field>
+        </record>
+        <record id="lab_test_critearea_82575_36" model="lab.test.critearea">
+            <field name="name">* Creatinina en sangre</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_82575"></field>
+            <field name="minimum_range">0</field>
+            <field name="maximum_range">1,2</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_04"></field>
+        </record>
+        <record id="lab_test_critearea_82575_37" model="lab.test.critearea">
+            <field name="name">*Creatinina en orina</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_82575"></field>
+            <field name="minimum_range">0,6</field>
+            <field name="maximum_range">2,4</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_05"></field>
+        </record>
+        <record id="lab_test_critearea_82575_38" model="lab.test.critearea">
+            <field name="name">* Depuración de creatinina</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_82575"></field>
+            <field name="minimum_range">72</field>
+            <field name="maximum_range">125</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_06"></field>
+        </record>
+        <record id="lab_test_critearea_82670_39" model="lab.test.critearea">
+            <field name="name">Estradiol</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_82670"></field>
+            <field name="minimum_range">27</field>
+            <field name="maximum_range">161</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_07"></field>
+        </record>
+        <record id="lab_test_critearea_82947_40" model="lab.test.critearea">
+            <field name="name">Glucosa basal</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_82947"></field>
+            <field name="minimum_range">70</field>
+            <field name="maximum_range">110</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_04"></field>
+        </record>
+        <record id="lab_test_critearea_82950_41" model="lab.test.critearea">
+            <field name="name">Glucosa basal</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_82950"></field>
+            <field name="minimum_range">70</field>
+            <field name="maximum_range">110</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_04"></field>
+        </record>
+        <record id="lab_test_critearea_82950_42" model="lab.test.critearea">
+            <field name="name">Glucosa post pandrial</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_82950"></field>
+            <field name="minimum_range">70</field>
+            <field name="maximum_range">110</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_04"></field>
+        </record>
+        <record id="lab_test_critearea_82951_43" model="lab.test.critearea">
+            <field name="name">Glucosa basal</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_82951"></field>
+            <field name="minimum_range">70</field>
+            <field name="maximum_range">110</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_04"></field>
+        </record>
+        <record id="lab_test_critearea_82951_44" model="lab.test.critearea">
+            <field name="name">Glucosa 30 min</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_82951"></field>
+            <field name="minimum_range">120</field>
+            <field name="maximum_range">170</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_04"></field>
+        </record>
+        <record id="lab_test_critearea_82951_45" model="lab.test.critearea">
+            <field name="name">Glucosa 60 min</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_82951"></field>
+            <field name="minimum_range">100</field>
+            <field name="maximum_range">140</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_04"></field>
+        </record>
+        <record id="lab_test_critearea_82951_46" model="lab.test.critearea">
+            <field name="name">Glucosa post 120 min</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_82951"></field>
+            <field name="minimum_range">70</field>
+            <field name="maximum_range">110</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_04"></field>
+        </record>
+        <record id="lab_test_critearea_82962_47" model="lab.test.critearea">
+            <field name="name">Glucosa (glucómetro)</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_82962"></field>
+            <field name="minimum_range">70</field>
+            <field name="maximum_range">110</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_04"></field>
+        </record>
+        <record id="lab_test_critearea_83001_48" model="lab.test.critearea">
+            <field name="name">Hormona folículoestimulante (FSH)</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_83001"></field>
+            <field name="minimum_range">3</field>
+            <field name="maximum_range">9</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_08"></field>
+        </record>
+        <record id="lab_test_critearea_83002_49" model="lab.test.critearea">
+            <field name="name">Hormona luteinizante (LH)</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_83002"></field>
+            <field name="minimum_range">2</field>
+            <field name="maximum_range">10</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_08"></field>
+        </record>
+        <record id="lab_test_critearea_83036_50" model="lab.test.critearea">
+            <field name="name">Hemoglobina glicosilada</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_83036"></field>
+            <field name="minimum_range">5</field>
+            <field name="maximum_range">6,5</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_09"></field>
+        </record>
+        <record id="lab_test_critearea_84295_51" model="lab.test.critearea">
+            <field name="name">Sodio en sangre</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_84295"></field>
+            <field name="minimum_range">135</field>
+            <field name="maximum_range">145</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_10"></field>
+        </record>
+        <record id="lab_test_critearea_82435_52" model="lab.test.critearea">
+            <field name="name">Cloro en sangre</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_82435"></field>
+            <field name="minimum_range">96</field>
+            <field name="maximum_range">106</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_10"></field>
+        </record>
+        <record id="lab_test_critearea_84132_53" model="lab.test.critearea">
+            <field name="name">Potasio en sangre</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_84132"></field>
+            <field name="minimum_range">3,7</field>
+            <field name="maximum_range">5,2</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_10"></field>
+        </record>
+        <record id="lab_test_critearea_80051_02_54" model="lab.test.critearea">
+            <field name="name">Sodio en orina</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_80051_02"></field>
+            <field name="minimum_range">2</field>
+            <field name="maximum_range">5</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_11"></field>
+        </record>
+        <record id="lab_test_critearea_80051_02_55" model="lab.test.critearea">
+            <field name="name">Cloro en orina</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_80051_02"></field>
+            <field name="minimum_range">2</field>
+            <field name="maximum_range">6</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_11"></field>
+        </record>
+        <record id="lab_test_critearea_80051_02_56" model="lab.test.critearea">
+            <field name="name">Potasio en orina</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_80051_02"></field>
+            <field name="minimum_range">1</field>
+            <field name="maximum_range">3</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_11"></field>
+        </record>
+        <record id="lab_test_critearea_83525_57" model="lab.test.critearea">
+            <field name="name">Insulina total</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_83525"></field>
+            <field name="minimum_range">5</field>
+            <field name="maximum_range">25</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_12"></field>
+        </record>
+        <record id="lab_test_critearea_83718_58" model="lab.test.critearea">
+            <field name="name">HDL colesterol</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_83718"></field>
+            <field name="minimum_range">40</field>
+            <field name="maximum_range">80</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_04"></field>
+        </record>
+        <record id="lab_test_critearea_83721_59" model="lab.test.critearea">
+            <field name="name">LDL colesterol</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_83721"></field>
+            <field name="minimum_range">0</field>
+            <field name="maximum_range">130</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_04"></field>
+        </record>
+        <record id="lab_test_critearea_83719_60" model="lab.test.critearea">
+            <field name="name">VLDL colesterol</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_83719"></field>
+            <field name="minimum_range">2</field>
+            <field name="maximum_range">30</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_04"></field>
+        </record>
+        <record id="lab_test_critearea_83735_61" model="lab.test.critearea">
+            <field name="name">Magnesio en sangre</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_83735"></field>
+            <field name="minimum_range">0,6</field>
+            <field name="maximum_range">1</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_13"></field>
+        </record>
+        <record id="lab_test_critearea_84066_62" model="lab.test.critearea">
+            <field name="name">Fosfatasa ácida prostática</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_84066"></field>
+            <field name="minimum_range">0</field>
+            <field name="maximum_range">3,5</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_03"></field>
+        </record>
+        <record id="lab_test_critearea_84075_63" model="lab.test.critearea">
+            <field name="name">Fosfatasa alcalina</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_84075"></field>
+            <field name="minimum_range">44</field>
+            <field name="maximum_range">147</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_03"></field>
+        </record>
+        <record id="lab_test_critearea_84100_64" model="lab.test.critearea">
+            <field name="name">Fósforo sérico</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_84100"></field>
+            <field name="minimum_range">2</field>
+            <field name="maximum_range">5</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_04"></field>
+        </record>
+        <record id="lab_test_critearea_84144_65" model="lab.test.critearea">
+            <field name="name">Hormona progesterona</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_84144"></field>
+            <field name="minimum_range">0</field>
+            <field name="maximum_range">65</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_14"></field>
+        </record>
+        <record id="lab_test_critearea_84146_66" model="lab.test.critearea">
+            <field name="name">Hormona Prolactina</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_84146"></field>
+            <field name="minimum_range">0</field>
+            <field name="maximum_range">25</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_14"></field>
+        </record>
+        <record id="lab_test_critearea_84153_67" model="lab.test.critearea">
+            <field name="name">PSA total</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_84153"></field>
+            <field name="minimum_range">0</field>
+            <field name="maximum_range">4</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_14"></field>
+        </record>
+        <record id="lab_test_critearea_84154_68" model="lab.test.critearea">
+            <field name="name">PSA libre</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_84154"></field>
+        </record>
+        <record id="lab_test_critearea_84526_69" model="lab.test.critearea">
+            <field name="name">Urea capilar</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_84526"></field>
+            <field name="minimum_range">10</field>
+            <field name="maximum_range">40</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_04"></field>
+        </record>
+        <record id="lab_test_critearea_82550_70" model="lab.test.critearea">
+            <field name="name">CK total</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_82550"></field>
+            <field name="minimum_range">0</field>
+            <field name="maximum_range">195</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_03"></field>
+        </record>
+        <record id="lab_test_critearea_82553_71" model="lab.test.critearea">
+            <field name="name">CK-MB</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_82553"></field>
+            <field name="minimum_range">0</field>
+            <field name="maximum_range">25</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_03"></field>
+        </record>
+        <record id="lab_test_critearea_84155_72" model="lab.test.critearea">
+            <field name="name">Proteinas totales</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_84155"></field>
+            <field name="minimum_range">6</field>
+            <field name="maximum_range">8</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_01"></field>
+        </record>
+        <record id="lab_test_critearea_84180_73" model="lab.test.critearea">
+            <field name="name">Proteinuria 24 horas</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_84180"></field>
+            <field name="minimum_range">0</field>
+            <field name="maximum_range">30</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_15"></field>
+        </record>
+        <record id="lab_test_critearea_84402_74" model="lab.test.critearea">
+            <field name="name">Testosterona libre</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_84402"></field>
+            <field name="minimum_range">90</field>
+            <field name="maximum_range">300</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_07"></field>
+        </record>
+        <record id="lab_test_critearea_84403_75" model="lab.test.critearea">
+            <field name="name">Testosterona total</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_84403"></field>
+            <field name="minimum_range">270</field>
+            <field name="maximum_range">1070</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_14"></field>
+        </record>
+        <record id="lab_test_critearea_84408_76" model="lab.test.critearea">
+            <field name="name">Marihuana en orina</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_84408"></field>
+        </record>
+        <record id="lab_test_critearea_84436_77" model="lab.test.critearea">
+            <field name="name">Hormona T4 total</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_84436"></field>
+            <field name="minimum_range">4,5</field>
+            <field name="maximum_range">12,5</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_16"></field>
+        </record>
+        <record id="lab_test_critearea_84439_78" model="lab.test.critearea">
+            <field name="name">Hormona T4 libre</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_84439"></field>
+            <field name="minimum_range">0,8</field>
+            <field name="maximum_range">1,8</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_17"></field>
+        </record>
+        <record id="lab_test_critearea_84443_79" model="lab.test.critearea">
+            <field name="name">Hormona TSH</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_84443"></field>
+            <field name="minimum_range">0,5</field>
+            <field name="maximum_range">4,7</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_12"></field>
+        </record>
+        <record id="lab_test_critearea_84450_80" model="lab.test.critearea">
+            <field name="name">Transaminasa TGO</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_84450"></field>
+            <field name="minimum_range">0</field>
+            <field name="maximum_range">47</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_03"></field>
+        </record>
+        <record id="lab_test_critearea_84460_81" model="lab.test.critearea">
+            <field name="name">Transaminasa TGP</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_84460"></field>
+            <field name="minimum_range">0</field>
+            <field name="maximum_range">49</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_03"></field>
+        </record>
+        <record id="lab_test_critearea_83615_82" model="lab.test.critearea">
+            <field name="name">Lactato deshidrogenasa (LDH)</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_83615"></field>
+            <field name="minimum_range">100</field>
+            <field name="maximum_range">333</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_03"></field>
+        </record>
+        <record id="lab_test_critearea_84478_83" model="lab.test.critearea">
+            <field name="name">Triglicéridos</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_84478"></field>
+            <field name="minimum_range">0</field>
+            <field name="maximum_range">150</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_04"></field>
+        </record>
+        <record id="lab_test_critearea_84480_84" model="lab.test.critearea">
+            <field name="name">Hormona T3 total</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_84480"></field>
+            <field name="minimum_range">60</field>
+            <field name="maximum_range">181</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_17"></field>
+        </record>
+        <record id="lab_test_critearea_84481_85" model="lab.test.critearea">
+            <field name="name">Hormona T3 libre</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_84481"></field>
+        </record>
+        <record id="lab_test_critearea_84520_86" model="lab.test.critearea">
+            <field name="name">Úrea en sangre</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_84520"></field>
+            <field name="minimum_range">10</field>
+            <field name="maximum_range">40</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_04"></field>
+        </record>
+        <record id="lab_test_critearea_84540_87" model="lab.test.critearea">
+            <field name="name">Úrea en orina</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_84540"></field>
+            <field name="minimum_range">15</field>
+            <field name="maximum_range">50</field>
+        </record>
+        <record id="lab_test_critearea_84550_88" model="lab.test.critearea">
+            <field name="name">Ácido úrico en sangre</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_84550"></field>
+            <field name="minimum_range">2,5</field>
+            <field name="maximum_range">8,5</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_04"></field>
+        </record>
+        <record id="lab_test_critearea_84702_89" model="lab.test.critearea">
+            <field name="name">Hormona Beta HCG (cuantitativa)</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_84702"></field>
+            <field name="minimum_range">0</field>
+            <field name="maximum_range">25</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_08"></field>
+        </record>
+        <record id="lab_test_critearea_84703_90" model="lab.test.critearea">
+            <field name="name">Hormona Beta HCG (cualitativa)</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_84703"></field>
+        </record>
+        <record id="lab_test_critearea_85002_91" model="lab.test.critearea">
+            <field name="name">Tiempo de sangría</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_85002"></field>
+            <field name="minimum_range">30</field>
+            <field name="maximum_range">240</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_18"></field>
+        </record>
+        <record id="lab_test_critearea_85013_92" model="lab.test.critearea">
+            <field name="name">Hematocrito</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_85013"></field>
+            <field name="minimum_range">35</field>
+            <field name="maximum_range">50</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_09"></field>
+        </record>
+        <record id="lab_test_critearea_85018_93" model="lab.test.critearea">
+            <field name="name">Hemoglobina</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_85018"></field>
+            <field name="minimum_range">12</field>
+            <field name="maximum_range">17</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_01"></field>
+        </record>
+        <record id="lab_test_critearea_85027_94" model="lab.test.critearea">
+            <field name="name">Recuento de leucocitos</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_85027"></field>
+            <field name="minimum_range">5</field>
+            <field name="maximum_range">10</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_19"></field>
+        </record>
+        <record id="lab_test_critearea_85027_95" model="lab.test.critearea">
+            <field name="name">Recuento de hematíes</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_85027"></field>
+            <field name="minimum_range">5</field>
+            <field name="maximum_range">8</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_20"></field>
+        </record>
+        <record id="lab_test_critearea_85027_96" model="lab.test.critearea">
+            <field name="name">Recuento de plaquetas</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_85027"></field>
+            <field name="minimum_range">250</field>
+            <field name="maximum_range">450</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_19"></field>
+        </record>
+        <record id="lab_test_critearea_85027_97" model="lab.test.critearea">
+            <field name="name">Hemoglobina</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_85027"></field>
+            <field name="minimum_range">12</field>
+            <field name="maximum_range">17</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_01"></field>
+        </record>
+        <record id="lab_test_critearea_85027_98" model="lab.test.critearea">
+            <field name="name">Hematocrito</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_85027"></field>
+            <field name="minimum_range">35</field>
+            <field name="maximum_range">50</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_09"></field>
+        </record>
+        <record id="lab_test_critearea_85027_99" model="lab.test.critearea">
+            <field name="name">VCM</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_85027"></field>
+            <field name="minimum_range">88</field>
+            <field name="maximum_range">100</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_21"></field>
+        </record>
+        <record id="lab_test_critearea_85027_100" model="lab.test.critearea">
+            <field name="name">HCM</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_85027"></field>
+            <field name="minimum_range">26,5</field>
+            <field name="maximum_range">33,5</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_22"></field>
+        </record>
+        <record id="lab_test_critearea_85027_101" model="lab.test.critearea">
+            <field name="name">CHCM</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_85027"></field>
+            <field name="minimum_range">31</field>
+            <field name="maximum_range">36</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_01"></field>
+        </record>
+        <record id="lab_test_critearea_85027_102" model="lab.test.critearea">
+            <field name="name">RDW-CV</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_85027"></field>
+            <field name="minimum_range">11</field>
+            <field name="maximum_range">16</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_09"></field>
+        </record>
+        <record id="lab_test_critearea_85027_103" model="lab.test.critearea">
+            <field name="name">Segmentados</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_85027"></field>
+            <field name="minimum_range">2</field>
+            <field name="maximum_range">7</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_19"></field>
+        </record>
+        <record id="lab_test_critearea_85027_104" model="lab.test.critearea">
+            <field name="name">Linfocitos</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_85027"></field>
+            <field name="minimum_range">0,8</field>
+            <field name="maximum_range">4</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_19"></field>
+        </record>
+        <record id="lab_test_critearea_85027_105" model="lab.test.critearea">
+            <field name="name">Monocitos</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_85027"></field>
+            <field name="minimum_range">0,12</field>
+            <field name="maximum_range">1,2</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_19"></field>
+        </record>
+        <record id="lab_test_critearea_85027_106" model="lab.test.critearea">
+            <field name="name">Eosinófilos</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_85027"></field>
+            <field name="minimum_range">0,02</field>
+            <field name="maximum_range">0,5</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_19"></field>
+        </record>
+        <record id="lab_test_critearea_85027_107" model="lab.test.critearea">
+            <field name="name">Basófilos</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_85027"></field>
+            <field name="minimum_range">0</field>
+            <field name="maximum_range">0,1</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_19"></field>
+        </record>
+        <record id="lab_test_critearea_85027_108" model="lab.test.critearea">
+            <field name="name">Segmentados (%)</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_85027"></field>
+            <field name="minimum_range">45</field>
+            <field name="maximum_range">70</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_09"></field>
+        </record>
+        <record id="lab_test_critearea_85027_109" model="lab.test.critearea">
+            <field name="name">Abastonados (%)</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_85027"></field>
+            <field name="minimum_range">0</field>
+            <field name="maximum_range">5</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_09"></field>
+        </record>
+        <record id="lab_test_critearea_85027_110" model="lab.test.critearea">
+            <field name="name">Linfocitos (%)</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_85027"></field>
+            <field name="minimum_range">20</field>
+            <field name="maximum_range">55</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_09"></field>
+        </record>
+        <record id="lab_test_critearea_85027_111" model="lab.test.critearea">
+            <field name="name">Monocitos (%)</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_85027"></field>
+            <field name="minimum_range">2</field>
+            <field name="maximum_range">9</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_09"></field>
+        </record>
+        <record id="lab_test_critearea_85027_112" model="lab.test.critearea">
+            <field name="name">Eosinófilos (%)</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_85027"></field>
+            <field name="minimum_range">1</field>
+            <field name="maximum_range">5</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_09"></field>
+        </record>
+        <record id="lab_test_critearea_85027_113" model="lab.test.critearea">
+            <field name="name">Basófilos (%)</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_85027"></field>
+            <field name="minimum_range">0</field>
+            <field name="maximum_range">1</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_09"></field>
+        </record>
+        <record id="lab_test_critearea_85027_114" model="lab.test.critearea">
+            <field name="name">Observaciones</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_85027"></field>
+        </record>
+        <record id="lab_test_critearea_85044_115" model="lab.test.critearea">
+            <field name="name">Recuento de reticulocitos</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_85044"></field>
+            <field name="minimum_range">0,5</field>
+            <field name="maximum_range">2,5</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_09"></field>
+        </record>
+        <record id="lab_test_critearea_85378_116" model="lab.test.critearea">
+            <field name="name">Dimero D</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_85378"></field>
+            <field name="minimum_range">0</field>
+            <field name="maximum_range">100</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_14"></field>
+        </record>
+        <record id="lab_test_critearea_85384_117" model="lab.test.critearea">
+            <field name="name">Fibrinógeno</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_85384"></field>
+            <field name="minimum_range">200</field>
+            <field name="maximum_range">400</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_04"></field>
+        </record>
+        <record id="lab_test_critearea_85590_118" model="lab.test.critearea">
+            <field name="name">Recuento de plaquetas</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_85590"></field>
+            <field name="minimum_range">150000</field>
+            <field name="maximum_range">450000</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_23"></field>
+        </record>
+        <record id="lab_test_critearea_85610_119" model="lab.test.critearea">
+            <field name="name">Segundos</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_85610"></field>
+            <field name="minimum_range">11</field>
+            <field name="maximum_range">14</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_18"></field>
+        </record>
+        <record id="lab_test_critearea_85610_120" model="lab.test.critearea">
+            <field name="name">Tiempo normal</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_85610"></field>
+            <field name="minimum_range">10</field>
+            <field name="maximum_range">15</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_18"></field>
+        </record>
+        <record id="lab_test_critearea_85610_121" model="lab.test.critearea">
+            <field name="name">INR</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_85610"></field>
+            <field name="minimum_range">0,8</field>
+            <field name="maximum_range">1,2</field>
+        </record>
+        <record id="lab_test_critearea_85651_122" model="lab.test.critearea">
+            <field name="name">VSG</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_85651"></field>
+            <field name="minimum_range">0</field>
+            <field name="maximum_range">20</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_24"></field>
+        </record>
+        <record id="lab_test_critearea_85670_123" model="lab.test.critearea">
+            <field name="name">Tiempo de trombina</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_85670"></field>
+            <field name="minimum_range">11,3</field>
+            <field name="maximum_range">18,5</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_18"></field>
+        </record>
+        <record id="lab_test_critearea_85730_124" model="lab.test.critearea">
+            <field name="name">PTTa</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_85730"></field>
+            <field name="minimum_range">20</field>
+            <field name="maximum_range">40</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_18"></field>
+        </record>
+        <record id="lab_test_critearea_86000_125" model="lab.test.critearea">
+            <field name="name">Tífico "O"</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_86000"></field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_25"></field>
+        </record>
+        <record id="lab_test_critearea_86000_126" model="lab.test.critearea">
+            <field name="name">Tífico "H"</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_86000"></field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_25"></field>
+        </record>
+        <record id="lab_test_critearea_86000_127" model="lab.test.critearea">
+            <field name="name">Paratífico "A"</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_86000"></field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_25"></field>
+        </record>
+        <record id="lab_test_critearea_86000_128" model="lab.test.critearea">
+            <field name="name">Paratífico "B"</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_86000"></field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_25"></field>
+        </record>
+        <record id="lab_test_critearea_86000_129" model="lab.test.critearea">
+            <field name="name">Brucella</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_86000"></field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_25"></field>
+        </record>
+        <record id="lab_test_critearea_86006_130" model="lab.test.critearea">
+            <field name="name">Set de brucella</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_86006"></field>
+        </record>
+        <record id="lab_test_critearea_86009_131" model="lab.test.critearea">
+            <field name="name">Examen de Brucella (Rosa de bengala)</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_86009"></field>
+        </record>
+        <record id="lab_test_critearea_86063_132" model="lab.test.critearea">
+            <field name="name">Antiestreptolisina O</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_86063"></field>
+        </record>
+        <record id="lab_test_critearea_86140_133" model="lab.test.critearea">
+            <field name="name">Proteína C-reactiva</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_86140"></field>
+        </record>
+        <record id="lab_test_critearea_86280_134" model="lab.test.critearea">
+            <field name="name">Prueba de inhibición de la hemaglutinación (HAI)</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_86280"></field>
+        </record>
+        <record id="lab_test_critearea_86430_135" model="lab.test.critearea">
+            <field name="name">Factor reumatoideo</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_86430"></field>
+        </record>
+        <record id="lab_test_critearea_86592_136" model="lab.test.critearea">
+            <field name="name">Sifilis cualitativa (prueba rápida)</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_86592"></field>
+        </record>
+        <record id="lab_test_critearea_86593_137" model="lab.test.critearea">
+            <field name="name">Sifilis cuantitativa (VDRL, RPR)</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_86593"></field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_25"></field>
+        </record>
+        <record id="lab_test_critearea_86677_138" model="lab.test.critearea">
+            <field name="name">H. pylori (Elisa)</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_86677"></field>
+        </record>
+        <record id="lab_test_critearea_86689_139" model="lab.test.critearea">
+            <field name="name">VIH confirmatorio (Western blot)</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_86689"></field>
+        </record>
+        <record id="lab_test_critearea_86703_140" model="lab.test.critearea">
+            <field name="name">VIH (Prueba rápida)</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_86703"></field>
+        </record>
+        <record id="lab_test_critearea_86704_141" model="lab.test.critearea">
+            <field name="name">Hepatitis B (core total- Elisa)</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_86704"></field>
+        </record>
+        <record id="lab_test_critearea_86705_142" model="lab.test.critearea">
+            <field name="name">Hepatitis B (core IgM- Elisa)</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_86705"></field>
+        </record>
+        <record id="lab_test_critearea_86708_143" model="lab.test.critearea">
+            <field name="name">Hepatitis A total (Elisa)</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_86708"></field>
+        </record>
+        <record id="lab_test_critearea_86709_144" model="lab.test.critearea">
+            <field name="name">Hepatitis A IgM (Elisa)</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_86709"></field>
+        </record>
+        <record id="lab_test_critearea_86759_145" model="lab.test.critearea">
+            <field name="name">Rotavirus</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_86759"></field>
+        </record>
+        <record id="lab_test_critearea_86780_146" model="lab.test.critearea">
+            <field name="name">Sifilis (Elisa)</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_86780"></field>
+        </record>
+        <record id="lab_test_critearea_86781_147" model="lab.test.critearea">
+            <field name="name">Sifilis confirmatorio (FTA)</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_86781"></field>
+        </record>
+        <record id="lab_test_critearea_87536_148" model="lab.test.critearea">
+            <field name="name">Carga viral de VIH</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_87536"></field>
+        </record>
+        <record id="lab_test_critearea_86880_149" model="lab.test.critearea">
+            <field name="name">Coombs directo</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_86880"></field>
+        </record>
+        <record id="lab_test_critearea_86885_150" model="lab.test.critearea">
+            <field name="name">Coombs indirecto</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_86885"></field>
+        </record>
+        <record id="lab_test_critearea_86900_151" model="lab.test.critearea">
+            <field name="name">Grupo sanguíneo (ABO)</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_86900"></field>
+        </record>
+        <record id="lab_test_critearea_86901_152" model="lab.test.critearea">
+            <field name="name">Factor Rh</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_86901"></field>
+        </record>
+        <record id="lab_test_critearea_87045_153" model="lab.test.critearea">
+            <field name="name">Coprocultivo</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_87045"></field>
+        </record>
+        <record id="lab_test_critearea_87087_154" model="lab.test.critearea">
+            <field name="name">Urocultivo y antibiograma</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_87087"></field>
+        </record>
+        <record id="lab_test_critearea_87115_155" model="lab.test.critearea">
+            <field name="name">Baciloscopia: BK</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_87115"></field>
+        </record>
+        <record id="lab_test_critearea_87116_156" model="lab.test.critearea">
+            <field name="name">Cultivo de BK y sensibilidad</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_87116"></field>
+        </record>
+        <record id="lab_test_critearea_87162_157" model="lab.test.critearea">
+            <field name="name">Cultivo de secreciones</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_87162"></field>
+        </record>
+        <record id="lab_test_critearea_87177_158" model="lab.test.critearea">
+            <field name="name">Parásitos</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_87177"></field>
+        </record>
+        <record id="lab_test_critearea_87177_01_159" model="lab.test.critearea">
+            <field name="name">Muestra 1</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_87177_01"></field>
+        </record>
+        <record id="lab_test_critearea_87177_01_160" model="lab.test.critearea">
+            <field name="name">Muestra 2</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_87177_01"></field>
+        </record>
+        <record id="lab_test_critearea_87177_01_161" model="lab.test.critearea">
+            <field name="name">Muestra 3</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_87177_01"></field>
+        </record>
+        <record id="lab_test_critearea_87178_162" model="lab.test.critearea">
+            <field name="name">Test de graham</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_87178"></field>
+        </record>
+        <record id="lab_test_critearea_87179_163" model="lab.test.critearea">
+            <field name="name">Examen coprológico funcional</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_87179"></field>
+        </record>
+        <record id="lab_test_critearea_87184_164" model="lab.test.critearea">
+            <field name="name">Antibiograma</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_87184"></field>
+        </record>
+        <record id="lab_test_critearea_87205_165" model="lab.test.critearea">
+            <field name="name">Examen directo de secreción</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_87205"></field>
+        </record>
+        <record id="lab_test_critearea_87220_166" model="lab.test.critearea">
+            <field name="name">Examen directo hongos/ácaros (KOH)</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_87220"></field>
+        </record>
+        <record id="lab_test_critearea_87340_167" model="lab.test.critearea">
+            <field name="name">Hepatitis B Ag. Australiano (Elisa)</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_87340"></field>
+        </record>
+        <record id="lab_test_critearea_87351_168" model="lab.test.critearea">
+            <field name="name">Hepatitis B Ag. Epsilon</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_87351"></field>
+        </record>
+        <record id="lab_test_critearea_87389_169" model="lab.test.critearea">
+            <field name="name">VIH (Elisa)</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_87389"></field>
+        </record>
+        <record id="lab_test_critearea_82520_170" model="lab.test.critearea">
+            <field name="name">Cocaína en orina</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_82520"></field>
+        </record>
+        <record id="lab_test_critearea_82977_171" model="lab.test.critearea">
+            <field name="name">GGT</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="test_id" ref="tgr_lab_test_82977"></field>
+            <field name="minimum_range">0</field>
+            <field name="maximum_range">65</field>
+            <field name="lab_uom_id" ref="tgr_lab_test_uom_03"></field>
+        </record>
+        <record id="lab_test_critearea_87207_172" model="lab.test.critearea">
+            <field name="name">Gota gruesa (Malaria/Bartonella)</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_87207"></field>
+        </record>
+        <record id="lab_test_critearea_89055_173" model="lab.test.critearea">
+            <field name="name">Reacción inflamatoria en Heces</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="test_id" ref="tgr_lab_test_89055"></field>
+        </record>
+        <record id="lab_test_critearea_86687_174" model="lab.test.critearea">
+            <field name="name">Anticuerpos; HTLV-I</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_86687"></field>
+        </record>
+        <record id="lab_test_critearea_86688_175" model="lab.test.critearea">
+            <field name="name">Anticuerpos; HTLV-II</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_86688"></field>
+        </record>
+        <record id="lab_test_critearea_86803_176" model="lab.test.critearea">
+            <field name="name">Anti VHC</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_86803"></field>
+        </record>
+        <record id="lab_test_critearea_86694_177" model="lab.test.critearea">
+            <field name="name">Anti Herpes total</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_86694"></field>
+        </record>
+        <record id="lab_test_critearea_86695_178" model="lab.test.critearea">
+            <field name="name">Herpes 1 IgG</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_86695"></field>
+        </record>
+        <record id="lab_test_critearea_86695_01_179" model="lab.test.critearea">
+            <field name="name">Herpes 1 IgM</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_86695_01"></field>
+        </record>
+        <record id="lab_test_critearea_86696_180" model="lab.test.critearea">
+            <field name="name">Herpes 2 IgG</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_86696"></field>
+        </record>
+        <record id="lab_test_critearea_86696_01_181" model="lab.test.critearea">
+            <field name="name">Herpes 2 IgM</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_86696_01"></field>
+        </record>
+        <record id="lab_test_critearea_86644_182" model="lab.test.critearea">
+            <field name="name">CMV IgG</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_86644"></field>
+        </record>
+        <record id="lab_test_critearea_86645_183" model="lab.test.critearea">
+            <field name="name">CMV IgM</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_86645"></field>
+        </record>
+        <record id="lab_test_critearea_86762_184" model="lab.test.critearea">
+            <field name="name">Rubeola IgG</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_86762"></field>
+        </record>
+        <record id="lab_test_critearea_86762_01_185" model="lab.test.critearea">
+            <field name="name">Rubeola IgM</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_86762_01"></field>
+        </record>
+        <record id="lab_test_critearea_86777_186" model="lab.test.critearea">
+            <field name="name">Toxoplasma IgG</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_86777"></field>
+        </record>
+        <record id="lab_test_critearea_86778_187" model="lab.test.critearea">
+            <field name="name">Toxoplasma IgM</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="test_id" ref="tgr_lab_test_86778"></field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="view_tgr_laboratory_test_profile_tree" model="ir.ui.view">
+    <field name="name">tgr.laboratory.test.profile.tree</field>
+    <field name="model">tgr.laboratory.test.profile</field>
+    <field name="arch" type="xml">
+      <list multi_edit="False" sample="False"
+        string="Pelfiles de Exámenes de Laboratorio">
+        <field name="code"></field>
+        <field name="name"></field>
+      </list>
+    </field>
+  </record>
+  <!-- Form -->
+  <record id="view_tgr_laboratory_profile_test_form" model="ir.ui.view">
+    <field name="name">tgr.laboratory.test.profile.form</field>
+    <field name="model">tgr.laboratory.test.profile</field>
+    <field name="arch" type="xml">
+      <form string="Perfil de Exámenes de Labaratorio">
+        <sheet>
+          <div class="oe_title">
+            <label class="oe_edit_only" for="name"></label>
+            <h1>
+              <field name="name" placeholder="Nombre del área..."></field>
+            </h1>
+          </div>
+          <group>
+            <group>
+              <field name="code"></field>
+            </group>
+            <group></group>
+          </group>
+          <field name="line_ids">
+            <list editable="bottom" string="Lines">
+              <field name="test_id" string="Test"></field>
+              <!-- <field name="sale_price"></field> -->
+              <field name="instruction"></field>
+            </list>
+          </field>
+        </sheet>
+      </form>
+    </field>
+  </record>
+  <record id="action_tgr_laboratory_test_profile" model="ir.actions.act_window">
+    <field name="name">Perfil de Laboratorio</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">tgr.laboratory.test.profile</field>
+    <field name="view_mode">list,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">No hay registros</p>
+      <p>Click en Nuevo para crear un nuevo Perfil de Laboratorio</p>
+    </field>
+  </record>
+</odoo>

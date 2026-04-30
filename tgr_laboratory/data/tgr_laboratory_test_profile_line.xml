@@ -1,0 +1,224 @@
+<odoo>
+    <data noupdate="1">
+        <record id="tgr_lab_test_profile_line_83718" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80061"></field>
+            <field name="test_id" ref="tgr_lab_test_83718"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_83721" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80061"></field>
+            <field name="test_id" ref="tgr_lab_test_83721"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_83719" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80061"></field>
+            <field name="test_id" ref="tgr_lab_test_83719"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_82465" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80061"></field>
+            <field name="test_id" ref="tgr_lab_test_82465"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_84478" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80061"></field>
+            <field name="test_id" ref="tgr_lab_test_84478"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_84450" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80076"></field>
+            <field name="test_id" ref="tgr_lab_test_84450"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_84460" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80076"></field>
+            <field name="test_id" ref="tgr_lab_test_84460"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_84155" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80076"></field>
+            <field name="test_id" ref="tgr_lab_test_84155"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_82040" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80076"></field>
+            <field name="test_id" ref="tgr_lab_test_82040"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_82247" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80076"></field>
+            <field name="test_id" ref="tgr_lab_test_82247"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_82248" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80076"></field>
+            <field name="test_id" ref="tgr_lab_test_82248"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_82977" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80076"></field>
+            <field name="test_id" ref="tgr_lab_test_82977"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_84075" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80076"></field>
+            <field name="test_id" ref="tgr_lab_test_84075"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_84520" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80069"></field>
+            <field name="test_id" ref="tgr_lab_test_84520"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_82565" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80069"></field>
+            <field name="test_id" ref="tgr_lab_test_82565"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_81000" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80069"></field>
+            <field name="test_id" ref="tgr_lab_test_81000"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_82575" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80069"></field>
+            <field name="test_id" ref="tgr_lab_test_82575"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_84180" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80069"></field>
+            <field name="test_id" ref="tgr_lab_test_84180"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_85027" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80055"></field>
+            <field name="test_id" ref="tgr_lab_test_85027"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_86900" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80055"></field>
+            <field name="test_id" ref="tgr_lab_test_86900"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_86901" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80055"></field>
+            <field name="test_id" ref="tgr_lab_test_86901"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_86593" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80055"></field>
+            <field name="test_id" ref="tgr_lab_test_86593"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_82947" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80055"></field>
+            <field name="test_id" ref="tgr_lab_test_82947"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_81000" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80055"></field>
+            <field name="test_id" ref="tgr_lab_test_81000"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_82565" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80055"></field>
+            <field name="test_id" ref="tgr_lab_test_82565"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_87340" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80055"></field>
+            <field name="test_id" ref="tgr_lab_test_87340"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_84480" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80092"></field>
+            <field name="test_id" ref="tgr_lab_test_84480"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_84439" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80092"></field>
+            <field name="test_id" ref="tgr_lab_test_84439"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_84443" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80092"></field>
+            <field name="test_id" ref="tgr_lab_test_84443"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_84295" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80051"></field>
+            <field name="test_id" ref="tgr_lab_test_84295"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_82435" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80051"></field>
+            <field name="test_id" ref="tgr_lab_test_82435"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_84132" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80051"></field>
+            <field name="test_id" ref="tgr_lab_test_84132"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_82550" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80062"></field>
+            <field name="test_id" ref="tgr_lab_test_82550"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_82553" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80062"></field>
+            <field name="test_id" ref="tgr_lab_test_82553"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_83615" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80062"></field>
+            <field name="test_id" ref="tgr_lab_test_83615"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_84450" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80062"></field>
+            <field name="test_id" ref="tgr_lab_test_84450"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_85002" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80063"></field>
+            <field name="test_id" ref="tgr_lab_test_85002"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_85610" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80063"></field>
+            <field name="test_id" ref="tgr_lab_test_85610"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_85730" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80063"></field>
+            <field name="test_id" ref="tgr_lab_test_85730"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_86644" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80090"></field>
+            <field name="test_id" ref="tgr_lab_test_86644"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_86694" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80090"></field>
+            <field name="test_id" ref="tgr_lab_test_86694"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_86762" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80090"></field>
+            <field name="test_id" ref="tgr_lab_test_86762"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_86777" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80090"></field>
+            <field name="test_id" ref="tgr_lab_test_86777"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_86900" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80096"></field>
+            <field name="test_id" ref="tgr_lab_test_86900"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_86901" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80096"></field>
+            <field name="test_id" ref="tgr_lab_test_86901"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_84443" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80096"></field>
+            <field name="test_id" ref="tgr_lab_test_84443"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_82947" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80096"></field>
+            <field name="test_id" ref="tgr_lab_test_82947"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_87340" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80095"></field>
+            <field name="test_id" ref="tgr_lab_test_87340"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_86593" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80095"></field>
+            <field name="test_id" ref="tgr_lab_test_86593"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_86900" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80095"></field>
+            <field name="test_id" ref="tgr_lab_test_86900"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_86901" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80095"></field>
+            <field name="test_id" ref="tgr_lab_test_86901"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_86704" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80095"></field>
+            <field name="test_id" ref="tgr_lab_test_86704"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_86687" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80095"></field>
+            <field name="test_id" ref="tgr_lab_test_86687"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_86688" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80095"></field>
+            <field name="test_id" ref="tgr_lab_test_86688"></field>
+        </record>
+        <record id="tgr_lab_test_profile_line_86803" model="tgr.laboratory.test.profile.line">
+            <field name="profile_id" ref="tgr_lab_test_profile_80095"></field>
+            <field name="test_id" ref="tgr_lab_test_86803"></field>
+        </record>
+    </data>
+</odoo>

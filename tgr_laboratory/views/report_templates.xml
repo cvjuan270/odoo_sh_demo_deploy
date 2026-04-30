@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="report_lab_request_header">
+        <div class="conteiner section-box">
+            <div class="row">
+                <div class="col col-6">
+                    <!-- Add patient fields -->
+                    <!-- <t t-set="patient_fields" t-value="[('DNI',o.patient_id.vat)]"></t> -->
+                    <t t-call="tgr_hms_base.report_patient_template"></t>
+                </div>
+                <!-- Second Column -->
+                <div class="col col-3">
+                    <div class="row align-items-center">
+                        <div class="col col-3">
+                            <span>Fecha :</span>
+                        </div>
+                        <div class="col col-9">
+                            <span t-field="o.date"></span>
+                        </div>
+                    </div>
+                    <div class="row align-items-center" t-if="o.physician_id">
+                        <div class="col col-3">
+                            <span>Médico pres. :</span>
+                        </div>
+                        <div class="col col-9">
+                            <span t-field="o.physician_id"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+</odoo>

@@ -1,0 +1,1028 @@
+<odoo>
+    <data noupdate="1">
+        <record id="tgr_lab_test_81000" model="tgr.lab.test">
+            <field name="name">Examen Completo de Orina</field>
+            <field name="code">81000.0</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="product_id" ref="product_product_81000"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_01"></field>
+            <field name="area_id" ref="laboratory_area_uroa"></field>
+        </record>
+        <record id="tgr_lab_test_81015" model="tgr.lab.test">
+            <field name="name">Sedimento urinario</field>
+            <field name="code">81015.0</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="product_id" ref="product_product_81015"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_01"></field>
+            <field name="area_id" ref="laboratory_area_uroa"></field>
+        </record>
+        <record id="tgr_lab_test_82040" model="tgr.lab.test">
+            <field name="name">Albumina en sangre</field>
+            <field name="code">82040.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_82040"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_bioq"></field>
+        </record>
+        <record id="tgr_lab_test_82043" model="tgr.lab.test">
+            <field name="name">Microalbuminuria</field>
+            <field name="code">82043.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_82043"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_01"></field>
+            <field name="area_id" ref="laboratory_area_bioq"></field>
+        </record>
+        <record id="tgr_lab_test_82150" model="tgr.lab.test">
+            <field name="name">Amilasa</field>
+            <field name="code">82150.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_82150"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_bioq"></field>
+        </record>
+        <record id="tgr_lab_test_82247" model="tgr.lab.test">
+            <field name="name">Bilirrubina total</field>
+            <field name="code">82247.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_82247"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_bioq"></field>
+        </record>
+        <record id="tgr_lab_test_82248" model="tgr.lab.test">
+            <field name="name">Bilirrubina directa</field>
+            <field name="code">82248.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_82248"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_bioq"></field>
+        </record>
+        <record id="tgr_lab_test_82271" model="tgr.lab.test">
+            <field name="name">Sangre Oculta en Heces (Thevenon)</field>
+            <field name="code">82271.0</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="product_id" ref="product_product_82271"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_03"></field>
+            <field name="area_id" ref="laboratory_area_micr"></field>
+        </record>
+        <record id="tgr_lab_test_82310" model="tgr.lab.test">
+            <field name="name">Calcio sérico</field>
+            <field name="code">82310.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_82310"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_bioq"></field>
+        </record>
+        <record id="tgr_lab_test_82465" model="tgr.lab.test">
+            <field name="name">Colesterol total</field>
+            <field name="code">82465.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_82465"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_bioq"></field>
+        </record>
+        <record id="tgr_lab_test_82565" model="tgr.lab.test">
+            <field name="name">Creatinina en sangre</field>
+            <field name="code">82565.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_82565"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_bioq"></field>
+        </record>
+        <record id="tgr_lab_test_82570_02" model="tgr.lab.test">
+            <field name="name">Creatinina en orina 24 horas</field>
+            <field name="code">82570.02</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_82570.02"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_01"></field>
+            <field name="area_id" ref="laboratory_area_bioq"></field>
+        </record>
+        <record id="tgr_lab_test_82575" model="tgr.lab.test">
+            <field name="name">Depuración de creatinina</field>
+            <field name="code">82575.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_82575"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_04"></field>
+            <field name="area_id" ref="laboratory_area_bioq"></field>
+        </record>
+        <record id="tgr_lab_test_82670" model="tgr.lab.test">
+            <field name="name">Estradiol</field>
+            <field name="code">82670.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_82670"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_82947" model="tgr.lab.test">
+            <field name="name">Glucosa basal</field>
+            <field name="code">82947.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_82947"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_bioq"></field>
+        </record>
+        <record id="tgr_lab_test_82950" model="tgr.lab.test">
+            <field name="name">Glucosa post pandrial</field>
+            <field name="code">82950.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_82950"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_bioq"></field>
+        </record>
+        <record id="tgr_lab_test_82951" model="tgr.lab.test">
+            <field name="name">Tolerancia de glucosa</field>
+            <field name="code">82951.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_82951"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_bioq"></field>
+        </record>
+        <record id="tgr_lab_test_82962" model="tgr.lab.test">
+            <field name="name">Glucosa (glucómetro)</field>
+            <field name="code">82962.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_82962"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_06"></field>
+            <field name="area_id" ref="laboratory_area_bioq"></field>
+        </record>
+        <record id="tgr_lab_test_83001" model="tgr.lab.test">
+            <field name="name">Hormona folículoestimulante (FSH)</field>
+            <field name="code">83001.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_83001"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_83002" model="tgr.lab.test">
+            <field name="name">Hormona luteinizante (LH)</field>
+            <field name="code">83002.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_83002"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_83036" model="tgr.lab.test">
+            <field name="name">Hemoglobina glicosilada</field>
+            <field name="code">83036.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_83036"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_06"></field>
+            <field name="area_id" ref="laboratory_area_bioq"></field>
+        </record>
+        <record id="tgr_lab_test_84295" model="tgr.lab.test">
+            <field name="name">Sodio en sangre</field>
+            <field name="code">84295.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_84295"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_bioq"></field>
+        </record>
+        <record id="tgr_lab_test_82435" model="tgr.lab.test">
+            <field name="name">Cloro en sangre</field>
+            <field name="code">82435.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_82435"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_bioq"></field>
+        </record>
+        <record id="tgr_lab_test_84132" model="tgr.lab.test">
+            <field name="name">Potasio en sangre</field>
+            <field name="code">84132.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_84132"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_bioq"></field>
+        </record>
+        <record id="tgr_lab_test_80051_02" model="tgr.lab.test">
+            <field name="name">Electrolitos en orina</field>
+            <field name="code">80051.02</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_80051.02"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_01"></field>
+            <field name="area_id" ref="laboratory_area_uroa"></field>
+        </record>
+        <record id="tgr_lab_test_83525" model="tgr.lab.test">
+            <field name="name">Insulina total</field>
+            <field name="code">83525.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_83525"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_83718" model="tgr.lab.test">
+            <field name="name">HDL colesterol</field>
+            <field name="code">83718.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_83718"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_bioq"></field>
+        </record>
+        <record id="tgr_lab_test_83721" model="tgr.lab.test">
+            <field name="name">LDL colesterol</field>
+            <field name="code">83721.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_83721"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_bioq"></field>
+        </record>
+        <record id="tgr_lab_test_83719" model="tgr.lab.test">
+            <field name="name">VLDL colesterol</field>
+            <field name="code">83719.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_83719"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_bioq"></field>
+        </record>
+        <record id="tgr_lab_test_83735" model="tgr.lab.test">
+            <field name="name">Magnesio en sangre</field>
+            <field name="code">83735.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_83735"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_bioq"></field>
+        </record>
+        <record id="tgr_lab_test_84066" model="tgr.lab.test">
+            <field name="name">Fosfatasa ácida prostática</field>
+            <field name="code">84066.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_84066"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_bioq"></field>
+        </record>
+        <record id="tgr_lab_test_84075" model="tgr.lab.test">
+            <field name="name">Fosfatasa alcalina</field>
+            <field name="code">84075.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_84075"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_bioq"></field>
+        </record>
+        <record id="tgr_lab_test_84100" model="tgr.lab.test">
+            <field name="name">Fósforo sérico</field>
+            <field name="code">84100.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_84100"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_bioq"></field>
+        </record>
+        <record id="tgr_lab_test_84144" model="tgr.lab.test">
+            <field name="name">Hormona progesterona</field>
+            <field name="code">84144.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_84144"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_84146" model="tgr.lab.test">
+            <field name="name">Hormona Prolactina</field>
+            <field name="code">84146.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_84146"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_84153" model="tgr.lab.test">
+            <field name="name">PSA total</field>
+            <field name="code">84153.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_84153"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_84154" model="tgr.lab.test">
+            <field name="name">PSA libre</field>
+            <field name="code">84154.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_84154"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_84526" model="tgr.lab.test">
+            <field name="name">Urea capilar</field>
+            <field name="code">84526.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_84526"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_06"></field>
+            <field name="area_id" ref="laboratory_area_bioq"></field>
+        </record>
+        <record id="tgr_lab_test_82550" model="tgr.lab.test">
+            <field name="name">CK total</field>
+            <field name="code">82550.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_82550"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_bioq"></field>
+        </record>
+        <record id="tgr_lab_test_82553" model="tgr.lab.test">
+            <field name="name">CK-MB</field>
+            <field name="code">82553.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_82553"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_bioq"></field>
+        </record>
+        <record id="tgr_lab_test_84155" model="tgr.lab.test">
+            <field name="name">Proteinas totales</field>
+            <field name="code">84155.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_84155"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_bioq"></field>
+        </record>
+        <record id="tgr_lab_test_84180" model="tgr.lab.test">
+            <field name="name">Proteinuria 24 horas</field>
+            <field name="code">84180.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_84180"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_01"></field>
+            <field name="area_id" ref="laboratory_area_uroa"></field>
+        </record>
+        <record id="tgr_lab_test_84402" model="tgr.lab.test">
+            <field name="name">Testosterona libre</field>
+            <field name="code">84402.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_84402"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_84403" model="tgr.lab.test">
+            <field name="name">Testosterona total</field>
+            <field name="code">84403.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_84403"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_84408" model="tgr.lab.test">
+            <field name="name">Marihuana en orina</field>
+            <field name="code">84408.0</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="product_id" ref="product_product_84408"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_01"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_84436" model="tgr.lab.test">
+            <field name="name">Hormona T4 total</field>
+            <field name="code">84436.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_84436"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_84439" model="tgr.lab.test">
+            <field name="name">Hormona T4 libre</field>
+            <field name="code">84439.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_84439"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_84443" model="tgr.lab.test">
+            <field name="name">Hormona TSH</field>
+            <field name="code">84443.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_84443"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_84450" model="tgr.lab.test">
+            <field name="name">Transaminasa TGO</field>
+            <field name="code">84450.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_84450"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_bioq"></field>
+        </record>
+        <record id="tgr_lab_test_84460" model="tgr.lab.test">
+            <field name="name">Transaminasa TGP</field>
+            <field name="code">84460.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_84460"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_bioq"></field>
+        </record>
+        <record id="tgr_lab_test_83615" model="tgr.lab.test">
+            <field name="name">Lactato deshidrogenasa (LDH)</field>
+            <field name="code">83615.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_83615"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_bioq"></field>
+        </record>
+        <record id="tgr_lab_test_84478" model="tgr.lab.test">
+            <field name="name">Triglicéridos</field>
+            <field name="code">84478.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_84478"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_bioq"></field>
+        </record>
+        <record id="tgr_lab_test_84480" model="tgr.lab.test">
+            <field name="name">Hormona T3 total</field>
+            <field name="code">84480.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_84480"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_84481" model="tgr.lab.test">
+            <field name="name">Hormona T3 libre</field>
+            <field name="code">84481.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_84481"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_84520" model="tgr.lab.test">
+            <field name="name">Úrea en sangre</field>
+            <field name="code">84520.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_84520"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_bioq"></field>
+        </record>
+        <record id="tgr_lab_test_84540" model="tgr.lab.test">
+            <field name="name">Úrea en orina</field>
+            <field name="code">84540.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_84540"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_01"></field>
+            <field name="area_id" ref="laboratory_area_bioq"></field>
+        </record>
+        <record id="tgr_lab_test_84550" model="tgr.lab.test">
+            <field name="name">Ácido úrico en sangre</field>
+            <field name="code">84550.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_84550"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_bioq"></field>
+        </record>
+        <record id="tgr_lab_test_84702" model="tgr.lab.test">
+            <field name="name">Hormona Beta HCG (cuantitativa)</field>
+            <field name="code">84702.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_84702"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_84703" model="tgr.lab.test">
+            <field name="name">Hormona Beta HCG (cualitativa)</field>
+            <field name="code">84703.0</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="product_id" ref="product_product_84703"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_85002" model="tgr.lab.test">
+            <field name="name">Tiempo de sangría</field>
+            <field name="code">85002.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_85002"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_06"></field>
+            <field name="area_id" ref="laboratory_area_hemo"></field>
+        </record>
+        <record id="tgr_lab_test_85013" model="tgr.lab.test">
+            <field name="name">Hematocrito</field>
+            <field name="code">85013.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_85013"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_06"></field>
+            <field name="area_id" ref="laboratory_area_hema"></field>
+        </record>
+        <record id="tgr_lab_test_85018" model="tgr.lab.test">
+            <field name="name">Hemoglobina</field>
+            <field name="code">85018.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_85018"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_06"></field>
+            <field name="area_id" ref="laboratory_area_hema"></field>
+        </record>
+        <record id="tgr_lab_test_85027" model="tgr.lab.test">
+            <field name="name">Hemograma completo automatizado</field>
+            <field name="code">85027.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_85027"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_06"></field>
+            <field name="area_id" ref="laboratory_area_hema"></field>
+        </record>
+        <record id="tgr_lab_test_85044" model="tgr.lab.test">
+            <field name="name">Recuento de reticulocitos</field>
+            <field name="code">85044.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_85044"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_06"></field>
+            <field name="area_id" ref="laboratory_area_hema"></field>
+        </record>
+        <record id="tgr_lab_test_85378" model="tgr.lab.test">
+            <field name="name">Dimero D</field>
+            <field name="code">85378.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_85378"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_07"></field>
+            <field name="area_id" ref="laboratory_area_hemo"></field>
+        </record>
+        <record id="tgr_lab_test_85384" model="tgr.lab.test">
+            <field name="name">Fibrinógeno</field>
+            <field name="code">85384.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_85384"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_07"></field>
+            <field name="area_id" ref="laboratory_area_hemo"></field>
+        </record>
+        <record id="tgr_lab_test_85590" model="tgr.lab.test">
+            <field name="name">Recuento de plaquetas</field>
+            <field name="code">85590.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_85590"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_06"></field>
+            <field name="area_id" ref="laboratory_area_hema"></field>
+        </record>
+        <record id="tgr_lab_test_85610" model="tgr.lab.test">
+            <field name="name">Tiempo de protrombina</field>
+            <field name="code">85610.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_85610"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_07"></field>
+            <field name="area_id" ref="laboratory_area_hemo"></field>
+        </record>
+        <record id="tgr_lab_test_85651" model="tgr.lab.test">
+            <field name="name">Velocidad de sedimentación (VSG)</field>
+            <field name="code">85651.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_85651"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_07"></field>
+            <field name="area_id" ref="laboratory_area_hema"></field>
+        </record>
+        <record id="tgr_lab_test_85670" model="tgr.lab.test">
+            <field name="name">Tiempo de trombina</field>
+            <field name="code">85670.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_85670"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_07"></field>
+            <field name="area_id" ref="laboratory_area_hemo"></field>
+        </record>
+        <record id="tgr_lab_test_85730" model="tgr.lab.test">
+            <field name="name">Tiempo de tromboplastina (PTTa)</field>
+            <field name="code">85730.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_85730"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_07"></field>
+            <field name="area_id" ref="laboratory_area_hemo"></field>
+        </record>
+        <record id="tgr_lab_test_86000" model="tgr.lab.test">
+            <field name="name">Aglutinaciones febriles</field>
+            <field name="code">86000.0</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="product_id" ref="product_product_86000"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_86006" model="tgr.lab.test">
+            <field name="name">Set de brucella</field>
+            <field name="code">86006.0</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="product_id" ref="product_product_86006"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_86009" model="tgr.lab.test">
+            <field name="name">Examen de Brucella (Rosa de bengala)</field>
+            <field name="code">86009.0</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="product_id" ref="product_product_86009"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_86063" model="tgr.lab.test">
+            <field name="name">Antiestreptolisina O</field>
+            <field name="code">86063.0</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="product_id" ref="product_product_86063"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_86140" model="tgr.lab.test">
+            <field name="name">Proteína C Reactiva (PCR)</field>
+            <field name="code">86140.0</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="product_id" ref="product_product_86140"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_86280" model="tgr.lab.test">
+            <field name="name">Sifilis TPHA</field>
+            <field name="code">86280.0</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="product_id" ref="product_product_86280"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_86430" model="tgr.lab.test">
+            <field name="name">Factor reumatoideo</field>
+            <field name="code">86430.0</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="product_id" ref="product_product_86430"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_86592" model="tgr.lab.test">
+            <field name="name">Sifilis cualitativa (prueba rápida)</field>
+            <field name="code">86592.0</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="product_id" ref="product_product_86592"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_86593" model="tgr.lab.test">
+            <field name="name">Sifilis cuantitativa (VDRL, RPR)</field>
+            <field name="code">86593.0</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="product_id" ref="product_product_86593"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_86677" model="tgr.lab.test">
+            <field name="name">H. pylori (Elisa)</field>
+            <field name="code">86677.0</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="product_id" ref="product_product_86677"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_86689" model="tgr.lab.test">
+            <field name="name">VIH confirmatorio (Western blot)</field>
+            <field name="code">86689.0</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="product_id" ref="product_product_86689"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_86703" model="tgr.lab.test">
+            <field name="name">VIH (Prueba rápida)</field>
+            <field name="code">86703.0</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="product_id" ref="product_product_86703"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_86704" model="tgr.lab.test">
+            <field name="name">Hepatitis B (core total- Elisa)</field>
+            <field name="code">86704.0</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="product_id" ref="product_product_86704"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_86705" model="tgr.lab.test">
+            <field name="name">Hepatitis B (core IgM- Elisa)</field>
+            <field name="code">86705.0</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="product_id" ref="product_product_86705"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_86708" model="tgr.lab.test">
+            <field name="name">Hepatitis A total (Elisa)</field>
+            <field name="code">86708.0</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="product_id" ref="product_product_86708"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_86709" model="tgr.lab.test">
+            <field name="name">Hepatitis A IgM (Elisa)</field>
+            <field name="code">86709.0</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="product_id" ref="product_product_86709"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_86759" model="tgr.lab.test">
+            <field name="name">Rotavirus</field>
+            <field name="code">86759.0</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="product_id" ref="product_product_86759"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_03"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_86780" model="tgr.lab.test">
+            <field name="name">Sifilis (Elisa)</field>
+            <field name="code">86780.0</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="product_id" ref="product_product_86780"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_86781" model="tgr.lab.test">
+            <field name="name">Sifilis confirmatorio (FTA)</field>
+            <field name="code">86781.0</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="product_id" ref="product_product_86781"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_87536" model="tgr.lab.test">
+            <field name="name">Carga viral de VIH</field>
+            <field name="code">87536.0</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="product_id" ref="product_product_87536"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_06"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_86880" model="tgr.lab.test">
+            <field name="name">Coombs directo</field>
+            <field name="code">86880.0</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="product_id" ref="product_product_86880"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_06"></field>
+            <field name="area_id" ref="laboratory_area_basa"></field>
+        </record>
+        <record id="tgr_lab_test_86885" model="tgr.lab.test">
+            <field name="name">Coombs indirecto</field>
+            <field name="code">86885.0</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="product_id" ref="product_product_86885"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_basa"></field>
+        </record>
+        <record id="tgr_lab_test_86900" model="tgr.lab.test">
+            <field name="name">Grupo sanguíneo (ABO)</field>
+            <field name="code">86900.0</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="product_id" ref="product_product_86900"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_06"></field>
+            <field name="area_id" ref="laboratory_area_basa"></field>
+        </record>
+        <record id="tgr_lab_test_86901" model="tgr.lab.test">
+            <field name="name">Factor Rh</field>
+            <field name="code">86901.0</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="product_id" ref="product_product_86901"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_06"></field>
+            <field name="area_id" ref="laboratory_area_basa"></field>
+        </record>
+        <record id="tgr_lab_test_87045" model="tgr.lab.test">
+            <field name="name">Coprocultivo</field>
+            <field name="code">87045.0</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="product_id" ref="product_product_87045"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_03"></field>
+            <field name="area_id" ref="laboratory_area_micr"></field>
+        </record>
+        <record id="tgr_lab_test_87087" model="tgr.lab.test">
+            <field name="name">Urocultivo y antibiograma</field>
+            <field name="code">87087.0</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="product_id" ref="product_product_87087"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_01"></field>
+            <field name="area_id" ref="laboratory_area_micr"></field>
+        </record>
+        <record id="tgr_lab_test_87115" model="tgr.lab.test">
+            <field name="name">Baciloscopia: BK</field>
+            <field name="code">87115.0</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="product_id" ref="product_product_87115"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_08"></field>
+            <field name="area_id" ref="laboratory_area_micr"></field>
+        </record>
+        <record id="tgr_lab_test_87116" model="tgr.lab.test">
+            <field name="name">Cultivo de BK y sensibilidad</field>
+            <field name="code">87116.0</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="product_id" ref="product_product_87116"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_09"></field>
+            <field name="area_id" ref="laboratory_area_micr"></field>
+        </record>
+        <record id="tgr_lab_test_87162" model="tgr.lab.test">
+            <field name="name">Cultivo de secreciones</field>
+            <field name="code">87162.0</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="product_id" ref="product_product_87162"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_10"></field>
+            <field name="area_id" ref="laboratory_area_micr"></field>
+        </record>
+        <record id="tgr_lab_test_87177" model="tgr.lab.test">
+            <field name="name">Parasitológico directo</field>
+            <field name="code">87177.0</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="product_id" ref="product_product_87177"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_03"></field>
+            <field name="area_id" ref="laboratory_area_micr"></field>
+        </record>
+        <record id="tgr_lab_test_87177_01" model="tgr.lab.test">
+            <field name="name">Parasitológico seriado</field>
+            <field name="code">87177.01</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="product_id" ref="product_product_87177.01"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_03"></field>
+            <field name="area_id" ref="laboratory_area_micr"></field>
+        </record>
+        <record id="tgr_lab_test_87178" model="tgr.lab.test">
+            <field name="name">Test de graham</field>
+            <field name="code">87178.0</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="product_id" ref="product_product_87178"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_03"></field>
+            <field name="area_id" ref="laboratory_area_micr"></field>
+        </record>
+        <record id="tgr_lab_test_87179" model="tgr.lab.test">
+            <field name="name">Examen coprológico funcional</field>
+            <field name="code">87179.0</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="product_id" ref="product_product_87179"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_03"></field>
+            <field name="area_id" ref="laboratory_area_micr"></field>
+        </record>
+        <record id="tgr_lab_test_87184" model="tgr.lab.test">
+            <field name="name">Antibiograma</field>
+            <field name="code">87184.0</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="product_id" ref="product_product_87184"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_10"></field>
+            <field name="area_id" ref="laboratory_area_micr"></field>
+        </record>
+        <record id="tgr_lab_test_87205" model="tgr.lab.test">
+            <field name="name">Examen directo de secreción</field>
+            <field name="code">87205.0</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="product_id" ref="product_product_87205"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_10"></field>
+            <field name="area_id" ref="laboratory_area_micr"></field>
+        </record>
+        <record id="tgr_lab_test_87220" model="tgr.lab.test">
+            <field name="name">Examen directo hongos/ácaros (KOH)</field>
+            <field name="code">87220.0</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="product_id" ref="product_product_87220"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_11"></field>
+            <field name="area_id" ref="laboratory_area_micr"></field>
+        </record>
+        <record id="tgr_lab_test_87340" model="tgr.lab.test">
+            <field name="name">Hepatitis B Ag. Australiano (Elisa)</field>
+            <field name="code">87340.0</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="product_id" ref="product_product_87340"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_87351" model="tgr.lab.test">
+            <field name="name">Hepatitis B Ag. Epsilon</field>
+            <field name="code">87351.0</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="product_id" ref="product_product_87351"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_87389" model="tgr.lab.test">
+            <field name="name">VIH (Elisa)</field>
+            <field name="code">87389.0</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="product_id" ref="product_product_87389"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_82520" model="tgr.lab.test">
+            <field name="name">Cocaína en orina</field>
+            <field name="code">82520.0</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="product_id" ref="product_product_82520"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_01"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_82977" model="tgr.lab.test">
+            <field name="name">Gamma glutamil transferasa (GGT)</field>
+            <field name="code">82977.0</field>
+            <field name="result_value_type">quantitative</field>
+            <field name="product_id" ref="product_product_82977"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_87207" model="tgr.lab.test">
+            <field name="name">Gota gruesa (Malaria/Bartonella)</field>
+            <field name="code">87207.0</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="product_id" ref="product_product_87207"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_06"></field>
+            <field name="area_id" ref="laboratory_area_hema"></field>
+        </record>
+        <record id="tgr_lab_test_89055" model="tgr.lab.test">
+            <field name="name">Reacción inflamatoria en Heces</field>
+            <field name="code">89055.0</field>
+            <field name="result_value_type">qualitative</field>
+            <field name="product_id" ref="product_product_89055"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_03"></field>
+            <field name="area_id" ref="laboratory_area_micr"></field>
+        </record>
+        <record id="tgr_lab_test_86687" model="tgr.lab.test">
+            <field name="name">Anti HTLV-I</field>
+            <field name="code">86687.0</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="product_id" ref="product_product_86687"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_86688" model="tgr.lab.test">
+            <field name="name">Anti HTLV-II</field>
+            <field name="code">86688.0</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="product_id" ref="product_product_86688"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_86803" model="tgr.lab.test">
+            <field name="name">Anti VHC</field>
+            <field name="code">86803.0</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="product_id" ref="product_product_86803"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_86694" model="tgr.lab.test">
+            <field name="name">Anti Herpes total</field>
+            <field name="code">86694.0</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="product_id" ref="product_product_86694"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_86695" model="tgr.lab.test">
+            <field name="name">Herpes 1 IgG</field>
+            <field name="code">86695.0</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="product_id" ref="product_product_86695"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_86695_01" model="tgr.lab.test">
+            <field name="name">Herpes 1 IgM</field>
+            <field name="code">86695.01</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="product_id" ref="product_product_86695.01"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_86696" model="tgr.lab.test">
+            <field name="name">Herpes 2 IgG</field>
+            <field name="code">86696.0</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="product_id" ref="product_product_86696"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_86696_01" model="tgr.lab.test">
+            <field name="name">Herpes 2 IgM</field>
+            <field name="code">86696.01</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="product_id" ref="product_product_86696.01"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_86644" model="tgr.lab.test">
+            <field name="name">CMV IgG</field>
+            <field name="code">86644.0</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="product_id" ref="product_product_86644"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_86645" model="tgr.lab.test">
+            <field name="name">CMV IgM</field>
+            <field name="code">86645.0</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="product_id" ref="product_product_86645"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_86762" model="tgr.lab.test">
+            <field name="name">Rubeola IgG</field>
+            <field name="code">86762.0</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="product_id" ref="product_product_86762"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_86762_01" model="tgr.lab.test">
+            <field name="name">Rubeola IgM</field>
+            <field name="code">86762.01</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="product_id" ref="product_product_86762.01"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_86777" model="tgr.lab.test">
+            <field name="name">Toxoplasma IgG</field>
+            <field name="code">86777.0</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="product_id" ref="product_product_86777"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+        <record id="tgr_lab_test_86778" model="tgr.lab.test">
+            <field name="name">Toxoplasma IgM</field>
+            <field name="code">86778.0</field>
+            <field name="result_value_type">semiquantitative</field>
+            <field name="product_id" ref="product_product_86778"></field>
+            <field name="sample_type_id" ref="tgr_laboratory_sample_type_02"></field>
+            <field name="area_id" ref="laboratory_area_inmu"></field>
+        </record>
+    </data>
+</odoo>

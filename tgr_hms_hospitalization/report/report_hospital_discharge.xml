@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_hospital_discharge_document">
+        <t t-call="web.external_layout">
+            <div class="page tgr_report">
+
+                <div class="mt32 mb32 text-center">
+                    <h2>
+                        <strong>Resumen de Alta</strong>
+                    </h2>
+                </div>
+                
+                <table class="table table-condensed">
+                    <tbody>
+                        <tr>
+                            <td style="width:20%;">
+                                <strong>Nombre del Paciente:</strong>
+                            </td>
+                            <td style="width:30%;">
+                                <span t-field="doc.patient_id.name"/>
+                            </td>
+                            <td style="width:20%;">
+                                <strong>No. de Hospitalización:</strong>
+                            </td>
+                            <td style="width: 30%;">
+                                <span t-field="doc.name"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Edad/Género:</strong>
+                            </td>
+                            <td>
+                                <span t-field="doc.patient_id.age"/>/<span t-field="doc.patient_id.gender"/>
+                            </td>
+                            <td>
+                                <strong>Sala/Habitación:</strong>
+                            </td>
+                            <td>
+                                <span t-field="doc.ward_id.name"/> - <span t-field="doc.bed_id.name"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Fecha de Admisión:</strong>
+                            </td>
+                            <td>
+                                <span t-field="doc.hospitalization_date"/>
+                            </td>
+                            <td>
+                                <strong>Fecha de Alta:</strong>
+                            </td>
+                            <td>
+                                <span t-field="doc.discharge_date"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Médico Principal:</strong>
+                            </td>
+                            <td>
+                                <span t-esc="', '.join(map(lambda x: x.name, doc.physician_id))"/>
+                            </td>
+                            <td>
+                                <strong>Cirugía:</strong>
+                            </td>
+                            <td>
+                                <span t-esc="', '.join(map(lambda x: x.name, doc.surgery_ids))"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Dirección del Paciente:</strong>
+                            </td>
+                            <td colspan="3">
+                                <span t-esc="', '.join(map(lambda x: x if x!=False else '', [doc.patient_id.street, doc.patient_id.street2, doc.patient_id.city, doc.patient_id.state_id.name, doc.patient_id.zip, doc.patient_id.country_id.name]))"/>
+                            </td>                            
+                        </tr>
+                        <tr t-if="doc.diseases_ids">
+                            <td>
+                                <strong>Enfermedades:</strong>
+                            </td>
+                            <td colspan="3">
+                                <span t-esc="', '.join(map(lambda x: x.name, doc.diseases_ids))"/>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div t-if="doc.discharge_diagnosis" class="col-12 mt8 mt8" style="page-break-inside: avoid;">
+                    <strong>Diagnóstico de Alta: </strong><br/>
+                    <div class="ml32" t-field="doc.discharge_diagnosis"/>
+                </div>
+
+                <div t-if="doc.op_note" class="col-12 mt8 mt8" style="page-break-inside: avoid;">
+                    <strong>Nota Operativa: </strong><br/>
+                    <div class="ml32" t-field="doc.op_note"/>
+                </div>
+
+                <div t-if="doc.post_operative" class="col-12 mt8 mt8" style="page-break-inside: avoid;">
+                    <strong>Curso Postoperatorio: </strong><br/>
+                    <div class="ml32" t-field="doc.post_operative"/>
+                </div>
+
+                <div name="laboratory_investigations"/>
+                <div name="radiology_investigations"/>
+
+                <div t-if="doc.surgery_ids" class="mt16 mb16 text-center">
+                    <h5>
+                        <strong>Cirugía</strong>
+                    </h5>
+                </div>
+
+                <div t-if="doc.surgery_ids" class="col-12 mb16">
+                    <t t-foreach="doc.surgery_ids" t-as="surgery">
+                        <div class="row col-12 mt8 mb8">
+                            <div class="col-6">
+                                No. Cirugía: <span t-field="surgery.name"/>
+                            </div>
+                            <div class="col-6 text-right">
+                                Fecha de Cirugía: <span t-field="surgery.start_date" t-options='{"format":"dd-MM-YYYY"}'/>
+                            </div>
+                        </div>
+                        <t t-call="tgr_hms_surgery.report_surgery_details">
+                            <t t-set="surgery" t-value="surgery"/>
+                            <t t-set="print_surgery" t-value="True"/>
+                        </t>
+                    </t>
+                </div>
+
+                <div t-if="doc.prescription_ids.filtered(lambda p: p.print_in_discharge)" class="mt16 mb16 text-center">
+                    <h5>
+                        <strong>Medicamentos Recetados</strong>
+                    </h5>
+                </div>
+
+                <div t-if="doc.prescription_ids.filtered(lambda p: p.print_in_discharge)" class="col-12 mb16">
+                    <t t-foreach="doc.prescription_ids.filtered(lambda p: p.print_in_discharge)" t-as="prescription">
+                        <div class="row col-12 mt8 mb8">
+                            <div class="col-6">
+                                No. Receta: <span t-field="prescription.name"/>
+                            </div>
+                            <div class="col-6 text-right">
+                                Fecha de Receta: <span t-field="prescription.prescription_date" t-options='{"format":"dd-MM-YYYY"}'/>
+                            </div>
+                        </div>
+                        <t t-call="tgr_hms.report_prescription_table">
+                            <t t-set="prescription" t-value="prescription"/>
+                        </t>
+                    </t>
+                </div>
+
+                <div t-if="doc.instructions" class="col-12 mt8 mt8" style="page-break-inside: avoid;">
+                    <strong>Instrucción: </strong><br/>
+                    <div class="ml32" t-field="doc.instructions"/>
+                </div>
+
+                <div t-if="doc.consumable_line_ids" class="mt16 mb16 text-center">
+                    <h5>
+                        <strong>Productos/Servicios Consumidos</strong>
+                    </h5>
+                </div>
+                <div t-if="doc.consumable_line_ids" class="col-12 mb16">
+                    <t t-call="tgr_hms.report_consumed_product_table">
+                        <t t-set="lines" t-value="doc.consumable_line_ids"/>
+                    </t>
+                </div>
+
+                <p class="mt32">
+                    Si tiene alguna pregunta o alguna emergencia, contáctenos cuando le sea conveniente.<br/><br/>
+                    Atentamente,<br/>
+                </p>
+
+                <div class="row" style="page-break-inside: avoid;">
+                    <div class="col-5">
+                        <span style="margin-left:-15px;" class="col-6"><strong>Oficial Médico:</strong></span>
+                        <span class="col-6"><strong>Fecha:</strong></span><br/>
+                        <span/><br/>
+                        <span/><br/>
+                        <div style="border-top: 1px solid black;">Nombre y Firma</div><br/>
+                    </div>
+                    <div class="col-2"/>
+                    <div class="col-5">
+                        <span style="margin-left:-15px;" class="col-6"><strong>Médico Principal:</strong></span>
+                        <span class="col-6"><strong>Fecha:</strong></span><br/>
+                        <span/><br/>
+                        <span/><br/>
+                        <div style="border-top: 1px solid black;">Nombre y Firma</div><br/>
+                    </div>
+
+                </div>
+                <div class="oe_structure"/>
+            </div>
+        </t>
+    </template>
+
+    <template id="report_hospital_discharge">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="tgr_hms_hospitalization.report_hospital_discharge_document" t-lang="doc.patient_id.partner_id.lang"/>
+            </t>
+        </t>
+    </template>
+
+    <record id="action_report_hospitalization_discharge" model="ir.actions.report">
+        <field name="name">Tarjeta de Alta</field>
+        <field name="model">tgr.hospitalization</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">tgr_hms_hospitalization.report_hospital_discharge</field>
+        <field name="report_file">tgr_hms_hospitalization.report_hospital_discharge</field>
+        <field name="print_report_name">(object.name or 'Hospitalization').replace('/','_') + '_Discharge'</field>
+        <field name="binding_model_id" ref="model_tgr_hospitalization"/>
+        <field name="groups_id" eval="[(4, ref('tgr_hms_hospitalization.group_tgr_hms_hospitalization_executive'))]"/>
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>

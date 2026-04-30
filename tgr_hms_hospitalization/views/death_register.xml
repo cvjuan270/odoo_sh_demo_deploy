@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<odoo>
+
+  <record model="ir.ui.view" id="patient_death_register_view">
+    <field name="name">Defunción de Paciente</field>
+    <field name="model">patient.death.register</field>
+    <field name="arch" type="xml">
+      <form string="Registro de Defunción de Paciente">
+        <header>
+          <button name="action_done" class="oe_highlight" string="Realizado" invisible="state!='draft'"
+            type="object" groups="tgr_hms.group_hms_jr_doctor" />
+          <button name="action_draft" class="oe_highlight" string="Cambiar a Borrador"
+            invisible="state!='done'" type="object" groups="tgr_hms.group_hms_jr_doctor" />
+          <field name="state" widget="statusbar" />
+        </header>
+        <sheet>
+          <div class="oe_title">
+            <h1>
+              <field name="name" />
+            </h1>
+          </div>
+          <group>
+            <group>
+              <field name="patient_id" required="1" readonly="state=='done'" />
+              <field name="patient_gender" />
+              <field name="patient_age" />
+              <field name="company_id" groups="base.group_multi_company"
+                options="{'no_create': True}" readonly="state=='done'" />
+            </group>
+            <group>
+              <field name="date_of_death" readonly="state=='done'" />
+              <field name="hospitalizaion_id" context="{'default_patient_id':patient_id}"
+                domain="[('patient_id','=',patient_id)]" readonly="state=='done'" />
+              <field name="physician_id" readonly="state=='done'" />
+            </group>
+          </group>
+          <separator string="Causa de Muerte" colspan="4" />
+          <field name="reason" colspan='4' nolabel="1" readonly="state=='done'" />
+          <separator string="Observaciones" colspan="4" />
+          <field name="extra_info" colspan='4' nolabel="1" readonly="state=='done'" />
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record model="ir.ui.view" id="patient_death_register_tree">
+    <field name="name">Listas de Defunción de Paciente</field>
+    <field name="model">patient.death.register</field>
+    <field name="arch" type="xml">
+      <list string='Defunción de Paciente'>
+        <field name="state" invisible="1" />
+        <field name="name" />
+        <field name="patient_id" />
+        <field name="date_of_death" />
+        <field name="patient_gender" />
+        <field name="patient_age" />
+        <field name="hospitalizaion_id" />
+        <field name="physician_id" />
+        <field name="company_id" groups="base.group_multi_company" />
+      </list>
+    </field>
+  </record>
+
+  <record id="view_patient_death_register_search" model="ir.ui.view">
+    <field name="name">Búsqueda de Defunción de Paciente</field>
+    <field name="model">patient.death.register</field>
+    <field name="arch" type="xml">
+      <search string="Buscar Registro de Defunción">
+        <field name="name" />
+        <field name="patient_id" />
+        <field name="date_of_death" />
+        <field name="hospitalizaion_id" />
+        <field name="physician_id" />
+        <separator />
+        <filter string="Borrador" name="draft" domain="[('state','=','draft')]" />
+        <filter string="Este Mes" name="month"
+          domain="[('date_of_death','&lt;=', time.strftime('%Y-%m-%d')),('date_of_death','&gt;=',time.strftime('%Y-%m-01'))]"
+          help="mes" />
+        <separator />
+        <filter string="Realizado" name="done" domain="[('state','in',('done'))]" />
+        <separator />
+        <group expand="0" string="Agrupar Por">
+          <filter string="Creación" name="group_by_create_date" help="Fecha de Creación" domain="[]"
+            context="{'group_by':'create_date'}" />
+          <filter string="Mes" name="group_by_date_of_death" domain="[]"
+            context="{'group_by':'date_of_death'}" help="Fecha de Defunción por Mes" />
+          <filter name="group_by_gender" string="Agrupar Por Género"
+            context="{'group_by':'patient_gender'}" />
+          <filter name="group_by_comp" string="Compañía" context="{'group_by':'company_id'}" />
+        </group>
+      </search>
+    </field>
+  </record>
+
+  <record id="view_tgr_patient_death_register_calendar" model="ir.ui.view">
+    <field name="name">patient.death.register.calendar</field>
+    <field name="model">patient.death.register</field>
+    <field name="type">calendar</field>
+    <field name="arch" type="xml">
+      <calendar string="Defunción de Paciente" color="physician_id" date_start="date_of_death">
+        <field name="physician_id" />
+        <field name="patient_id" />
+        <field name="state" />
+      </calendar>
+    </field>
+  </record>
+
+  <record id="view_patient_death_register_pivot" model="ir.ui.view">
+    <field name="name">patient.death.register.pivot</field>
+    <field name="model">patient.death.register</field>
+    <field name="arch" type="xml">
+      <pivot string="Defunción de Paciente">
+        <field name="date_of_death" type="row" />
+        <field name="physician_id" type="row" />
+        <field name="patient_id" type="row" />
+      </pivot>
+    </field>
+  </record>
+
+  <record model="ir.actions.act_window" id="hms_action_death_register">
+    <field name="name">Registro de Defunción de Paciente</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">patient.death.register</field>
+    <field name="view_mode">list,form,calendar,pivot</field>
+    <field name="context">{'search_default_month':True}</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">
+        No se encontraron registros
+      </p>
+      <p>
+        Haga clic para agregar un nuevo registro.
+      </p>
+    </field>
+  </record>
+
+
+</odoo>

@@ -1,0 +1,130 @@
+id,name,sale_ok,purchase_ok,type,hospital_product_type,categ_id/id,default_code
+product_product_81000,Examen Completo de Orina,1,0,service,pathology,product_category_exa_lab,81000
+product_product_81015,Sedimento urinario,1,0,service,pathology,product_category_exa_lab,81015
+product_product_82040,Albumina en sangre,1,0,service,pathology,product_category_exa_lab,82040
+product_product_82043,Microalbuminuria,1,0,service,pathology,product_category_exa_lab,82043
+product_product_82150,Amilasa,1,0,service,pathology,product_category_exa_lab,82150
+product_product_82247,Bilirrubina total,1,0,service,pathology,product_category_exa_lab,82247
+product_product_82248,Bilirrubina directa,1,0,service,pathology,product_category_exa_lab,82248
+product_product_82271,Sangre Oculta en Heces (Thevenon),1,0,service,pathology,product_category_exa_lab,82271
+product_product_82310,Calcio sérico,1,0,service,pathology,product_category_exa_lab,82310
+product_product_82465,Colesterol total,1,0,service,pathology,product_category_exa_lab,82465
+product_product_82565,Creatinina en sangre,1,0,service,pathology,product_category_exa_lab,82565
+product_product_82570.02,Creatinina en orina 24 horas,1,0,service,pathology,product_category_exa_lab,82570.02
+product_product_82575,Depuración de creatinina,1,0,service,pathology,product_category_exa_lab,82575
+product_product_82670,Estradiol,1,0,service,pathology,product_category_exa_lab,82670
+product_product_82947,Glucosa basal,1,0,service,pathology,product_category_exa_lab,82947
+product_product_82950,Glucosa post pandrial,1,0,service,pathology,product_category_exa_lab,82950
+product_product_82951,Tolerancia de glucosa,1,0,service,pathology,product_category_exa_lab,82951
+product_product_82962,Glucosa (glucómetro),1,0,service,pathology,product_category_exa_lab,82962
+product_product_83001,Hormona folículoestimulante (FSH),1,0,service,pathology,product_category_exa_lab,83001
+product_product_83002,Hormona luteinizante (LH),1,0,service,pathology,product_category_exa_lab,83002
+product_product_83036,Hemoglobina glicosilada,1,0,service,pathology,product_category_exa_lab,83036
+product_product_84295,Sodio en sangre,1,0,service,pathology,product_category_exa_lab,84295
+product_product_82435,Cloro en sangre,1,0,service,pathology,product_category_exa_lab,82435
+product_product_84132,Potasio en sangre,1,0,service,pathology,product_category_exa_lab,84132
+product_product_80051.02,Electrolitos en orina,1,0,service,pathology,product_category_exa_lab,80051.02
+product_product_83525,Insulina total,1,0,service,pathology,product_category_exa_lab,83525
+product_product_83718,HDL colesterol,1,0,service,pathology,product_category_exa_lab,83718
+product_product_83721,LDL colesterol,1,0,service,pathology,product_category_exa_lab,83721
+product_product_83719,VLDL colesterol,1,0,service,pathology,product_category_exa_lab,83719
+product_product_83735,Magnesio en sangre,1,0,service,pathology,product_category_exa_lab,83735
+product_product_84066,Fosfatasa ácida prostática,1,0,service,pathology,product_category_exa_lab,84066
+product_product_84075,Fosfatasa alcalina,1,0,service,pathology,product_category_exa_lab,84075
+product_product_84100,Fósforo sérico,1,0,service,pathology,product_category_exa_lab,84100
+product_product_84144,Hormona progesterona,1,0,service,pathology,product_category_exa_lab,84144
+product_product_84146,Hormona Prolactina,1,0,service,pathology,product_category_exa_lab,84146
+product_product_84153,PSA total,1,0,service,pathology,product_category_exa_lab,84153
+product_product_84154,PSA libre,1,0,service,pathology,product_category_exa_lab,84154
+product_product_84526,Urea capilar,1,0,service,pathology,product_category_exa_lab,84526
+product_product_82550,CK total,1,0,service,pathology,product_category_exa_lab,82550
+product_product_82553,CK-MB,1,0,service,pathology,product_category_exa_lab,82553
+product_product_84155,Proteinas totales,1,0,service,pathology,product_category_exa_lab,84155
+product_product_84180,Proteinuria 24 horas,1,0,service,pathology,product_category_exa_lab,84180
+product_product_84402,Testosterona libre,1,0,service,pathology,product_category_exa_lab,84402
+product_product_84403,Testosterona total,1,0,service,pathology,product_category_exa_lab,84403
+product_product_84408,Marihuana en orina,1,0,service,pathology,product_category_exa_lab,84408
+product_product_84436,Hormona T4 total,1,0,service,pathology,product_category_exa_lab,84436
+product_product_84439,Hormona T4 libre,1,0,service,pathology,product_category_exa_lab,84439
+product_product_84443,Hormona TSH,1,0,service,pathology,product_category_exa_lab,84443
+product_product_84450,Transaminasa TGO,1,0,service,pathology,product_category_exa_lab,84450
+product_product_84460,Transaminasa TGP,1,0,service,pathology,product_category_exa_lab,84460
+product_product_83615,Lactato deshidrogenasa (LDH),1,0,service,pathology,product_category_exa_lab,83615
+product_product_84478,Triglicéridos,1,0,service,pathology,product_category_exa_lab,84478
+product_product_84480,Hormona T3 total,1,0,service,pathology,product_category_exa_lab,84480
+product_product_84481,Hormona T3 libre,1,0,service,pathology,product_category_exa_lab,84481
+product_product_84520,Úrea en sangre,1,0,service,pathology,product_category_exa_lab,84520
+product_product_84540,Úrea en orina,1,0,service,pathology,product_category_exa_lab,84540
+product_product_84550,Ácido úrico en sangre,1,0,service,pathology,product_category_exa_lab,84550
+product_product_84702,Hormona Beta HCG (cuantitativa),1,0,service,pathology,product_category_exa_lab,84702
+product_product_84703,Hormona Beta HCG (cualitativa),1,0,service,pathology,product_category_exa_lab,84703
+product_product_85002,Tiempo de sangría,1,0,service,pathology,product_category_exa_lab,85002
+product_product_85013,Hematocrito,1,0,service,pathology,product_category_exa_lab,85013
+product_product_85018,Hemoglobina,1,0,service,pathology,product_category_exa_lab,85018
+product_product_85027,Hemograma completo automatizado,1,0,service,pathology,product_category_exa_lab,85027
+product_product_85044,Recuento de reticulocitos,1,0,service,pathology,product_category_exa_lab,85044
+product_product_85378,Dimero D,1,0,service,pathology,product_category_exa_lab,85378
+product_product_85384,Fibrinógeno,1,0,service,pathology,product_category_exa_lab,85384
+product_product_85590,Recuento de plaquetas,1,0,service,pathology,product_category_exa_lab,85590
+product_product_85610,Tiempo de protrombina,1,0,service,pathology,product_category_exa_lab,85610
+product_product_85651,Velocidad de sedimentación (VSG),1,0,service,pathology,product_category_exa_lab,85651
+product_product_85670,Tiempo de trombina,1,0,service,pathology,product_category_exa_lab,85670
+product_product_85730,Tiempo de tromboplastina (PTTa),1,0,service,pathology,product_category_exa_lab,85730
+product_product_86000,Aglutinaciones febriles,1,0,service,pathology,product_category_exa_lab,86000
+product_product_86006,Set de brucella,1,0,service,pathology,product_category_exa_lab,86006
+product_product_86009,Examen de Brucella (Rosa de bengala),1,0,service,pathology,product_category_exa_lab,86009
+product_product_86063,Antiestreptolisina O,1,0,service,pathology,product_category_exa_lab,86063
+product_product_86140,Proteína C Reactiva (PCR),1,0,service,pathology,product_category_exa_lab,86140
+product_product_86280,Sifilis TPHA,1,0,service,pathology,product_category_exa_lab,86280
+product_product_86430,Factor reumatoideo,1,0,service,pathology,product_category_exa_lab,86430
+product_product_86592,Sifilis cualitativa (prueba rápida),1,0,service,pathology,product_category_exa_lab,86592
+product_product_86593,"Sifilis cuantitativa (VDRL, RPR)",1,0,service,pathology,product_category_exa_lab,86593
+product_product_86677,H. pylori (Elisa),1,0,service,pathology,product_category_exa_lab,86677
+product_product_86689,VIH  confirmatorio (Western blot),1,0,service,pathology,product_category_exa_lab,86689
+product_product_86703,VIH (Prueba rápida),1,0,service,pathology,product_category_exa_lab,86703
+product_product_86704,Hepatitis B (core total- Elisa),1,0,service,pathology,product_category_exa_lab,86704
+product_product_86705,Hepatitis B (core IgM- Elisa),1,0,service,pathology,product_category_exa_lab,86705
+product_product_86708,Hepatitis A total (Elisa),1,0,service,pathology,product_category_exa_lab,86708
+product_product_86709,Hepatitis A IgM (Elisa),1,0,service,pathology,product_category_exa_lab,86709
+product_product_86759,Rotavirus,1,0,service,pathology,product_category_exa_lab,86759
+product_product_86780,Sifilis (Elisa),1,0,service,pathology,product_category_exa_lab,86780
+product_product_86781,Sifilis confirmatorio (FTA),1,0,service,pathology,product_category_exa_lab,86781
+product_product_87536,Carga viral de VIH,1,0,service,pathology,product_category_exa_lab,87536
+product_product_86880,Coombs directo,1,0,service,pathology,product_category_exa_lab,86880
+product_product_86885,Coombs indirecto,1,0,service,pathology,product_category_exa_lab,86885
+product_product_86900,Grupo sanguíneo (ABO),1,0,service,pathology,product_category_exa_lab,86900
+product_product_86901,Factor Rh,1,0,service,pathology,product_category_exa_lab,86901
+product_product_87045,Coprocultivo,1,0,service,pathology,product_category_exa_lab,87045
+product_product_87087,Urocultivo y antibiograma,1,0,service,pathology,product_category_exa_lab,87087
+product_product_87115,Baciloscopia: BK,1,0,service,pathology,product_category_exa_lab,87115
+product_product_87116,Cultivo de BK y sensibilidad,1,0,service,pathology,product_category_exa_lab,87116
+product_product_87162,Cultivo de secreciones,1,0,service,pathology,product_category_exa_lab,87162
+product_product_87177,Parasitológico directo,1,0,service,pathology,product_category_exa_lab,87177
+product_product_87177.01,Parasitológico seriado ,1,0,service,pathology,product_category_exa_lab,87177.01
+product_product_87178,Test de graham,1,0,service,pathology,product_category_exa_lab,87178
+product_product_87179,Examen coprológico funcional,1,0,service,pathology,product_category_exa_lab,87179
+product_product_87184,Antibiograma,1,0,service,pathology,product_category_exa_lab,87184
+product_product_87205,Examen directo de secreción,1,0,service,pathology,product_category_exa_lab,87205
+product_product_87220,Examen directo hongos/ácaros (KOH),1,0,service,pathology,product_category_exa_lab,87220
+product_product_87340,Hepatitis B Ag. Australiano (Elisa),1,0,service,pathology,product_category_exa_lab,87340
+product_product_87351,Hepatitis B Ag. Epsilon ,1,0,service,pathology,product_category_exa_lab,87351
+product_product_87389,VIH (Elisa),1,0,service,pathology,product_category_exa_lab,87389
+product_product_82520,Cocaína en orina,1,0,service,pathology,product_category_exa_lab,82520
+product_product_82977,Gamma glutamil transferasa (GGT),1,0,service,pathology,product_category_exa_lab,82977
+product_product_87207,Gota gruesa (Malaria/Bartonella),1,0,service,pathology,product_category_exa_lab,87207
+product_product_89055,Reacción inflamatoria en Heces,1,0,service,pathology,product_category_exa_lab,89055
+product_product_86687,Anti  HTLV-I,1,0,service,pathology,product_category_exa_lab,86687
+product_product_86688,Anti HTLV-II,1,0,service,pathology,product_category_exa_lab,86688
+product_product_86803,Anti VHC,1,0,service,pathology,product_category_exa_lab,86803
+product_product_86694,Anti Herpes total,1,0,service,pathology,product_category_exa_lab,86694
+product_product_86695,Herpes 1 IgG,1,0,service,pathology,product_category_exa_lab,86695
+product_product_86695.01,Herpes 1  IgM ,1,0,service,pathology,product_category_exa_lab,86695.01
+product_product_86696,Herpes 2 IgG,1,0,service,pathology,product_category_exa_lab,86696
+product_product_86696.01,Herpes 2 IgM ,1,0,service,pathology,product_category_exa_lab,86696.01
+product_product_86644,CMV IgG,1,0,service,pathology,product_category_exa_lab,86644
+product_product_86645,CMV IgM,1,0,service,pathology,product_category_exa_lab,86645
+product_product_86762,Rubeola IgG,1,0,service,pathology,product_category_exa_lab,86762
+product_product_86762.01,Rubeola IgM,1,0,service,pathology,product_category_exa_lab,86762.01
+product_product_86777,Toxoplasma IgG,1,0,service,pathology,product_category_exa_lab,86777
+product_product_86778,Toxoplasma IgM,1,0,service,pathology,product_category_exa_lab,86778
+product_product_86701,VIH (Prueba rápida),1,0,service,pathology,product_category_exa_lab,86778

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.hospitalization</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="10"/>
+        <field name="inherit_id" ref="tgr_hms.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='hospitalization']" position="inside">
+                <block title="Hospitalización" name="hospitalization_setting_container">
+                    <setting help="Location to take consumed products in Hospitalization." id="tgr_hospitalization_stock_location_id_setting">
+                        <field name="tgr_hospitalization_stock_location_id" class="o_light_label" string="Ubicación de existencias"/>
+                    </setting>
+                    <setting help="Location to manage consumed products in Hospitalization." id="tgr_hospitalization_usage_location_id_setting">
+                        <field name="tgr_hospitalization_usage_location_id" class="o_light_label" string="Ubicación de uso de existencias"/>
+                    </setting>
+                    <setting help="Allow bed reservation flow for patient in Hospitalization." id="allow_bed_reservation_setting">
+                        <field name="allow_bed_reservation" class="o_light_label" string="Permitir reserva de cama"/>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

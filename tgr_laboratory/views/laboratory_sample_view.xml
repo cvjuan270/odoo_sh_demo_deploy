@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <!-- Laboratory Sample Type -->
+  <record id="view_tgr_laboratory_sample_type_tree" model="ir.ui.view">
+    <field name="name">Laboratory Sample Type</field>
+    <field name="model">tgr.laboratory.sample.type</field>
+    <field name="arch" type="xml">
+      <list editable="top" string="Tipo de Muestra">
+        <field name="sequence" widget="handle"></field>
+        <field name="name"></field>
+        <field name="description"></field>
+      </list>
+    </field>
+  </record>
+  <record id="action_tgr_laboratory_sample_type" model="ir.actions.act_window">
+    <field name="name">Tipo de Muestra</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">tgr.laboratory.sample.type</field>
+    <field name="view_mode">list</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">No se encontraron registros</p>
+      <p>Haga clic para agregar un nuevo Tipo de Muestra.</p>
+    </field>
+  </record>
+  <!-- Lab Sample -->
+  <record id="tgr_patient_laboratory_sample_form" model="ir.ui.view">
+    <field name="name">Lab Sample</field>
+    <field name="model">tgr.patient.laboratory.sample</field>
+    <field name="arch" type="xml">
+      <form string="Muestras">
+        <header>
+          <button class="oe_highlight"
+            groups="tgr_laboratory.group_hms_lab_sample_user"
+            invisible="state!='draft'" name="action_collect" string="Recolectado"
+            type="object"></button>
+          <button class="oe_highlight"
+            groups="tgr_laboratory.group_hms_lab_user"
+            invisible="state!='collect'" name="action_examine" string="Examinado"
+            type="object"></button>
+          <button groups="tgr_laboratory.group_hms_lab_sample_user"
+            invisible="state in ['collect','cancel','examine']"
+            name="action_cancel" string="Cancelar" type="object"></button>
+          <button invisible="state!='collect'"
+            name="%(tgr_laboratory.tgr_lab_sample_report)d" string="Imprimir"
+            type="action"></button>
+          <field name="state" statusbar_visible="draft,collect,examine,cancel"
+            widget="statusbar"></field>
+        </header>
+        <sheet>
+          <h1>
+            <field class="oe_inline" name="name"></field>
+          </h1>
+          <group>
+            <group>
+              <field name="request_id" readonly="state!='draft'"></field>
+              <field name="patient_id" readonly="state!='draft'"></field>
+              <field name="sample_type_id" readonly="state!='draft'"></field>
+              <field name="container_name" readonly="state!='draft'"></field>
+            </group>
+            <group>
+              <field name="date" readonly="state!='draft'"></field>
+              <field name="user_id" readonly="state!='draft'"></field>
+              <field groups="base.group_multi_company" name="company_id"
+                options="{'no_create': True}" readonly="state!='draft'"></field>
+              <field name="test_ids" readonly="state!='draft'"
+                widget="many2many_tags"></field>
+              <field name="area_id" readonly="1"></field>
+            </group>
+          </group>
+          <field colspan="2" name="notes" nolabel="1" placeholder="Notas"
+            readonly="state!='draft'"></field>
+        </sheet>
+      </form>
+    </field>
+  </record>
+  <record id="tgr_patient_laboratory_sample_tree" model="ir.ui.view">
+    <field name="name">Lab Sample</field>
+    <field name="model">tgr.patient.laboratory.sample</field>
+    <field name="arch" type="xml">
+      <list decoration-danger="state=='collect'"
+        decoration-info="state=='draft'" decoration-muted="state=='cancel'"
+        name="sample_tree" string="Muestra">
+        <header>
+          <button class="oe_highlight"
+            groups="tgr_laboratory.group_hms_lab_sample_user"
+            name="action_collect" string="Recolectado" type="object"></button>
+          <button class="oe_highlight"
+            groups="tgr_laboratory.group_hms_lab_sample_user"
+            name="action_bulk_collect_and_examine"
+            string="Recolectado y Examinado" type="object" />
+        </header>
+        <field name="name"></field>
+        <field name="request_id"></field>
+        <field name="patient_id"></field>
+        <field name="sample_type_id"></field>
+        <field name="area_id"></field>
+        <field name="patient_id"></field>
+        <field name="date"></field>
+        <field name="user_id"></field>
+        <field groups="base.group_multi_company" name="company_id"></field>
+        <field decoration-danger="state=='collect'"
+          decoration-info="state=='draft'" decoration-success="state=='examine'"
+          decoration-warning="state=='cancel'" name="state" string="Estado"
+          widget="badge"></field>
+      </list>
+    </field>
+  </record>
+  <record id="tgr_patient_laboratory_sample_search" model="ir.ui.view">
+    <field name="name">tgr.patient.laboratory.sample.search</field>
+    <field name="model">tgr.patient.laboratory.sample</field>
+    <field name="arch" type="xml">
+      <search string="Muestra">
+        <field name="patient_id"></field>
+        <field name="user_id"></field>
+        <field name="container_name"></field>
+        <filter domain="[('state','=','collect')]" name="collect"
+          string="Por Examinar"></filter>
+        <filter domain="[('state','=','examine')]" name="examined"
+          string="Examinado"></filter>
+        <filter
+          domain="[('date','>=', datetime.datetime.combine(context_today(), datetime.time(0,0,0))), ('date','&lt;=', datetime.datetime.combine(context_today(), datetime.time(23,59,59)))]"
+          name="today" string="Muestra de Hoy"></filter>
+        <separator></separator>
+        <group expand="0" string="Agrupar Por">
+          <filter context="{'group_by':'patient_id'}" name="group_by_patient_id"
+            string="Paciente"></filter>
+          <filter context="{'group_by':'date'}" name="group_by_date"
+            string="Fecha"></filter>
+          <filter context="{'group_by':'user_id'}" name="group_by_user"
+            string="Usuario"></filter>
+          <filter context="{'group_by':'company_id'}" name="group_by_company"
+            string="Hospital"></filter>
+          <filter context="{'group_by':'state'}" name="group_by_state"
+            string="Estado"></filter>
+          <filter context="{'group_by':'sample_type_id'}"
+            name="group_by_sample_type" string="Tipo de Muestra"></filter>
+        </group>
+      </search>
+    </field>
+  </record>
+  <record id="tgr_patient_laboratory_sample_calendar" model="ir.ui.view">
+    <field name="name">tgr.patient.laboratory.sample.calendar</field>
+    <field name="model">tgr.patient.laboratory.sample</field>
+    <field name="type">calendar</field>
+    <field name="arch" type="xml">
+      <calendar color="user_id" date_start="date" string="Muestra">
+        <field name="user_id"></field>
+        <field name="patient_id"></field>
+        <field name="state"></field>
+      </calendar>
+    </field>
+  </record>
+  <record id="tgr_patient_laboratory_sample_pivot" model="ir.ui.view">
+    <field name="name">tgr.patient.laboratory.sample.pivot</field>
+    <field name="model">tgr.patient.laboratory.sample</field>
+    <field name="arch" type="xml">
+      <pivot string="Muestra">
+        <field name="date" type="row"></field>
+        <field name="user_id" type="row"></field>
+        <field name="patient_id" type="row"></field>
+      </pivot>
+    </field>
+  </record>
+  <record id="action_tgr_patient_laboratory_sample"
+    model="ir.actions.act_window">
+    <field name="name">Muestras</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">tgr.patient.laboratory.sample</field>
+    <field name="view_mode">list,form,calendar,pivot</field>
+    <field name="context">{'search_default_today': 1}</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">No se encontraron registros</p>
+      <p>Haga clic para agregar una nueva Muestra.</p>
+    </field>
+  </record>
+</odoo>

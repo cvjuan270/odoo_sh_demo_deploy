@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <record id="res_config_settings_view_form" model="ir.ui.view">
+    <field name="name">res.config.settings.view.form.inherit.surgery</field>
+    <field name="model">res.config.settings</field>
+    <field name="priority" eval="10" />
+    <field name="inherit_id" ref="tgr_hms.res_config_settings_view_form" />
+    <field name="arch" type="xml">
+      <xpath expr="//div[@id='hospitalization']" position="before">
+        <block title="Cirugía" name="surgery_setting_container">
+          <setting help="Ubicación para tomar productos consumidos en Cirugía."
+            id="tgr_surgery_stock_location_id_setting">
+            <field name="tgr_surgery_stock_location_id" class="o_light_label"
+              string="Ubicación de Stock" />
+          </setting>
+          <setting help="Ubicación para gestionar productos consumidos en Cirugía."
+            id="tgr_surgery_usage_location_id_setting">
+            <field name="tgr_surgery_usage_location_id" class="o_light_label"
+              string="Ubicación de Uso de Stock" />
+          </setting>
+        </block>
+      </xpath>
+    </field>
+  </record>
+</odoo>

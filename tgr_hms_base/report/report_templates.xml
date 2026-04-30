@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- header -->
+    <template id="tgr_hms_header">
+        <div t-att-style="report_header_style" t-attf-class="header o_company_#{company.id}_layout">
+            <div class="o_clean_header">
+                <div class="print-container-invoice-classic-header">
+                    <table class="table-print-invoice-classic-header">
+                        <thead>
+                            <tr>
+                                <th colspan="2"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="width: 80%; vertical-align: top; border: hidden">
+                                    <div class="info">
+                                        <t t-if="company.name">
+                                            <div>
+                                                <span style="font-weight: normal; font-size: 14px" t-esc="company.name"></span>
+                                            </div>
+                                        </t>
+                                        <t t-if="company.vat">
+                                            <div>
+                                                <span style="font-weight: normal; font-size: 14px">RUC:</span>
+                                                <span style="font-weight: normal; font-size: 14px" t-esc="company.vat"></span>
+                                            </div>
+                                        </t>
+                                        <div>
+                                            <span style="font-weight: normal; font-size: 14px">Dirección:</span>
+                                            <t name="company_street_title" t-if="company.street.title()"><span style="font-weight: normal; font-size: 14px" t-esc="company.street.title()"></span>,</t>
+                                            <t t-if="company.city"><span style="font-weight: normal; font-size: 14px" t-esc="company.city"></span>,</t>
+                                            <t t-if="company.state_id.name"><span style="font-weight: normal; font-size: 14px" t-esc="company.state_id.name"></span>,</t>
+                                            <t t-if="company.country_id.name">
+                                                <span style="font-weight: normal; font-size: 14px" t-esc="company.country_id.name"></span>
+                                            </t>
+                                        </div>
+                                        <div>
+                                            <span style="font-weight: normal; font-size: 14px">Contacto:</span>
+                                            <t t-if="company.phone">
+                                                <span style="font-weight: normal; font-size: 14px" t-esc="company.phone"></span>
+                                                <br></br>
+                                                <span style="font-weight: normal; font-size: 14px" t-esc="company.email"></span>
+                                            </t>
+                                        </div>
+                                        <div>
+                                            <span t-field="company.company_details" t-if="company.company_details"></span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="width: 20%; border: hidden; text-align: left; vertical-align: top;">
+                                    <div style="display: flex; justify-content: left;  align-items: left;">
+                                        <t t-if="company.logo">
+                                            <img alt="Logo" class="logo" style="max-width: 94%; max-height: 60%; object-fit: contain; " t-att-src="image_data_uri(company.logo)" t-if="company.logo"></img>
+                                        </t>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </template>
+    <!--footer -->
+    <template id="tgr_hms_footer">
+        <div t-attf-class="footer o_background_footer">
+            <div class="text-center">
+                <div class="text-muted" t-if="report_type == 'pdf'">Página N° <span class="page"></span> de <span class="topage"></span> páginas</div>
+            </div>
+            <div class="text-center">
+                <t t-esc="company.report_footer"></t>
+                <span style="font-size: 12px;text-align: center;color: #555;font-style: italic;">Automatiza tu empresa con la mejor solución ERP <a href="tagre.pe" target="_blank">tagre.pe</a></span>
+            </div>
+        </div>
+    </template>
+    <!-- Patient -->
+    <template id="tgr_hms_patient">
+        <div class="client_data">
+            <div class="client_data_1">
+                <div class="row">
+                    <div class="label">
+                        <strong>óCLIENTE</strong>
+                    </div>
+                    <div class="separator">
+                        <strong style="font-weight: 800">:</strong>
+                    </div>
+                    <div class="data">
+                        <t t-esc="patient.name" t-if="patient.name"></t>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+</odoo>

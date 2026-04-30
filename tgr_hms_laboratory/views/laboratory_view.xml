@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!--Patient Test Results-->
+    <record id="patient_laboratory_test_view" model="ir.ui.view">
+        <field name="name">Laboratory Test</field>
+        <field name="model">patient.laboratory.test</field>
+        <field name="inherit_id" ref="tgr_laboratory.patient_laboratory_test_view"></field>
+        <field name="arch" type="xml">
+            <field name="request_id" position="after">
+                <field domain="[('patient_id','=',patient_id)]" name="appointment_id" readonly="state in ['done','cancel']"></field>
+                <field domain="[('patient_id','=',patient_id)]" name="treatment_id" readonly="state in ['done','cancel']"></field>
+            </field>
+        </field>
+    </record>
+    <!--Patient Lab Results-->
+    <record id="patient_laboratory_test_request_form" model="ir.ui.view">
+        <field name="name">Test Requests</field>
+        <field name="model">tgr.laboratory.request</field>
+        <field name="inherit_id" ref="tgr_laboratory.patient_laboratory_test_request_form"></field>
+        <field name="arch" type="xml">
+            <field name="lab_bill_id" position="before">
+                <field domain="[('patient_id','=',patient_id)]" name="appointment_id" readonly="state in ['done','cancel']"></field>
+                <field domain="[('patient_id','=',patient_id)]" name="treatment_id" readonly="state in ['done','cancel']"></field>
+            </field>
+        </field>
+    </record>
+</odoo>

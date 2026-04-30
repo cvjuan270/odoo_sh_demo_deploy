@@ -1,0 +1,14 @@
+id,name,description
+tgr_laboratory_sample_type_01,Orina,Orina
+tgr_laboratory_sample_type_02,Suero,Suero
+tgr_laboratory_sample_type_03,Heces,Heces
+tgr_laboratory_sample_type_04,"Orina/Suero
+Suero","Orina/Suero
+Suero"
+tgr_laboratory_sample_type_05,Orina/Suero,Orina/Suero
+tgr_laboratory_sample_type_06,Sangre total,Sangre total
+tgr_laboratory_sample_type_07,Plasma,Plasma
+tgr_laboratory_sample_type_08,"Esputo/Otro líquido (líquido cefalorraquídeo, líquido pleural, exudado, líquido amniótico, líquido sinovial, liquido pericardico)","Esputo/Otro líquido (líquido cefalorraquídeo, líquido pleural, exudado, líquido amniótico, líquido sinovial, liquido pericardico)"
+tgr_laboratory_sample_type_09,Esputo/Otro líquido,Esputo/Otro líquido
+tgr_laboratory_sample_type_10,Secreción,Secreción
+tgr_laboratory_sample_type_11,Raspado de piel/uña/pelo,Raspado de piel/uña/pelo

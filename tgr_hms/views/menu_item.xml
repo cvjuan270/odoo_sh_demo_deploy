@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <!-- HMS Main Menu and sub menus -->
+  <menuitem groups="tgr_hms_base.group_hms_manager" id="menu_hms" name="HMS"
+    sequence="260" web_icon="tgr_hms_base,static/description/icon.png"></menuitem>
+  <menuitem action="tgr_hms_base.action_patient" id="action_menu_patient"
+    name="Pacientes" parent="menu_hms" sequence="0"></menuitem>
+  <!-- <menuitem action="tgr_hms_base.action_physician" id="action_menu_doctors" -->
+  <!--   name="Physicians" parent="menu_hms" sequence="2"></menuitem> -->
+  <!-- <menuitem action="tgr_action_form_hospital_treatment" -->
+  <!--   id="action_menu_treatment" name="Treatments" parent="menu_hms"
+  sequence="3"></menuitem> -->
+  <!-- <menuitem action="action_tgr_patient_procedure" -->
+  <!--   id="menu_tgr_patient_procedure" name="Patient Procedures"
+  parent="menu_hms" -->
+  <!--   sequence="4"></menuitem> -->
+  <menuitem action="action_appointment" id="menu_appointment" name="Citas"
+    parent="menu_hms" sequence="5"></menuitem>
+  <!-- Prescription Menu-->
+  <menuitem action="act_open_hms_prescription_order_view"
+    groups="tgr_hms.group_hms_jr_doctor" id="hos_prescription"
+    name="Prescripciones" parent="tgr_hms.menu_hms" sequence="5"></menuitem>
+  <!-- Referring Doc -->
+  <menuitem action="action_referring_doctors" id="menu_referring_doctors"
+    parent="tgr_hms.menu_hms" sequence="15"></menuitem>
+  <!-- Pricelist -->
+  <menuitem action="product.product_pricelist_action2"
+    groups="product.group_product_pricelist" id="menu_product_pricelist_main"
+    name="Pricelists" parent="tgr_hms.menu_hms" sequence="20"></menuitem>
+  <!-- Configuration Menu-->
+  <menuitem groups="tgr_hms_base.group_hms_manager" id="menu_hms_cofig"
+    name="Configuration" parent="menu_hms" sequence="100"></menuitem>
+  <menuitem action="tgr_hms_base.action_hms_config_settings"
+    groups="base.group_system" id="menu_hms_cofig_settings" name="Settings"
+    parent="menu_hms_cofig" sequence="0"></menuitem>
+  <!--Configuration
+  Schedule -->
+  <menuitem action="resource.action_resource_calendar_form"
+    id="menu_working_schedule" parent="menu_hms_cofig" sequence="20"></menuitem>
+  <!-- Patient Configuration Menu-->
+  <menuitem action="tgr_hms.act_open_medical_alerts" id="menu_medical_alerts"
+    name="Medical Alerts" parent="tgr_hms_base.menu_hms_patient_cofig"
+    sequence="11"></menuitem>
+  <menuitem action="tgr_hms.action_tgr_family_relation"
+    id="menu_family_relation" name="Family Relation"
+    parent="tgr_hms_base.menu_hms_patient_cofig" sequence="12"></menuitem>
+  <menuitem action="tgr_hms.act_open_tgr_ethnicity_view" id="menu_ethnicity"
+    name="Ethnicity" parent="tgr_hms_base.menu_hms_patient_cofig" sequence="25"></menuitem>
+  <menuitem id="diseases_menu" name="Diseases"
+    parent="tgr_hms_base.menu_hms_patient_cofig" sequence="40"></menuitem>
+  <menuitem action="tgr_hms.act_open_diseases_view" id="hms_diseases"
+    name="Diseases" parent="tgr_hms.diseases_menu" sequence="0"></menuitem>
+  <menuitem action="tgr_hms.act_open_tgr_disease_category_view"
+    id="menu_disease_category" name="Disease Categories"
+    parent="tgr_hms.diseases_menu" sequence="10"></menuitem>
+  <menuitem action="tgr_hms.action_hms_genetic_disease"
+    id="menu_hms_genetic_disease" name="Genetic Disease"
+    parent="tgr_hms.diseases_menu" sequence="20"></menuitem>
+  <!--Under
+  Main Physician-->
+  <menuitem action="action_referring_doctors"
+    id="menu_physician_referring_physicians"
+    parent="tgr_hms_base.main_menu_physician" sequence="1"></menuitem>
+  <!-- Schedule Main menu -->
+  <menuitem action="action_resource_calendar"
+    groups="tgr_hms.group_hms_receptionist,tgr_hms.group_hms_jr_doctor"
+    id="action_menu_working_schedule" name="Cronograma" sequence="75"
+    web_icon="tgr_hms,static/src/img/calendar.png"></menuitem>
+  <!-- Main Treatment Menu -->
+  <menuitem groups="tgr_hms.group_hms_receptionist,tgr_hms.group_hms_jr_doctor"
+    id="main_menu_treatment" name="Treatments" sequence="25"
+    web_icon="tgr_hms,static/src/img/treatment.png"></menuitem>
+  <menuitem action="tgr_action_form_hospital_treatment" id="menu_treatment"
+    name="Treatments" parent="main_menu_treatment" sequence="10"></menuitem>
+  <menuitem action="action_tgr_patient_procedure"
+    id="menu_tgr_patient_procedure_treatment" name="Patient Procedures"
+    parent="main_menu_treatment" sequence="20"></menuitem>
+  <menuitem groups="tgr_hms_base.group_hms_manager" id="menu_treatment_cofig"
+    name="Configuration" parent="main_menu_treatment" sequence="100"></menuitem>
+  <menuitem action="action_procedure_group" id="menu_procedure_group"
+    name="Procedure Groups" parent="menu_treatment_cofig" sequence="10"></menuitem>
+  <!-- Main Appointment Menu -->
+  <menuitem action="action_appointment"
+    groups="tgr_hms.group_hms_receptionist,tgr_hms.group_hms_jr_doctor,tgr_hms.group_tgr_hms_appointment_user"
+    id="action_main_menu_appointmnet_opd" sequence="25"
+    web_icon="tgr_hms,static/src/img/appointment.png"></menuitem>
+  <!-- Appointment Configuration -->
+  <menuitem id="menu_appointment_cofig" name="Configuration"
+    parent="tgr_hms.action_main_menu_appointmnet_opd" sequence="100"></menuitem>
+  <menuitem action="act_open_appointment_purpose"
+    groups="tgr_hms_base.group_hms_manager" id="menu_patient_appointment"
+    name="Appointment Purpose" parent="tgr_hms.menu_appointment_cofig"
+    sequence="0"></menuitem>
+  <menuitem action="act_open_appointment_cabin"
+    groups="tgr_hms_base.group_hms_manager" id="menu_open_appointment_cabin"
+    name="Appointment Cabin" parent="tgr_hms.menu_appointment_cofig"
+    sequence="1"></menuitem>
+  <menuitem action="action_tgr_cancel_reason"
+    groups="tgr_hms_base.group_hms_manager" id="menu_tgr_cancel_reason"
+    name="Cancel Reason" parent="menu_appointment_cofig" sequence="50"></menuitem>
+  <!-- Main Prescriptions Menu -->
+  <menuitem groups="tgr_hms.group_hms_jr_doctor" id="hos_pres_root"
+    name="Prescription" sequence="25"
+    web_icon="tgr_hms,static/src/img/prescription.png"></menuitem>
+  <menuitem action="act_open_hms_prescription_order_view"
+    id="hos_prescption_inner_root" name="Prescription" parent="hos_pres_root"></menuitem>
+  <menuitem groups="tgr_hms.group_hms_doctor" id="menu_pres_cofig"
+    name="Configuration" parent="hos_pres_root" sequence="100"></menuitem>
+  <menuitem action="act_open_medicament_group_view"
+    id="menuitem_action_presc_medicament_group" name="Medicament Group"
+    parent="tgr_hms.menu_pres_cofig" sequence="11"></menuitem>
+  <!-- Main Medicine Menu -->
+  <menuitem action="action_medicament_dosage"
+    id="menu_medicine_medicament_dosage" name="Medication Dosage"
+    parent="tgr_hms_base.menu_medicine_cofig" sequence="7"></menuitem>
+  <menuitem action="act_open_medicament_group_view"
+    id="menu_medicine_hms_medicament_group" name="Medicament Group"
+    parent="tgr_hms_base.tgr_medicine_root" sequence="11"></menuitem>
+  <menuitem action="action_tgr_product_kit" id="menu_tgr_product_kit"
+    name="Product Kit" parent="tgr_hms_base.tgr_medicine_root" sequence="15"></menuitem>
+</odoo>

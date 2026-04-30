@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <!-- Patient View -->
+    <record id="patient_kanban_view" model="ir.ui.view">
+      <field name="name">patient.kanban</field>
+      <field name="model">hms.patient</field>
+      <field name="type">kanban</field>
+      <field name="arch" type="xml">
+        <kanban>
+          <field name="id"></field>
+          <field name="name"></field>
+          <field name="image_128"></field>
+          <field name="age"></field>
+          <field name="gender"></field>
+          <field name="primary_physician_id"></field>
+          <field name="parent_id"></field>
+          <field name="function"></field>
+          <field name="code"></field>
+          <field name="today_is_birthday"></field>
+          <field name="tgr_tag_ids"></field>
+          <templates>
+            <t t-name="card">
+              <div class="oe_kanban_global_click o_kanban_record_has_image_fill">
+                <div class="ribbon acs-kanban-ribbon ribbon-top-right o_widget"
+                  t-if="record.today_is_birthday.raw_value">
+                  <span class="bg-success"><i class="fa fa-birthday-cake"></i>
+                    Cumpleaños</span>
+                </div>
+                <t t-set="placeholder"
+                  t-value="'/base/static/img/avatar_grey.png'"></t>
+                <div class="o_kanban_image_fill_left d-none d-md-block"
+                  t-attf-style="background-image:url('#{kanban_image('hms.patient', 'image_128', record.id.raw_value, placeholder)}')"></div>
+                <div class="oe_kanban_details">
+                  <strong class="oe_partner_heading">
+                    <field name="display_name"></field>
+                  </strong>
+                  <ul>
+                    <li>
+                      <b>Código:</b>
+                      <field name="code"></field>
+                    </li>
+                    <li t-if="record.age.raw_value">
+                      <b>Edad:</b>
+                      <field name="age"></field>
+                    </li>
+                    <li t-if="record.gender.raw_value">
+                      <b>Género:</b>
+                      <field name="gender"></field>
+                    </li>
+                    <li t-if="record.primary_physician_id.raw_value">
+                      <b>Médico Principal:</b>
+                      <field name="primary_physician_id"></field>
+                    </li>
+                  </ul>
+                  <span class="oe_kanban_list_many2many">
+                    <field name="tgr_tag_ids" options="{'color_field': 'color'}"
+                      widget="many2many_tags"></field>
+                  </span>
+                </div>
+              </div>
+            </t>
+          </templates>
+        </kanban>
+      </field>
+    </record>
+    <record id="view_patient_tree" model="ir.ui.view">
+      <field name="name">patient.tree</field>
+      <field name="model">hms.patient</field>
+      <field name="arch" type="xml">
+        <list string="Paciente">
+          <field name="code" optional="show"></field>
+          <field name="name"></field>
+          <field name="age" optional="show"></field>
+          <field name="gender" optional="show"></field>
+          <field name="mobile" optional="show"></field>
+          <field groups="base.group_multi_company" name="company_id"
+            optional="show"></field>
+          <field invisible="1" name="active"></field>
+        </list>
+      </field>
+    </record>
+    <record id="view_patient_form" model="ir.ui.view">
+      <field name="name">patient.form</field>
+      <field name="model">hms.patient</field>
+      <field name="arch" type="xml">
+        <form string="Paciente">
+          <header></header>
+          <sheet>
+            <div class="oe_button_box" name="button_box">
+              <button class="oe_stat_button"
+                context="{'default_patient_id': id}"
+                groups="account.group_account_invoice" icon="fa-money"
+                name="view_invoices" type="object">
+                <div class="o_field_widget o_stat_info mr4">
+                  <span class="o_stat_text">Fact.:</span>
+                  <span class="o_stat_text">Deuda:</span>
+                </div>
+                <div class="o_field_widget o_stat_info">
+                  <span class="o_stat_value">
+                    <field name="total_invoiced"
+                      options="{'currency_field': 'currency_id'}"
+                      widget="monetary"></field>
+                  </span>
+                  <span class="o_stat_value">
+                    <field name="tgr_amount_due"
+                      options="{'currency_field': 'currency_id'}"
+                      widget="monetary"></field>
+                  </span>
+                </div>
+              </button>
+              <button class="oe_stat_button" icon="fa-files-o"
+                name="action_view_attachments" type="object">
+                <field name="attach_count" string="Documentos" widget="statinfo"></field>
+              </button>
+            </div>
+            <field invisible="1" name="today_is_birthday"></field>
+            <widget invisible="not today_is_birthday" name="web_ribbon"
+              title="Cumpleaños"></widget>
+            <field class="oe_avatar" name="image_1920"
+              options="{'preview_image': 'image_128'}" widget="image"></field>
+            <widget bg_color="bg-danger" invisible="active" name="web_ribbon"
+              title="Archivado"></widget>
+            <div class="oe_title">
+              <h1>
+                <field default_focus="1" name="name" placeholder="Nombre"
+                  required="1"></field>
+              </h1>
+              <div groups="base.group_user" name="options"></div>
+            </div>
+            <group>
+              <group>
+                <!-- custom tagre  -->
+                <label for="l10n_latam_identification_type_id"
+                  string="Tipo de Documento"></label>
+                <field name="l10n_latam_identification_type_id" nolabel="1"
+                  options="{'no_open': True, 'no_create': True}"
+                  placeholder="DNI" required="True"></field>
+                <label for="vat" string="Número de Documento"></label>
+                <field name="vat" nolabel="1" placeholder="Número dni"></field>
+                <!-- custom tagre  -->
+                <field name="code" readonly="1"></field>
+                <field name="gender" required="1"></field>
+                <field name="primary_physician_id"></field>
+                <field name="title"></field>
+                <field invisible="1" name="currency_id"></field>
+                <field invisible="1" name="active"></field>
+              </group>
+              <group>
+                <field name="birthday"></field>
+                <field name="age"></field>
+                <field name="tgr_tag_ids" options="{'color_field': 'color'}"
+                  widget="many2many_tags"></field>
+              </group>
+            </group>
+            <notebook>
+              <page name="info" string="Información General">
+                <group>
+                  <group>
+                    <label for="street" string="Dirección"></label>
+                    <div class="o_address_format">
+                      <field class="o_address_street" name="street"
+                        placeholder="Calle..."></field>
+                      <field class="o_address_street" name="street2"
+                        placeholder="Calle 2..."></field>
+                      <field class="o_address_city" name="city"
+                        placeholder="Ciudad"></field>
+                      <field class="o_address_state"
+                        context="{'country_id': country_id, 'zip': zip}"
+                        name="state_id" options="{&quot;no_open&quot;: True}"
+                        placeholder="Provincia"></field>
+                      <field class="o_address_zip" name="zip" placeholder="Código Postal"></field>
+                      <field class="o_address_country" name="country_id"
+                        options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}"
+                        placeholder="País"></field>
+                    </div>
+                    <field name="nationality_id"></field>
+                    <field name="passport"></field>
+                    <field name="location_url"
+                      placeholder="https://www.google.com/maps/place/Almighty+Consulting+Solutions+Pvt.+Ltd./@23.1645694,72.6554962,17z/data=!3m1!4b1!4m6!3m5!1s0x395e872719d44beb:0x38d56e6bb07adf0b!8m2!3d23.1645645!4d72.6597234!16s%2Fg%2F11hbk9x_k2"
+                      widget="url"></field>
+                  </group>
+                  <group>
+                    <field name="phone" widget="phone"></field>
+                    <field name="mobile" widget="phone"></field>
+                    <field name="email"></field>
+                    <field name="gov_code"></field>
+                  </group>
+                </group>
+                <group>
+                  <group name="basic_details">
+                    <field name="occupation"></field>
+                    <field name="education"></field>
+                    <field
+                      groups="tgr_hms_base.group_manage_ethnic_religion_tribe"
+                      name="tgr_religion_id"></field>
+                    <field
+                      groups="tgr_hms_base.group_manage_ethnic_religion_tribe"
+                      name="caste"></field>
+                  </group>
+                  <group>
+                    <field groups="product.group_product_pricelist"
+                      name="property_product_pricelist"
+                      options="{'no_open':True,'no_create': True}"></field>
+                    <field name="marital_status"></field>
+                    <field invisible="'marital_status'!='married'"
+                      name="spouse_name"></field>
+                    <field invisible="'marital_status'!='married'"
+                      name="spouse_edu"></field>
+                    <field invisible="'marital_status'!='married'"
+                      name="spouse_business"></field>
+                  </group>
+                </group>
+              </page>
+              <page name="hospital_info" string="Información del Hospital">
+                <group>
+                  <group>
+                    <field groups="base.group_no_one" name="partner_id"
+                      readonly="1" required="0"></field>
+                    <field groups="base.group_multi_company" name="company_id"
+                      options="{'no_create': True}"></field>
+                  </group>
+                  <group name="ref_doc_details"></group>
+                  <group name="basic_medical">
+                    <field name="blood_group"></field>
+                  </group>
+                  <group name="death_details">
+                    <field force_save="True" name="date_of_death"></field>
+                  </group>
+                </group>
+                <group>
+                  <group name="corporate_tieup">
+                    <field name="is_corpo_tieup"></field>
+                    <field context="{'default_is_company':True}"
+                      invisible="not is_corpo_tieup" name="corpo_company_id"
+                      required="is_corpo_tieup"></field>
+                    <field invisible="not is_corpo_tieup" name="emp_code"
+                      required="is_corpo_tieup"></field>
+                  </group>
+                </group>
+              </page>
+            </notebook>
+          </sheet>
+          <chatter reload_on_attachment="True" />
+        </form>
+      </field>
+    </record>
+    <record id="view_patient_filter" model="ir.ui.view">
+      <field name="name">patient.filter</field>
+      <field name="model">hms.patient</field>
+      <field eval="1" name="priority"></field>
+      <field name="arch" type="xml">
+        <search string="Paciente">
+          <field
+            filter_domain="['|', '|', '|', '|', ('name', 'ilike', self), ('gov_code', 'ilike', self), ('code', 'ilike', self), ('email', 'ilike', self),  ('mobile', 'ilike', self)]"
+            name="name"></field>
+          <field filter_domain="[('mobile', 'ilike', self)]" name="mobile"></field>
+          <field name="gov_code"></field>
+          <field name="code"></field>
+          <field name="primary_physician_id"></field>
+          <field invisible="1" name="active"></field>
+          <separator></separator>
+          <filter domain="[('gender','=','male')]" name="gender"
+            string="Masculino"></filter>
+          <filter domain="[('gender','=','female')]" name="gender"
+            string="Femenino"></filter>
+          <separator></separator>
+          <filter domain="['|', ('active', '=', False), ('active', '=', True)]"
+            name="all" string="Todos"></filter>
+          <separator></separator>
+          <filter domain="[('active', '=', False)]" name="inactive"
+            string="Archivado"></filter>
+          <separator></separator>
+          <filter
+            domain="[('birthday','like',(context_today()).strftime('%%m-%%d'))]"
+            name="today_birthday" string="Cumpleaños de Hoy"></filter>
+          <newline></newline>
+          <group expand="0" string="Agrupar Por...">
+            <filter context="{'group_by':'birthday'}" domain="[]"
+              name="birthday_groupby" string="Cumpleaños"></filter>
+            <filter context="{'group_by':'company_id'}" domain="[]"
+              name="company_group" string="Empresa"></filter>
+            <filter context="{'group_by':'blood_group'}" domain="[]"
+              name="blood_group" string="Grupo Sanguíneo"></filter>
+            <filter context="{'group_by':'corpo_company_id'}" domain="[]"
+              name="corpo_company_id" string="Empresa Corporativa"></filter>
+          </group>
+        </search>
+      </field>
+    </record>
+    <record id="action_patient" model="ir.actions.act_window">
+      <field name="name">Paciente</field>
+      <field name="res_model">hms.patient</field>
+      <field name="view_mode">list,form</field>
+      <!-- <field name="search_view_id" ref="view_patient_filter"></field> -->
+      <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">No se encontraron registros</p>
+        <p>Haga clic para agregar un Paciente. /></p>
+      </field>
+    </record>
+  </data>
+</odoo>

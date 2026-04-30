@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- Directory tree view -->
+  <record id="view_document_directory_filter" model="ir.ui.view">
+    <field name="name">document.directory.search</field>
+    <field name="model">document.directory</field>
+    <field name="arch" type="xml">
+      <search string="Buscar Directorio">
+        <field name="name" />
+        <field name="description" />
+        <field name="res_model" />
+        <field name="tag_ids" string="Etiqueta"
+          filter_domain="[('tag_ids', 'ilike', self)]" />
+        <separator />
+        <group expand="0" string="Agrupar Por"> </group>
+        <searchpanel>
+          <field name="parent_id" icon="fa-filter" limit="0" />
+        </searchpanel>
+      </search>
+    </field>
+  </record>
+  <record id="document_directory_tree_view" model="ir.ui.view">
+    <field name="name">document.directory.tree</field>
+    <field name="model">document.directory</field>
+    <field name="priority">100</field>
+    <field name="arch" type="xml">
+      <list string="Página de Documentos">
+        <field name="name" />
+        <field name="user_ids" />
+      </list>
+    </field>
+  </record>
+  <record id="document_directory_form_view" model="ir.ui.view">
+    <field name="name">document.directory.form</field>
+    <field name="model">document.directory</field>
+    <field name="arch" type="xml">
+      <form string="Directorio de Documentos">
+        <sheet>
+          <div class="oe_button_box" name="button_box">
+            <button class="oe_stat_button" name="action_view_attachments"
+              type="object" icon="fa-files-o">
+              <field string="Adjuntos" name="attchement_count"
+                widget="statinfo" />
+            </button>
+          </div>
+          <div class="oe_title">
+            <label for="name" string="Nombre del Directorio" class="oe_edit_only" />
+            <h1>
+              <field name="name" />
+            </h1>
+          </div>
+          <group>
+            <field name="parent_id" />
+            <field name="department_id" />
+            <field name="res_model" />
+            <field name="user_ids" widget="many2many_tags" />
+            <field name="tag_ids" widget="many2many_tags" colspan="2" />
+          </group>
+          <notebook>
+            <page string="Descripción" name="description">
+              <field name="description" placeholder="Descripción" />
+            </page>
+          </notebook>
+        </sheet>
+      </form>
+    </field>
+  </record>
+  <record id="action_document_directory" model="ir.actions.act_window">
+    <field name="name">Directorio de Documentos</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">document.directory</field>
+    <field name="view_mode">list,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face"> No se encontraron registros </p>
+      <p> Haga clic para agregar un Directorio. </p>
+    </field>
+  </record>
+  <record id="view_document_structure_tree" model="ir.ui.view">
+    <field name="name">document.structure.tree</field>
+    <field name="model">document.directory</field>
+    <field name="arch" type="xml">
+      <list string="Estructura de Directorios">
+        <field name="name" />
+        <field name="res_model" />
+      </list>
+    </field>
+  </record>
+  <!-- tgr.document.tag views -->
+  <record id="tgr_document_tag_form" model="ir.ui.view">
+    <field name="name">tgr.document.tag.form</field>
+    <field name="model">tgr.document.tag</field>
+    <field name="arch" type="xml">
+      <form string="Etiquetas de Documentos">
+        <sheet>
+          <group>
+            <field name="name" />
+            <field name="color" groups="base.group_no_one" />
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+  <record id="tgr_document_tag_tree" model="ir.ui.view">
+    <field name="name">tgr.document.tag.tree</field>
+    <field name="model">tgr.document.tag</field>
+    <field name="arch" type="xml">
+      <list string="Etiquetas de Documentos">
+        <field name="name" />
+        <field name="color" groups="base.group_no_one" />
+      </list>
+    </field>
+  </record>
+  <record id="action_tgr_document_tag" model="ir.actions.act_window">
+    <field name="name">Etiquetas de Documentos</field>
+    <field name="res_model">tgr.document.tag</field>
+    <field name="view_id" ref="tgr_document_tag_tree" />
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face"> Haga clic para definir una nueva etiqueta de documento. </p>
+      <p> Cree etiquetas específicas que se adapten a las actividades de su empresa para clasificar y analizar mejor sus documentos. Tales categorías podrían, por ejemplo, reflejar la estructura de sus documentos o los diferentes tipos de gestión que realiza. </p>
+    </field>
+  </record>
+</odoo>

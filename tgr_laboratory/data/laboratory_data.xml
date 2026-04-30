@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data noupdate="1">
+    <record id="tgr_laboratory_sample_sequence" model="ir.sequence">
+      <field name="name">Toma de Muestras</field>
+      <field name="code">tgr.patient.laboratory.sample</field>
+      <field name="company_id" ref="base.main_company"></field>
+      <field name="implementation">no_gap</field>
+      <field name="prefix">%(range_y)s-%(range_month)s-</field>
+      <field eval="True" name="use_date_range"></field>
+      <field eval="True" name="tgr_auto_create"></field>
+      <field name="padding">3</field>
+    </record>
+    <record id="seq_laboratory_request_sequence" model="ir.sequence">
+      <field name="name">Solicitud de Analisis de Laboratorio</field>
+      <field name="code">tgr.laboratory.request</field>
+      <field name="prefix">LR</field>
+      <field name="padding">3</field>
+      <field eval="True" name="tgr_auto_create"></field>
+      <field eval="False" name="company_id"></field>
+    </record>
+    <record id="seq_patient_laboratory_test" model="ir.sequence">
+      <field name="name">Prueba de Laboratorio del Paciente</field>
+      <field name="code">patient.laboratory.test</field>
+      <field name="prefix">RLR</field>
+      <field name="padding">3</field>
+      <field eval="True" name="tgr_auto_create"></field>
+      <field eval="False" name="company_id"></field>
+    </record>
+    <record id="base.main_company" model="res.company">
+      <field name="laboratory_usage_location_id"
+        ref="stock.stock_location_customers"></field>
+      <field name="laboratory_stock_location_id"
+        ref="stock.stock_location_stock"></field>
+    </record>
+    <!-- Lab-related subtypes for messaging / Chatter -->
+    <record id="mt_lab_test_done" model="mail.message.subtype">
+      <field name="name">Exámen de laboratorio terminado</field>
+      <field name="res_model">patient.laboratory.test</field>
+      <field eval="False" name="default"></field>
+      <field name="description">Exámen de laboratorio terminado</field>
+    </record>
+    <!-- Definición del cron job para crear rangos automáticamente -->
+    <record forcecreate="True" id="ir_cron_create_sequence_date_ranges_samples"
+      model="ir.cron">
+      <field name="name">Crear Rangos de Fechas para Secuencias - Muestras de
+        Laboratorio</field>
+      <field eval="True" name="active"></field>
+      <field name="user_id" ref="base.user_root"></field>
+      <field name="model_id"
+        ref="tgr_hms_base.model_tgr_sequence_date_range_creator"></field>
+      <field name="state">code</field>
+      <field name="code">model.cron_create_sequence_date_ranges('tgr.patient.laboratory.sample',
+        6, 'month')</field>
+      <field name="interval_number">1</field>
+      <field name="interval_type">months</field>
+    </record>
+  </data>
+</odoo>

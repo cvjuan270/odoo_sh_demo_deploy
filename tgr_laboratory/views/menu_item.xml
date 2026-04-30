@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Laboratory Root Menu -->
+    <menuitem groups="tgr_laboratory.group_hms_lab_user,tgr_laboratory.group_hms_lab_sample_user" id="menu_laboratory" name="Laboratory" sequence="35" web_icon="tgr_laboratory,static/description/icon.png"></menuitem>
+    <menuitem action="hms_action_lab_test_request" id="menu_lab_request" parent="menu_laboratory" sequence="10"></menuitem>
+    <menuitem action="action_lab_result" groups="tgr_laboratory.group_hms_lab_user" id="menu_lab_test_result" parent="menu_laboratory" sequence="20"></menuitem>
+    <menuitem action="action_tgr_patient_laboratory_sample" id="menu_lab_sample" parent="menu_laboratory" sequence="30"></menuitem>
+    <!-- Configuration -->
+    <menuitem groups="tgr_hms_base.group_hms_manager,tgr_laboratory.group_hms_lab_manager" id="menu_hms_lab_cofig" name="Configuration" parent="menu_laboratory" sequence="100"></menuitem>
+    <menuitem action="hms_action_form_test" id="menu_lab_test" parent="menu_hms_lab_cofig" sequence="10"></menuitem>
+    <menuitem action="action_tgr_test_uom" id="menu_lab_test_uom" parent="menu_hms_lab_cofig" sequence="20"></menuitem>
+    <menuitem action="action_tgr_laboratory" id="menu_tgr_laboratory" parent="menu_hms_lab_cofig" sequence="30"></menuitem>
+    <menuitem action="action_tgr_collection_center" groups="tgr_laboratory.group_manage_collection_center" id="menu_tgr_collection_center" parent="menu_hms_lab_cofig" sequence="35"></menuitem>
+    <!-- <menuitem action="action_laboratory_group" id="menu_tgr_laboratory_group" name="Perfil de Laboratorio" parent="menu_hms_lab_cofig" sequence="40"></menuitem> -->
+    <menuitem action="action_tgr_laboratory_sample_type" id="menu_tgr_laboratory_sample_type" parent="menu_hms_lab_cofig" sequence="50"></menuitem>
+    <menuitem action="action_laboratory_area" id="menu_tgr_laboratory_area" name="Area de Laboratorio" parent="menu_hms_lab_cofig" sequence="50"></menuitem>
+    <menuitem action="action_tgr_laboratory_test_profile" id="menu_tgr_laboratory_test_profile" name="Perfil de Exámenes de Laboratorio" parent="menu_hms_lab_cofig" sequence="50"></menuitem>
+</odoo>

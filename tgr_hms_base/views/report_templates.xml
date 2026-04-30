@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Layout -->
+        <template id="tgr_external_layout">
+            <div t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')" t-att-data-oe-model="o and o._name" t-attf-class="article o_report_layout_standard">
+                <t t-out="0"></t>
+            </div>
+        </template>
+        <!-- Header  -->
+        <template id="report_header_template">
+            <div t-att-style="report_header_style" t-attf-class="header o_company_#{o.company_id.id}_layout">
+                <div class="o_clean_header">
+                    <div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="width: 40%; vertical-align: top; border: hidden">
+                                        <div class="info">
+                                            <t t-if="o.company_id.name">
+                                                <div>
+                                                    <span class="fw-bold fs-2 text-uppercase" t-attf-style="color: #{o.company_id and o.company_id.primary_color or '#000000'}" t-esc="o.company_id.name"></span>
+                                                </div>
+                                            </t>
+                                            <t t-if="o.company_id.vat">
+                                                <div>
+                                                    <span class="fw-bold fs-2 text-uppercase" t-attf-style="color: #{o.company_id and o.company_id.primary_color or '#000000'}">NIF/RUC:</span>
+                                                    <span class="fw-normal fs-3" t-attf-style="color: #{o.company_id and o.company_id.primary_color or '#000000'}" t-esc="o.company_id.vat"></span>
+                                                </div>
+                                            </t>
+                                            <div>
+                                                <t name="company_street_title" t-if="o.company_id.street.title()"><span style="font-weight: normal; font-size: 14px" t-esc="o.company_id.street.title()"></span>,</t>
+                                                <t t-if="o.company_id.city"><span style="font-weight: normal; font-size: 14px" t-esc="o.company_id.city"></span>,</t>
+                                                <t t-if="o.company_id.state_id.name"><span style="font-weight: normal; font-size: 14px" t-esc="o.company_id.state_id.name"></span>,</t>
+                                                <t t-if="o.company_id.country_id.name">
+                                                    <span style="font-weight: normal; font-size: 14px" t-esc="o.company_id.country_id.name"></span>
+                                                </t>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="width: 40%; vertical-align: top; border: hidden">
+                                        <div class="text-left px-2">
+                                            <t t-if="o.company_id.phone">
+                                                <i class="fa fa-whatsapp" t-attf-style="color: #{o.company_id and o.company_id.secondary_color or '#000000'}"></i>
+                                                <span style="font-weight: normal; font-size: 14px" t-esc="o.company_id.phone"></span>
+                                            </t>
+                                            <t t-if="o.company_id.email">
+                                                <br></br>
+                                                <i class="fa fa-envelope" t-attf-style="color: #{o.company_id and o.company_id.secondary_color or '#000000'}"></i>
+                                                <span style="font-weight: normal; font-size: 14px" t-esc="o.company_id.email"></span>
+                                            </t>
+                                            <t t-if="o.company_id.website">
+                                                <br></br>
+                                                <i class="fa fa-edge" t-attf-style="color: #{o.company_id and o.company_id.secondary_color or '#000000'}"></i>
+                                                <span style="font-weight: normal; font-size: 14px" t-esc="o.company_id.website"></span>
+                                            </t>
+                                        </div>
+                                    </td>
+                                    <td style="width: 20%;border: hidden;text-align: right; vertical-align: top;">
+                                        <div style="display: flex; justify-content: right; align-items: right; ">
+                                            <t t-if="o.company_id.logo">
+                                                <img alt="Logo" class="logo" style="max-width: 94%;max-height: 60%;object-fit: contain;" t-att-src="image_data_uri(o.company_id.logo)" t-if="o.company_id.logo"></img>
+                                            </t>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <!-- Footer -->
+        <template id="report_footer_template">
+            <div t-attf-class="footer o_background_footer">
+                <div class="text-center">
+                    <div class="text-muted" t-if="report_type == 'pdf'">Página N° <span class="page"></span> de <span class="topage"></span> páginas</div>
+                </div>
+                <div class="text-center">
+                    <t t-esc="o.company_id.report_footer"></t>
+                    <span name="hms_tagline" style="font-size: 12px;text-align: center;color: #555;font-style: italic;">Automatiza tu empresa con la mejor solución ERP <a href="tagre.pe" target="_blank">tagre.pe</a></span>
+                </div>
+            </div>
+        </template>
+        <!-- patient -->
+        <template id="report_patient_template">
+            <div class="row">
+                <div class="col col-2">
+                    <div class="label-container">
+                        <span t-esc="o.patient_id.l10n_latam_identification_type_id.name+' :'"></span>
+                    </div>
+                </div>
+                <div class="col col-10">
+                    <span class="ms-1" t-esc="o.patient_id.vat"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-2">
+                    <div class="label-container">
+                        <span t-esc="'Nombre :'"></span>
+                    </div>
+                </div>
+                <div class="col col-10">
+                    <span class="ms-1" t-esc="o.patient_id.name"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-2">
+                    <div class="label-container">
+                        <span t-esc="'Sexo :'"></span>
+                    </div>
+                </div>
+                <div class="col col-10">
+                    <span class="ms-1" t-esc="o.patient_id.gender"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-2">
+                    <div class="label-container">
+                        <span t-esc="'Fecha Naci. :'"></span>
+                    </div>
+                </div>
+                <div class="col col-10">
+                    <span class="ms-1" t-field="o.patient_id.birthday"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-2">
+                    <div class="label-container">
+                        <span t-esc="'Edad :'"></span>
+                    </div>
+                </div>
+                <div class="col col-10">
+                    <span class="ms-1" t-field="o.patient_id.age"></span>
+                </div>
+            </div>
+            <!-- Dinamic fields -->
+            <!-- Example: -->
+            <!-- <t t-set="patient_fields" t-value="[('DNI',o.patient_id.vat)]"></t> -->
+            <t t-as="field" t-foreach="patient_fields">
+                <t t-set="label" t-value="field[0]"></t>
+                <t t-set="value" t-value="field[1]"></t>
+                <div class="row" t-if="field">
+                    <div class="col col-2">
+                        <div class="label-container">
+                            <span t-esc="label+ ':'"></span>
+                        </div>
+                    </div>
+                    <div class="col col-10">
+                        <span class="ms-1" t-esc="value"></span>
+                    </div>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>

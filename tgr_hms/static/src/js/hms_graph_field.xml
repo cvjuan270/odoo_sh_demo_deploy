@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="tgr_hms.AlmightyHmsGraphField">
+        <div class="tgr_graph_linechart" t-att-class="props.className">
+            <canvas t-ref="canvas"/>
+        </div>
+    </t>
+
+</templates>

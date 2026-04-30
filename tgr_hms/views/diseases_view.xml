@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <!-- Diseases Views -->
+  <record id="view_diseases_tree" model="ir.ui.view">
+    <field name="name">hms.diseases.tree</field>
+    <field name="model">hms.diseases</field>
+    <field name="arch" type="xml">
+      <list string="TGR Enfermedades">
+        <field name="sequence" widget="handle" />
+        <field name="name" />
+        <field name="code" />
+        <field name="classification" />
+        <field name="category_id" />
+      </list>
+    </field>
+  </record>
+  <record id="view_diseases_form" model="ir.ui.view">
+    <field name="name">hms.diseases.form</field>
+    <field name="model">hms.diseases</field>
+    <field name="arch" type="xml">
+      <form string="TGR Enfermedades">
+        <sheet>
+          <div class="oe_title">
+            <label for="name" string="Nombre" class="oe_edit_only" />
+            <h1>
+              <field name="name" placeholder="Enfermedad" />
+            </h1>
+          </div>
+          <group>
+            <field name="code" />
+            <field name="category_id" />
+            <field name="classification" />
+            <field name="sequence" />
+          </group>
+          <group string="Información Adicional">
+            <field name="info" nolabel="1" colspan="2" />
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+  <record id="view_diseases_search" model="ir.ui.view">
+    <field name="name">hms.diseases.search</field>
+    <field name="model">hms.diseases</field>
+    <field name="arch" type="xml">
+      <search string="TGR Enfermedades">
+        <field name="category_id" />
+        <field name="info" />
+        <field name="code" />
+        <field name="name" />
+        <field name="classification" />
+        <newline />
+        <filter string="Enfermedades CIE-9" name="icd_9"
+          domain="[('classification','=','icd9')]" context="{}" />
+        <filter string="Enfermedades CIE-10" name="icd_10"
+          domain="[('classification','=','icd10')]" context="{}" />
+        <filter string="Enfermedades CIE-11" name="icd_11"
+          domain="[('classification','=','vaccine')]" context="{}" />
+        <group expand="0" string="Agrupar Por...">
+          <filter string="Categoría Principal" name="category_id_groupby" domain="[]"
+            context="{'group_by':'category_id'}" />
+          <filter string="Código" name="code_groupby" domain="[]"
+            context="{'group_by':'code'}" />
+          <filter string="Clasificación" name="classification_groupby"
+            domain="[]" context="{'group_by':'classification'}" />
+        </group>
+      </search>
+    </field>
+  </record>
+  <record model="ir.actions.act_window" id="act_open_diseases_view">
+    <field name="name">Enfermedades</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">hms.diseases</field>
+    <field name="view_mode">list,form</field>
+    <field name="search_view_id" ref="view_diseases_search" />
+    <field name="domain">[]</field>
+    <field name="context">{}</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face"> No se encontraron registros </p>
+      <p> Haga clic para agregar una Enfermedad. </p>
+    </field>
+  </record>
+  <!-- Diseases Category Views -->
+  <record id="view_diseases_category_tree" model="ir.ui.view">
+    <field name="name">diseases.category.tree</field>
+    <field name="model">diseases.category</field>
+    <field name="arch" type="xml">
+      <list string="Categoría de Enfermedades">
+        <field name="name" />
+        <field name="parent_id" />
+      </list>
+    </field>
+  </record>
+  <record id="view_diseases_category_form" model="ir.ui.view">
+    <field name="name">diseases.category.form</field>
+    <field name="model">diseases.category</field>
+    <field name="arch" type="xml">
+      <form string="Categoría de Enfermedades">
+        <sheet>
+          <div class="oe_title">
+            <label for="name" string="Nombre" class="oe_edit_only" />
+            <h1>
+              <field name="name" placeholder="Categoría de Enfermedades" />
+            </h1>
+          </div>
+          <group>
+            <field name="parent_id" />
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+  <record id="view_diseases_category_search" model="ir.ui.view">
+    <field name="name">diseases.category.search</field>
+    <field name="model">diseases.category</field>
+    <field name="arch" type="xml">
+      <search string="Categoría de Enfermedades">
+        <field name="name" />
+        <field name="parent_id" />
+        <newline />
+        <group expand="0" string="Agrupar Por...">
+          <filter string="Nombre de Categoría" name="name_groupby" domain="[]"
+            context="{'group_by':'name'}" />
+          <filter string="Categoría Padre" name="parent_id_groupby" domain="[]"
+            context="{'group_by':'parent_id'}" />
+        </group>
+      </search>
+    </field>
+  </record>
+  <record model="ir.actions.act_window" id="act_open_tgr_disease_category_view">
+    <field name="name">Categorías de Enfermedades</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">diseases.category</field>
+    <field name="view_mode">list,form</field>
+    <field name="search_view_id" ref="view_diseases_category_search" />
+    <field name="domain">[]</field>
+    <field name="context">{}</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face"> No se encontraron registros </p>
+      <p> Haga clic para agregar una Categoría de Enfermedades. </p>
+    </field>
+  </record>
+  <!-- Patient Disease -->
+  <record id="view_hms_patient_disease_form" model="ir.ui.view">
+    <field name="name">patient.disease.form</field>
+    <field name="model">hms.patient.disease</field>
+    <field name="arch" type="xml">
+      <form string="Enfermedad del Paciente">
+        <sheet>
+          <group>
+            <group>
+              <field name="disease_id" required="1" />
+              <field name="diagnosed_date" required="1" />
+              <field name="healed_date" string="Fecha de Curación" />
+              <field name="physician_id" string="Médico" />
+            </group>
+            <group>
+              <field name="status" />
+              <field name="disease_severity" />
+              <field name="is_allergy" />
+              <field name="pregnancy_warning" />
+            </group>
+            <field name="description" placeholder="Notas sobre la enfermedad" />
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+  <record id="view_hms_patient_disease_tree" model="ir.ui.view">
+    <field name="name">patient.disease.tree</field>
+    <field name="model">hms.patient.disease</field>
+    <field name="arch" type="xml">
+      <list string="Enfermedad del Paciente">
+        <field name="disease_id" />
+        <field name="diagnosed_date" />
+        <field name="physician_id" />
+        <field name="treatment_id" />
+      </list>
+    </field>
+  </record>
+  <record id="action_hms_patient_disease" model="ir.actions.act_window">
+    <field name="name">Examen Sistemático</field>
+    <field name="res_model">hms.patient.disease</field>
+    <field name="view_mode">list,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face"> No se encontraron registros </p>
+      <p> Haga clic para agregar un Examen Sistemático. </p>
+    </field>
+  </record>
+  <!-- Disease -->
+  <record id="view_hms_genetic_disease_form" model="ir.ui.view">
+    <field name="name">genetic.disease.form</field>
+    <field name="model">disease.gene</field>
+    <field name="arch" type="xml">
+      <form string="Enfermedad Genética">
+        <sheet>
+          <group>
+            <group>
+              <field name="name" />
+              <field name="long_name" />
+              <field name="chromosome" />
+            </group>
+            <group>
+              <field name="gene_id" />
+              <field name="location" />
+              <field name="dominance" />
+            </group>
+            <field name="info" />
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+  <record id="view_hms_genetic_disease_tree" model="ir.ui.view">
+    <field name="name">disease.gene.tree</field>
+    <field name="model">disease.gene</field>
+    <field name="arch" type="xml">
+      <list string="Enfermedad Genética">
+        <field name="name" />
+        <field name="gene_id" />
+        <field name="dominance" />
+      </list>
+    </field>
+  </record>
+  <record id="view_hms_genetic_disease_search" model="ir.ui.view">
+    <field name="name">disease.gene.search</field>
+    <field name="model">disease.gene</field>
+    <field name="arch" type="xml">
+      <search string="Gen de Enfermedad">
+        <field name="name" />
+        <field name="gene_id" />
+        <field name="chromosome" />
+        <newline />
+        <filter string="Gen Dominante" name="dominance"
+          domain="[('dominance','=','d')]" context="{}" />
+        <filter string="Gen Recesivo" name="recessive"
+          domain="[('dominance','=','r')]" context="{}" />
+        <group expand="0" string="Agrupar Por...">
+          <filter string="Dominancia" name="dominance_groupby" domain="[]"
+            context="{'group_by':'dominance'}" />
+        </group>
+      </search>
+    </field>
+  </record>
+  <record id="action_hms_genetic_disease" model="ir.actions.act_window">
+    <field name="name">Enfermedad Genética</field>
+    <field name="res_model">disease.gene</field>
+    <field name="view_mode">list,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face"> No se encontraron registros </p>
+      <p> Haga clic para agregar una Enfermedad Genética. </p>
+    </field>
+  </record>
+</odoo>

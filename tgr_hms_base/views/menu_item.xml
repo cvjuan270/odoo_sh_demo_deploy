@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Main Patient Menu-->
+    <menuitem groups="tgr_hms_base.group_hms_user" id="main_menu_patient" name="Patient" sequence="20" web_icon="tgr_hms_base,static/src/img/patient.png"></menuitem>
+    <menuitem action="action_patient" id="action_main_menu_patient" name="Patient" parent="main_menu_patient" sequence="10"></menuitem>
+    <!-- Patient Configuration Menu-->
+    <menuitem groups="tgr_hms_base.group_hms_manager" id="menu_hms_patient_cofig" name="Configuration" parent="tgr_hms_base.main_menu_patient" sequence="100"></menuitem>
+    <menuitem action="tgr_hms_base.act_open_patient_tag" id="menu_patient_tag" name="Etiquetas de Paciente" parent="tgr_hms_base.menu_hms_patient_cofig" sequence="15"></menuitem>
+    <menuitem action="tgr_hms_base.act_tgr_religion_view" id="menu_religion" name="Religion" parent="tgr_hms_base.menu_hms_patient_cofig" sequence="20"></menuitem>
+    <!--Main Physician -->
+    <menuitem groups="tgr_hms_base.group_hms_user" id="main_menu_physician" name="Physician" sequence="20" web_icon="tgr_hms_base,static/src/img/physician.png"></menuitem>
+    <menuitem action="action_physician" id="action_menu_physician" parent="main_menu_physician" sequence="0"></menuitem>
+    <menuitem groups="tgr_hms_base.group_hms_manager" id="menu_physician_cofig" name="Configuration" parent="main_menu_physician" sequence="100"></menuitem>
+    <menuitem action="action_physician_specialty" id="menu_physician_specialty" parent="menu_physician_cofig" sequence="10"></menuitem>
+    <menuitem action="action_physician_degree" id="menu_physician_degree" parent="menu_physician_cofig" sequence="10"></menuitem>
+    <!-- Main Services Menu -->
+    <menuitem groups="tgr_hms_base.group_manage_services" id="tgr_services_root" name="Services" sequence="25" web_icon="tgr_hms_base,static/src/img/services.png"></menuitem>
+    <menuitem action="product_template_action_services" id="menu_tgr_services" name="Services" parent="tgr_services_root"></menuitem>
+    <!-- Main Medicine Menu -->
+    <menuitem groups="tgr_hms_base.group_manage_medicines" id="tgr_medicine_root" name="Medicines" sequence="25" web_icon="tgr_hms_base,static/src/img/pills.png"></menuitem>
+    <menuitem action="product_template_action_medicines" id="menu_tgr_medicine" name="Medicines" parent="tgr_medicine_root"></menuitem>
+    <menuitem groups="tgr_hms_base.group_hms_user" id="menu_medicine_cofig" name="Configuration" parent="tgr_medicine_root" sequence="100"></menuitem>
+    <menuitem action="tgr_hms_base.act_open_drug_form_view" id="menu_medicine_drug" name="Drug Form" parent="tgr_hms_base.menu_medicine_cofig" sequence="2"></menuitem>
+    <menuitem action="act_open_active_comp" id="menu_medicine_product_active_component" name="Active Component" parent="tgr_hms_base.menu_medicine_cofig" sequence="5"></menuitem>
+    <menuitem action="act_open_drug_company_form_view" id="menu_medicine_drug_company" name="Drug Company" parent="tgr_hms_base.menu_medicine_cofig" sequence="6"></menuitem>
+    <menuitem action="act_open_therapeutic_effect" id="menu_therapeutic_effect" name="Therapeutic Effect" parent="tgr_hms_base.menu_medicine_cofig" sequence="7"></menuitem>
+    <menuitem action="action_medicament_flavour" id="menu_medicine_medicament_flavour" name="Medicament Flavour" parent="tgr_hms_base.menu_medicine_cofig" sequence="9"></menuitem>
+    <menuitem action="action_medicament_route" id="menu_medicine_medicament_route" name="Medicament Route" parent="tgr_hms_base.menu_medicine_cofig" sequence="10"></menuitem>
+</odoo>

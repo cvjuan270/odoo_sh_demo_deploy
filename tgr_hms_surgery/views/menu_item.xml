@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <!-- Surgery -->
+  <menuitem id="main_menu_surgery" name="Cirugía" sequence="26"
+    groups="tgr_hms_surgery.group_tgr_hms_surgery_user"
+    web_icon="tgr_hms_surgery,static/description/icon.png" />
+  <menuitem id="menu_surgery" name="Cirugía" action="action_hms_surgery"
+    parent="main_menu_surgery" />
+  <menuitem id="menu_package" name="Paquete" action="tgr_hms_package_action"
+    parent="main_menu_surgery" />
+  <!-- Configuration -->
+  <menuitem id="menu_surgery_cofig" name="Configuración"
+    parent="main_menu_surgery" sequence="50"
+    groups="tgr_hms_surgery.group_tgr_hms_surgery_manager" />
+  <menuitem id="conf_pre_operative_check_list" name="Lista de Verificación Preoperatoria"
+    parent="menu_surgery_cofig" action="action_check_list_conf_view" />
+  <menuitem id="tgr_health_surgery_template" name="Plantilla de Cirugía"
+    action="tgr_hms_surgery.action_hms_surgery_template"
+    parent="menu_surgery_cofig" sequence="27" />
+  <menuitem id="menu_tgr_hms_anesthesia" name="Anestesia"
+    action="tgr_hms_surgery.action_tgr_hms_anesthesia"
+    parent="menu_surgery_cofig" sequence="35" />
+</odoo>

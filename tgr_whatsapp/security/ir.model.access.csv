@@ -1,0 +1,13 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+access_tgr_whatsapp,access_tgr_whatsapp,model_tgr_whatsapp_message,base.group_user,1,1,1,0
+access_tgr_whatsapp_user,access_tgr_whatsapp_user,model_tgr_whatsapp_message,tgr_whatsapp.group_whatsapp_user,1,1,1,0
+access_tgr_whatsapp_manager,access_tgr_whatsapp_manager,model_tgr_whatsapp_message,tgr_whatsapp.group_whatsapp_manager,1,1,1,1
+access_tgr_whatsapp_template,access_tgr_whatsapp_template,model_tgr_whatsapp_template,base.group_user,1,0,0,0
+access_tgr_whatsapp_template_user,access_tgr_whatsapp_template_user,model_tgr_whatsapp_template,tgr_whatsapp.group_whatsapp_user,1,1,1,0
+access_tgr_whatsapp_template_manager,access_tgr_whatsapp_template_manager,model_tgr_whatsapp_template,tgr_whatsapp.group_whatsapp_manager,1,1,1,1
+tgr_whatsapp_announcement,tgr_whatsapp_announcement,model_tgr_whatsapp_announcement,base.group_user,1,0,0,0
+tgr_whatsapp_announcement_user,tgr_whatsapp_announcement_user,model_tgr_whatsapp_announcement,tgr_whatsapp.group_whatsapp_user,1,1,1,0
+tgr_whatsapp_announcement_manager,tgr_whatsapp_announcement_manager,model_tgr_whatsapp_announcement,tgr_whatsapp.group_whatsapp_manager,1,1,1,1
+
+access_tgr_send_whatsapp,access_tgr_send_whatsapp,model_tgr_send_whatsapp,base.group_user,1,1,1,1
+access_tgr_whatsapp_history,access_tgr_whatsapp_history,model_tgr_whatsapp_history,base.group_user,1,1,1,1

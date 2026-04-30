@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+  <record id="view_accommodation_history_list" model="ir.ui.view">
+    <field name="name">patient.accommodation.history.list</field>
+    <field name="model">patient.accommodation.history</field>
+    <field name="arch" type="xml">
+      <list string="Historial de Alojamiento" decoration-danger="end_date==False">
+        <field name="patient_id" />
+        <field name="ward_id" />
+        <field name="bed_id" />
+        <field name="hospitalization_id" />
+        <field name="start_date" />
+        <field name="end_date" />
+        <field name="rest_time" />
+        <field name="invoice_policy" />
+      </list>
+    </field>
+
+  </record>
+
+  <record id="view_accommodation_history_form" model="ir.ui.view">
+    <field name="name">patient.accommodation.history.form</field>
+    <field name="model">patient.accommodation.history</field>
+    <field name="arch" type="xml">
+      <form string="Formulario de Historial de Alojamiento">
+        <sheet>
+          <group>
+            <group>
+              <field name="hospitalization_id" />
+              <field name="patient_id" />
+              <field name="ward_id" />
+              <field name="bed_id" />
+            </group>
+            <group>
+              <field name="invoice_policy" />
+              <field name="start_date" />
+              <field name="end_date" />
+              <field name="rest_time" />
+            </group>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="accommodation_history_search" model="ir.ui.view">
+    <field name="name">Accommodation History</field>
+    <field name="model">patient.accommodation.history</field>
+    <field name="arch" type="xml">
+      <search string="Búsqueda de Historial de Alojamiento">
+        <field name="patient_id" />
+        <field name="end_date" />
+        <field name="start_date" />
+        <field name="hospitalization_id" />
+        <newline />
+        <group expand="0" string="Agrupar Por...">
+          <filter name="hospitalization" string="hospitalization" domain="[]"
+            context="{'group_by':'hospitalization_id'}" />
+        </group>
+      </search>
+    </field>
+  </record>
+
+  <record model="ir.actions.act_window" id="action_accommodation_history">
+    <field name="name">Historial de Alojamiento</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">patient.accommodation.history</field>
+    <field name="view_mode">list,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">
+        No hay Historial de Alojamiento.
+      </p>
+    </field>
+  </record>
+
+  <!-- Bed View -->
+  <record id="view_bed_list" model="ir.ui.view">
+    <field name="name">hospital.bed.list</field>
+    <field name="model">hospital.bed</field>
+    <field name="arch" type="xml">
+      <list string="Lista de Camas" decoration-info="state=='reserved'"
+        decoration-success="state=='free'"
+        decoration-danger="state=='occupied'" decoration-muted="state=='blocked'">
+        <field name="name" />
+        <field name="ward_id" />
+        <field name="list_price" />
+        <field name="patient_id" />
+        <field name="bed_type" />
+        <field name="telephone" />
+        <field name="state" decoration-info="state=='free'" decoration-danger="state=='blocked'"
+          decoration-success="state=='occupied'" decoration-warning="state=='reserved'"
+          widget="badge" />
+        <field name="notes" />
+        <field name="department_id" groups="tgr_hms.group_allow_multi_department" />
+        <field name="company_id" groups="base.group_multi_company" />
+      </list>
+    </field>
+  </record>
+
+  <record id="view_bed_form" model="ir.ui.view">
+    <field name="name">bed.form</field>
+    <field name="model">hospital.bed</field>
+    <field name="arch" type="xml">
+      <form string="Formulario de Cama">
+        <header>
+          <field name="state" widget="statusbar" statusbar_visible="free,reserved,occupied,blocked"
+            clickable="1" />
+        </header>
+        <sheet>
+          <div class="oe_button_box" name="button_box">
+            <button type="object" class="oe_stat_button" icon="fa-bed"
+              name="action_accommodation_history" string="Asignación de Cama" />
+          </div>
+          <group>
+            <group>
+              <field name="name" required="True" readonly="state!='free'" />
+              <field name="ward_id" required="True" readonly="state!='free'" />
+              <field name="invoice_policy" readonly="state!='free'" />
+              <field name="patient_id" readonly="1" />
+              <field name="department_id" groups="tgr_hms.group_allow_multi_department"
+                readonly="state!='free'" />
+            </group>
+            <group>
+              <field name="product_id" required="True"
+                domain="[('hospital_product_type','=','bed')]"
+                context="{'default_hospital_product_type':'bed'}" readonly="state!='free'" />
+              <field name="list_price" />
+              <field name="bed_type" readonly="state!='free'" />
+              <field name="telephone" readonly="state!='free'" />
+              <field name="company_id" groups="base.group_multi_company"
+                options="{'no_create': True}" readonly="state!='free'" />
+            </group>
+          </group>
+          <field name="notes" nolabel="1" placeholder="Notas..." />
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="bed_search" model="ir.ui.view">
+    <field name="name">bed.search</field>
+    <field name="model">hospital.bed</field>
+    <field name="arch" type="xml">
+      <search string="Búsqueda de Cama">
+        <field name="name" />
+        <field name="telephone" />
+        <field name="ward_id" />
+        <field name="product_id" />
+        <filter name="free" string="Camas Libres" domain="[('state','=','free')]" />
+        <filter name="reserved" string="Camas Reservadas" domain="[('state','=','reserved')]" />
+        <filter name="occupied" string="Camas Ocupadas" domain="[('state','=','occupied')]" />
+        <newline />
+        <group expand="0" string="Agrupar Por...">
+          <filter name="group_by_ward" string="Sala/Habitación" domain="[]"
+            context="{'group_by':'ward_id'}" />
+          <filter name="group_by_type" string="Agrupar Por Tipos" context="{'group_by':'bed_type'}" />
+        </group>
+      </search>
+    </field>
+  </record>
+
+
+  <record model="ir.actions.act_window" id="action_bed">
+    <field name="name">Camas</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">hospital.bed</field>
+    <field name="view_mode">list,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">
+        Haga clic para agregar una cama.
+      </p>
+    </field>
+  </record>
+</odoo>

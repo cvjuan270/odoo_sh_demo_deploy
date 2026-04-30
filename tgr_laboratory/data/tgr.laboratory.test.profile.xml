@@ -1,0 +1,48 @@
+<odoo>
+    <data noupdate="1">
+        <record id="tgr_lab_test_profile_80061" model="tgr.laboratory.test.profile">
+            <field name="name">PERFIL LIPÍDICO</field>
+            <field name="code">80061</field>
+        </record>
+        <record id="tgr_lab_test_profile_80076" model="tgr.laboratory.test.profile">
+            <field name="name">PERFIL HEPÁTICO</field>
+            <field name="code">80076</field>
+        </record>
+        <record id="tgr_lab_test_profile_80069" model="tgr.laboratory.test.profile">
+            <field name="name">PERFIL RENAL</field>
+            <field name="code">80069</field>
+        </record>
+        <record id="tgr_lab_test_profile_80055" model="tgr.laboratory.test.profile">
+            <field name="name">PERFIL GESTANTE</field>
+            <field name="code">80055</field>
+        </record>
+        <record id="tgr_lab_test_profile_80092" model="tgr.laboratory.test.profile">
+            <field name="name">PERFIL TIROIDEO</field>
+            <field name="code">80092</field>
+        </record>
+        <record id="tgr_lab_test_profile_80051" model="tgr.laboratory.test.profile">
+            <field name="name">PERFIL DE ELECTROLITOS</field>
+            <field name="code">80051</field>
+        </record>
+        <record id="tgr_lab_test_profile_80062" model="tgr.laboratory.test.profile">
+            <field name="name">PERFIL CARDIACO</field>
+            <field name="code">80062</field>
+        </record>
+        <record id="tgr_lab_test_profile_80063" model="tgr.laboratory.test.profile">
+            <field name="name">PERFIL DE COAGULACIÓN</field>
+            <field name="code">80063</field>
+        </record>
+        <record id="tgr_lab_test_profile_80090" model="tgr.laboratory.test.profile">
+            <field name="name">PERFIL TORCH</field>
+            <field name="code">80090</field>
+        </record>
+        <record id="tgr_lab_test_profile_80096" model="tgr.laboratory.test.profile">
+            <field name="name">PERFIL NEONATAL</field>
+            <field name="code">80096</field>
+        </record>
+        <record id="tgr_lab_test_profile_80095" model="tgr.laboratory.test.profile">
+            <field name="name">PERFIL DONANTE DE SANGRE</field>
+            <field name="code">80095</field>
+        </record>
+    </data>
+</odoo>

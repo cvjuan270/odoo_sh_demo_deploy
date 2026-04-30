@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <record id="view_tgr_family_member_form" model="ir.ui.view">
+    <field name="name">tgr.family.member.form</field>
+    <field name="model">tgr.family.member</field>
+    <field name="arch" type="xml">
+      <form string="Familiar">
+        <sheet>
+          <group>
+            <group>
+              <field name="related_patient_id" />
+              <field name="relation_id" />
+            </group>
+            <group>
+              <field name="patient_id" />
+            </group>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+  <!-- Patient View -->
+  <record id="patient_kanban_view" model="ir.ui.view">
+    <field name="name">patient.kanban</field>
+    <field name="model">hms.patient</field>
+    <field name="inherit_id" ref="tgr_hms_base.patient_kanban_view" />
+    <field name="arch" type="xml">
+      <field name="id" position="after">
+        <field name="show_cancellation_warning_flag" />
+        <field name="tgr_cancelled_appointments" />
+        <field name="tgr_flag_days" />
+      </field>
+      <xpath expr="//div[hasclass('oe_kanban_details')]/ul" position="after">
+        <div t-if="record.show_cancellation_warning_flag.raw_value"
+          class="badge rounded-pill text-bg-danger">
+          <span class="fa fa-exclamation-triangle" title="Cancelación" />
+                    <field
+            name="tgr_cancelled_appointments" nolabel="1" /> Cancelación de Cita en los últimos
+          <field name="tgr_flag_days" nolabel="1" /> días </div>
+      </xpath>
+    </field>
+  </record>
+  <record id="view_patient_form" model="ir.ui.view">
+    <field name="name">patient.form</field>
+    <field name="model">hms.patient</field>
+    <field name="inherit_id" ref="tgr_hms_base.view_patient_form" />
+    <field name="arch" type="xml">
+      <header position="inside">
+        <button name="create_invoice" string="Crear Factura" type="object"
+          class="oe_highlight" invisible="invoice_id"
+          groups="tgr_hms.group_patient_registartion_invoicing" />
+        <field name="invoice_id" invisible="1" />
+      </header>
+      <widget name="web_ribbon" position="after">
+        <field name="show_cancellation_warning_flag" invisible="1" />
+        <div invisible="not show_cancellation_warning_flag"
+          class="badge rounded-pill text-bg-danger">
+          <span class="fa fa-exclamation-triangle" title="Cancelación" />
+                    <field
+            name="tgr_cancelled_appointments" nolabel="1" /> Cancelación de Cita en los últimos
+          <field name="tgr_flag_days" nolabel="1" /> días </div>
+      </widget>
+      <div name="button_box" position="inside">
+        <button name="action_treatment" type="object" class="oe_stat_button"
+          groups="tgr_hms.group_hms_receptionist" icon="fa-user-md">
+          <field string="Tratamientos" name="treatment_count" widget="statinfo" />
+        </button>
+        <button name="action_appointment" type="object" class="oe_stat_button"
+          groups="tgr_hms.group_hms_receptionist" icon="fa-stethoscope">
+          <field string="Citas" name="appointment_count"
+            widget="statinfo" />
+        </button>
+        <button name="action_evaluation" type="object" class="oe_stat_button"
+          groups="tgr_hms.group_hms_receptionist" icon="fa-stethoscope">
+          <field string="Evaluaciones" name="evaluation_count" widget="statinfo" />
+        </button>
+        <button name="action_prescription" groups="tgr_hms.group_hms_jr_doctor"
+          type="object" class="oe_stat_button" icon="fa-wpforms">
+          <field string="Prescripciones" name="prescription_count"
+            widget="statinfo" />
+        </button>
+        <button name="action_view_patient_procedures" class="oe_stat_button"
+          icon="fa-medkit" type="object">
+          <field string="Procedimientos del Paciente" name="patient_procedure_count"
+            widget="statinfo" />
+        </button>
+      </div>
+      <field name="age" position="after">
+        <field name="department_ids" widget="many2many_tags"
+          groups="tgr_hms.group_allow_multi_department"
+          options="{'no_open': True, 'no_create': True}"
+          context="{'tree_view_ref': 'tgr_hms.view_hr_department_tree'}"
+          domain="[('patient_department','=',True)]" />
+      </field>
+      <field name="caste" position="after">
+        <field name="ethnic_group_id"
+          groups="tgr_hms_base.group_manage_ethnic_religion_tribe" />
+      </field>
+      <field name="company_id" position="attributes">
+        <attribute name="string">Hospital</attribute>
+      </field>
+      <group name="ref_doc_details" position="inside">
+        <field name="ref_doctor_ids" widget="many2many_tags" />
+        <field name="assignee_ids" widget="many2many_tags" />
+        <field name="registration_product_id"
+          groups="tgr_hms.group_patient_registartion_invoicing" />
+      </group>
+      <page name="hospital_info" position="after">
+        <page name="clinical_ass" string="Evaluación Clínica"
+          groups="tgr_hms.group_hms_nurse">
+          <div>NOTA: Los detalles se muestran según la última Evaluación de Paciente completada. <t invisible="not last_evaluation_id">Última Evaluación: <field
+                name="last_evaluation_id" nolabel="1" class="oe_link" /></t> <button
+              class="oe_inline oe_stat_button btn-link" type="object"
+              name="show_weight_chart" title="Mostrar Gráficos de Evaluación"
+              icon="fa-area-chart" string="Mostrar Gráficos de Evaluación"
+              widget="statinfo" /></div>
+          <group>
+            <group>
+              <label for="weight" />
+              <div class="o_row">
+                <field name="weight" />
+                <field name="tgr_weight_name" />
+              </div>
+              <label for="height" />
+              <div class="o_row">
+                <field name="height" />
+                <field name="tgr_height_name" />
+              </div>
+              <label for="temp" />
+              <div class="o_row">
+                <field name="temp" />
+                <field name="tgr_temp_name" />
+              </div>
+              <label for="rbs" />
+              <div class="o_row">
+                <field name="rbs" />
+                <field name="tgr_rbs_name" />
+              </div>
+            </group>
+            <group>
+              <field name="rr" />
+              <label string="PA Sistólica/Diastólica" for="systolic_bp" />
+              <div name="systolic_bp">
+                <div class="oe_inline" style="display: inline;">
+                  <field name="systolic_bp" class="oe_inline" />/<field
+                    name="diastolic_bp" class="oe_inline" />
+                </div>
+              </div>
+              <label for="spo2" />
+              <div class="o_row">
+                <field name="spo2" />
+                <field name="tgr_spo2_name" />
+              </div>
+            </group>
+            <group>
+              <field name="bmi" />
+            </group>
+            <group>
+              <field name="bmi_state" />
+            </group>
+          </group>
+          <separator string="Nivel de Dolor" />
+          <group>
+            <group>
+              <label for="pain_level" />
+              <div class="o_row">
+                <field name="pain_level" />
+                <span>
+                  <button name="%(action_tgr_pain_level)d" type="action"
+                    icon="fa-question-circle" title="Nivel de Dolor" />
+                </span>
+              </div>
+              <field name="pain" colspan="2" nolabel="1" />
+            </group>
+          </group>
+        </page>
+        <page name='diseases' string="Enfermedades"
+          groups="tgr_hms.group_hms_jr_doctor">
+          <separator string="Alerta Médica" colspan="4" />
+          <group>
+            <field name="medical_alert_ids" widget="many2many_tags" />
+          </group>
+          <separator string="Historia Médica Pasada" colspan="4" />
+          <field name="medical_history" />
+          <separator string="Historial de Enfermedades" colspan="4" />
+          <field name="patient_diseases_ids" nolabel="1" colspan="4" />
+          <separator string="Historia Familiar de Enfermedades" />
+          <field name="family_history_ids" />
+          <separator string="Riesgo Genético" />
+          <field name="genetic_risks_ids" />
+        </page>
+        <page string="Familia" name="family_note">
+          <field name="family_member_ids">
+            <list editable="bottom">
+              <field name="related_patient_id" />
+              <field name="relation_id" required="1" />
+            </list>
+          </field>
+        </page>
+      </page>
+    </field>
+  </record>
+  <!-- Graph -->
+  <record id="patient_evalution_kanban_view" model="ir.ui.view">
+    <field name="name">Evaluation</field>
+    <field name="model">hms.patient</field>
+    <field name="type">kanban</field>
+    <field name="priority">100</field>
+    <field name="arch" type="xml">
+      <kanban create="false" class="o_kanban_dashboard o_tgr_hms_kanban">
+        <field name="grpah_data_filter" />
+        <field name="patient_weight_line_graph" />
+        <field name="patient_height_line_graph" />
+        <field name="patient_temp_line_graph" />
+        <field name="patient_hr_line_graph" />
+        <field name="patient_rr_line_graph" />
+        <field name="patient_systolic_bp_line_graph" />
+        <field name="patient_diastolic_bp_line_graph" />
+        <field name="patient_spo2_line_graph" />
+        <templates>
+          <t t-name="card">
+            <div id="tgr_hms_dashboard" class="">
+              <div class="row">
+                <span t-esc="grpah_data_filter" />
+                <div class="btn-group col-4 mt8 mb8" role="group"
+                  aria-label="Filtros">
+                  <button
+                    t-attf-class="btn #{record.grpah_data_filter.raw_value=='today' ? 'btn-primary' : 'btn-secondary'}"
+                    type="object" name="today_data">Hoy</button>
+                  <button
+                    t-attf-class="btn #{record.grpah_data_filter.raw_value=='week' ? 'btn-primary' : 'btn-secondary'}"
+                    type="object" name="week_data">Esta Semana</button>
+                  <button
+                    t-attf-class="btn #{record.grpah_data_filter.raw_value=='month' ? 'btn-primary' : 'btn-secondary'}"
+                    type="object" name="month_data">Este Mes</button>
+                  <button
+                    t-attf-class="btn #{record.grpah_data_filter.raw_value=='all' ? 'btn-primary' : 'btn-secondary'}"
+                    type="object" name="all_data">Hasta Ahora</button>
+                </div>
+              </div>
+              <div class="row mb8">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <div t-attf-class="card acs-card card-">
+                    <div class="card-heading">
+                      <i class="fa fa-area-chart" aria-label="Información"
+                        title="Gráfico de Peso"></i> Gráfico de Peso </div>
+                    <div class="card-body o_tgr_AcsDashboardGraph">
+                      <t t-name="WightChart">
+                        <field name="patient_weight_line_graph"
+                          ylabel="Peso (kg)" xlabel="Fecha"
+                          widget="AlmightyHmsGraph" />
+                      </t>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mb8">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <div t-attf-class="card acs-card card-">
+                    <div class="card-heading">
+                      <i class="fa fa-area-chart" aria-label="Información"
+                        title="Gráfico de Estatura"></i> Gráfico de Estatura </div>
+                    <div class="card-body o_tgr_AcsDashboardGraph">
+                      <t t-name="HeightChart">
+                        <field name="patient_height_line_graph" ylabel="Estatura"
+                          xlabel="Fecha" widget="AlmightyHmsGraph" />
+                      </t>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mb8">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <div t-attf-class="card acs-card card-">
+                    <div class="card-heading">
+                      <i class="fa fa-area-chart" aria-label="Información"
+                        title="Gráfico de Temperatura"></i> Temperatura </div>
+                    <div class="card-body o_tgr_AcsDashboardGraph">
+                      <t t-name="TempratureChart">
+                        <field name="patient_temp_line_graph"
+                          ylabel="Temperatura" xlabel="Fecha"
+                          widget="AlmightyHmsGraph" />
+                      </t>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mb8">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <div t-attf-class="card acs-card card-">
+                    <div class="card-heading">
+                      <i class="fa fa-area-chart" aria-label="Información"
+                        title="Gráfico de Frecuencia Cardíaca"></i> Gráfico de Frecuencia Cardíaca </div>
+                    <div class="card-body o_tgr_AcsDashboardGraph">
+                      <t t-name="HRChart">
+                        <field name="patient_hr_line_graph" ylabel="Frecuencia Cardíaca"
+                          xlabel="Fecha" widget="AlmightyHmsGraph" />
+                      </t>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mb8">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <div t-attf-class="card acs-card card-">
+                    <div class="card-heading">
+                      <i class="fa fa-area-chart" aria-label="Información"
+                        title="Gráfico de FR"></i> Gráfico de FR </div>
+                    <div class="card-body o_tgr_AcsDashboardGraph">
+                      <t t-name="RRChart">
+                        <field name="patient_rr_line_graph" ylabel="FR"
+                          xlabel="Fecha" widget="AlmightyHmsGraph" />
+                      </t>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mb8">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <div t-attf-class="card acs-card card-">
+                    <div class="card-heading">
+                      <i class="fa fa-area-chart" aria-label="Información"
+                        title="Gráfico de PA Sistólica"></i> Gráfico de PA Sistólica </div>
+                    <div class="card-body o_tgr_AcsDashboardGraph">
+                      <t t-name="SBPChart">
+                        <field name="patient_systolic_bp_line_graph"
+                          ylabel="PA Sistólica" xlabel="Fecha"
+                          widget="AlmightyHmsGraph" />
+                      </t>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mb8">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <div t-attf-class="card acs-card card-">
+                    <div class="card-heading">
+                      <i class="fa fa-area-chart" aria-label="Información"
+                        title="Gráfico de PA Diastólica"></i> Gráfico de PA Diastólica </div>
+                    <div class="card-body o_tgr_AcsDashboardGraph">
+                      <t t-name="DBPChart">
+                        <field name="patient_diastolic_bp_line_graph"
+                          ylabel="PA Diastólica" xlabel="Fecha"
+                          widget="AlmightyHmsGraph" />
+                      </t>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mb8">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <div t-attf-class="card acs-card card-">
+                    <div class="card-heading">
+                      <i class="fa fa-area-chart" aria-label="Información"
+                        title="Gráfico de SpO2"></i> Gráfico de SpO2 </div>
+                    <div class="card-body o_tgr_AcsDashboardGraph">
+                      <t t-name="Spo2Chart">
+                        <field name="patient_spo2_line_graph" ylabel="SpO2"
+                          xlabel="Fecha" widget="AlmightyHmsGraph" />
+                      </t>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mb8">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <div t-attf-class="card acs-card card-">
+                    <div class="card-heading">
+                      <i class="fa fa-area-chart" aria-label="Información"
+                        title="Gráfico de RBS"></i> RBS </div>
+                    <div class="card-body o_tgr_AcsDashboardGraph">
+                      <t t-name="RBSChart">
+                        <field name="patient_rbs_line_graph" ylabel="RBS"
+                          xlabel="Fecha" widget="AlmightyHmsGraph" />
+                      </t>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </t>
+        </templates>
+      </kanban>
+    </field>
+  </record>
+  <record id="action_patient_evaluation_graph_1" model="ir.actions.act_window">
+    <field name="name">Gráfico de Evaluación del Paciente</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">hms.patient</field>
+    <field name="view_mode">kanban</field>
+    <field name="view_id" ref="patient_evalution_kanban_view" />
+  </record>
+</odoo>

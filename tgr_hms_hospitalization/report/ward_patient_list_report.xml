@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="ward_patient_list_report_document">
+        <t t-call="web.external_layout">
+            <div class="page">
+                <div class="oe_structure"/>
+
+                <table class="table table-bordered">
+                    <tr>
+                        <td style="text-align:center" colspan="4">
+                            <strong style="font-size: 20px;">
+                                <span>Sala: </span>
+                                <span t-field="doc.name"/>
+                            </strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 200;">
+                            <strong>Tipo de Sala/Habitación:</strong>
+                        </td>
+                        <td style="width: 300;">
+                            <span t-field="doc.ward_room_type"/>
+                        </td>
+                        <td style="width: 200;">
+                            <strong>Género:</strong>
+                        </td>
+                        <td style="width: 300;">
+                            <span t-field="doc.gender"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 200;">
+                            <strong>Piso:</strong>
+                        </td>
+                        <td style="width: 300;">
+                            <span t-field="doc.floor"/>
+                        </td>
+                        <td style="width: 200;">
+                            <strong>Fecha:</strong>
+                        </td>
+                        <td style="width: 300;">
+                            <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')" />
+                        </td>
+                    </tr>
+                </table>
+                <br/>
+                <table class="table table-condensed">
+                    <thead>
+                        <tr class="active">
+                            <th>
+                                <strong>Cama No</strong>
+                            </th>
+                            <th>
+                                <strong>Nombre del Paciente</strong>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr t-foreach="doc.bed_ids.filtered(lambda r: r.patient_id)" t-as="bed">
+                            <td>
+                                <span t-esc="bed.name"/>
+                            </td>
+                            <td>
+                                <span t-esc="bed.patient_id.name"/>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p class="mt32">
+                    Esta información es según nuestros registros. Si tiene alguna pregunta, contáctenos.<br/><br/>
+                    Atentamente,<br/>
+                </p>                
+                <div class="oe_structure"/>
+                <p style="page-break-before:always;"> </p>
+            </div>
+        </t>
+    </template>
+
+    <template id="ward_patient_list_report">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="tgr_hms_hospitalization.ward_patient_list_report_document" t-lang="doc.create_uid.partner_id.lang"/>
+            </t>
+        </t>
+    </template>
+
+    <record id="action_wardpatient_report" model="ir.actions.report">
+        <field name="name">Lista de Pacientes de Sala</field>
+        <field name="model">hospital.ward</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">tgr_hms_hospitalization.ward_patient_list_report</field>
+        <field name="report_file">tgr_hms_hospitalization.ward_patient_list_report</field>
+        <field name="print_report_name">(object.name).replace('/','_') + '_PatientList'</field>
+        <field name="binding_model_id" ref="model_hospital_ward"/>
+        <field name="groups_id" eval="[(4, ref('tgr_hms_hospitalization.group_tgr_hms_hospitalization_executive'))]"/>
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>

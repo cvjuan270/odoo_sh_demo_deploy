@@ -1,0 +1,26 @@
+id,name,code
+tgr_lab_test_uom_01,g/dl,g/dl
+tgr_lab_test_uom_02,mg/día,mg/día
+tgr_lab_test_uom_03,U/L,U/L
+tgr_lab_test_uom_04,mg/dl,mg/dl
+tgr_lab_test_uom_05,g/día,g/día
+tgr_lab_test_uom_06,g/dia,g/dia
+tgr_lab_test_uom_07,pg/ml,pg/ml
+tgr_lab_test_uom_08,mUI/ml,mUI/ml
+tgr_lab_test_uom_09,%,%
+tgr_lab_test_uom_10,mEq/l,mEq/l
+tgr_lab_test_uom_11,mEq/kg/día,mEq/kg/día
+tgr_lab_test_uom_12,µUI/ml,µUI/ml
+tgr_lab_test_uom_13,mmol/L,mmol/L
+tgr_lab_test_uom_14,ng/ml,ng/ml
+tgr_lab_test_uom_15,mg/24 horas,mg/24 horas
+tgr_lab_test_uom_16,µg/dl,µg/dl
+tgr_lab_test_uom_17,ng/dl,ng/dl
+tgr_lab_test_uom_18,seg.,seg.
+tgr_lab_test_uom_19,10^3/µl,10^3/µl
+tgr_lab_test_uom_20,10^6/µl,10^6/µl
+tgr_lab_test_uom_21,fl,fl
+tgr_lab_test_uom_22,pg,pg
+tgr_lab_test_uom_23,10^9/L,10^9/L
+tgr_lab_test_uom_24,mm/h,mm/h
+tgr_lab_test_uom_25,dils,dils

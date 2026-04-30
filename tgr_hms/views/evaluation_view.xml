@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <record id="view_tgr_patient_evaluation_form" model="ir.ui.view">
+    <field name="name">Patient Evaluation</field>
+    <field name="model">tgr.patient.evaluation</field>
+    <field name="arch" type="xml">
+      <form>
+        <header>
+          <button name="action_done" invisible="state != 'draft'"
+            groups="tgr_hms.group_hms_jr_doctor,tgr_hms.group_hms_nurse"
+            type="object" string="Finalizado" class="oe_highlight" />
+          <button name="action_cancel" string="Cancelar"
+            invisible="state != 'draft'" type="object" />
+          <button name="action_draft" string="Borrador"
+            invisible="state != 'cancel'" type="object" />
+          <field name="state" widget="statusbar" statusbar_visible="draft,done" />
+        </header>
+        <sheet>
+          <field name="image_128" widget="image" class="oe_avatar"
+            options="{'preview_image': 'image_128'}" />
+          <div class="oe_title">
+            <h1>
+              <field name="name" default_focus="1" placeholder="Nombre" />
+            </h1>
+          </div>
+          <group>
+            <group>
+              <field name="patient_id" readonly="state in ['cancel','done']" />
+              <field name="age" readonly="1" />
+              <field name="appointment_id"
+                domain="[('patient_id','=', patient_id)]"
+                context="{'default_patient_id': patient_id, 'default_physician_id': physician_id}"
+                readonly="state in ['cancel','done']" />
+            </group>
+            <group>
+              <field name="physician_id" readonly="state in ['cancel','done']" />
+              <field name="date" readonly="state in ['cancel','done']" />
+              <field name="company_id" groups="base.group_multi_company"
+                options="{'no_create': True}"
+                readonly="state in ['cancel','done']" />
+            </group>
+          </group>
+          <notebook>
+            <page name="details" string="Detalles"
+              groups="tgr_hms.group_hms_nurse">
+              <group>
+                <group>
+                  <label for="weight" />
+                  <div class="o_row">
+                    <field name="weight" readonly="state in ['cancel','done']" />
+                    <field name="tgr_weight_name" />
+                  </div>
+                  <label for="height" />
+                  <div class="o_row">
+                    <field name="height" readonly="state in ['cancel','done']" />
+                    <field name="tgr_height_name" />
+                  </div>
+                  <label for="temp" />
+                  <div class="o_row">
+                    <field name="temp" readonly="state in ['cancel','done']" />
+                    <field name="tgr_temp_name" />
+                  </div>
+                  <label for="hr" />
+                  <div class="o_row">
+                    <field name="hr" readonly="state in ['cancel','done']" />
+                    bpm </div>
+                  <field name="rr" readonly="state in ['cancel','done']" />
+                </group>
+                <group>
+                  <label string="PA Sistólica/Diastólica" for="systolic_bp" />
+                  <div name="systolic_bp">
+                    <div class="oe_inline" style="display: inline;">
+                      <field name="systolic_bp" class="oe_inline"
+                        readonly="state in ['cancel','done']" />/<field
+                        name="diastolic_bp" class="oe_inline"
+                        readonly="state in ['cancel','done']" />
+                    </div>
+                  </div>
+                  <label for="spo2" />
+                  <div class="o_row">
+                    <field name="spo2" readonly="state in ['cancel','done']" />
+                    <field name="tgr_spo2_name" />
+                  </div>
+                  <label for="rbs" />
+                  <div class="o_row">
+                    <field name="rbs" readonly="state in ['cancel','done']" />
+                    <field name="tgr_rbs_name" />
+                  </div>
+                  <label for="head_circum" />
+                  <div class="o_row">
+                    <field name="head_circum"
+                      readonly="state in ['cancel','done']" />
+                    <field name="tgr_head_circum_name" />
+                  </div>
+                </group>
+                <group>
+                  <field name="bmi" readonly="state in ['cancel','done']" />
+                </group>
+                <group>
+                  <field name="bmi_state" readonly="state in ['cancel','done']" />
+                </group>
+              </group>
+              <group>
+                <separator string="Resumen Físico Clínico" />
+                <label for="anamnesis" />
+                <div class="o-row">
+                  <field name="anamnesis" readonly="state == 'done'" />
+                </div>
+                <label for="physical_exam" />
+                <div class="o-row">
+                  <field name="physical_exam" readonly="state == 'done'" />
+                </div>
+                <label for="diseases_ids" />
+                <div class="o-row">
+                  <field name="diseases_ids" widget="many2many_tags"
+                    readonly="state == 'done'"
+                    options="{'no_create': True, 'no_open': True}" />
+                </div>
+              </group>
+            </page>
+          </notebook>
+        </sheet>
+        <chatter></chatter>
+      </form>
+    </field>
+  </record>
+  <record model="ir.ui.view" id="view_tgr_patient_evaluation_search">
+    <field name="name">evaluation.list</field>
+    <field name="model">tgr.patient.evaluation</field>
+    <field name="arch" type="xml">
+      <search string="Evaluación del Paciente">
+        <field name="name" />
+        <field name="patient_id" />
+        <field name="date" />
+        <group expand="0" string="Agrupar Por...">
+          <filter string="Paciente" name="patient_groupby" domain="[]"
+            context="{'group_by':'patient_id'}" />
+          <filter string="Fecha" name="date_groupby" domain="[]"
+            context="{'group_by':'date'}" />
+          <filter string="Estado" name="state_groupby" domain="[]"
+            context="{'group_by':'state'}" />
+        </group>
+      </search>
+    </field>
+  </record>
+  <record model="ir.ui.view" id="view_tgr_patient_evaluation_tree">
+    <field name="name">treatment.list</field>
+    <field name="model">tgr.patient.evaluation</field>
+    <field name="arch" type="xml">
+      <list string="Evaluación del Paciente">
+        <field name="name" />
+        <field name="patient_id" />
+        <field name="date" />
+        <field name="state" />
+        <field name="company_id" groups="base.group_multi_company" />
+      </list>
+    </field>
+  </record>
+  <record id="view_tgr_patient_evaluation_calendar" model="ir.ui.view">
+    <field name="name">tgr.patient.evaluation.calendar</field>
+    <field name="model">tgr.patient.evaluation</field>
+    <field name="type">calendar</field>
+    <field name="arch" type="xml">
+      <calendar string="Evaluaciones del Paciente" color="patient_id"
+        date_start="date">
+        <field name="physician_id" />
+        <field name="patient_id" />
+        <field name="state" />
+      </calendar>
+    </field>
+  </record>
+  <record id="view_tgr_patient_evaluation_pivot" model="ir.ui.view">
+    <field name="name">tgr.patient.evaluation.pivot</field>
+    <field name="model">tgr.patient.evaluation</field>
+    <field name="arch" type="xml">
+      <pivot string="Evaluaciones del Paciente">
+        <field name="date" type="row" />
+        <field name="physician_id" type="row" />
+      </pivot>
+    </field>
+  </record>
+  <record id="action_tgr_patient_evaluation" model="ir.actions.act_window">
+    <field name="name">Evaluación del Paciente</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">tgr.patient.evaluation</field>
+    <field name="view_mode">list,form,calendar,pivot</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face"> No se encontraron registros </p>
+      <p> Haga clic para agregar una Evaluación del Paciente. </p>
+    </field>
+  </record>
+  <!-- POPUP -->
+  <record id="view_tgr_patient_evaluation_popup_form" model="ir.ui.view">
+    <field name="name">tgr.patient.evaluation.form</field>
+    <field name="model">tgr.patient.evaluation</field>
+    <field name="inherit_id" ref="tgr_hms.view_tgr_patient_evaluation_form" />
+    <field name="mode">primary</field>
+    <field name="priority">1</field>
+    <field name="arch" type="xml">
+      <sheet position="after">
+        <footer>
+          <button name="create_evaluation" type="object" string="Crear"
+            class="oe_highlight" />
+          <button string="Cancelar" class="oe_link" special="cancel" />
+        </footer>
+      </sheet>
+    </field>
+  </record>
+  <record id="action_tgr_patient_evaluation_popup" model="ir.actions.act_window">
+    <field name="name">Evaluación</field>
+    <field name="res_model">tgr.patient.evaluation</field>
+    <field name="view_id" ref="view_tgr_patient_evaluation_popup_form" />
+    <field name="view_mode">form</field>
+    <field name="target">new</field>
+  </record>
+</odoo>

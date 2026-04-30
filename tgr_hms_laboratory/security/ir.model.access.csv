@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hms_laboratory_request_line_receptionist,TGR Patient Laboratory Request line,tgr_laboratory.model_laboratory_request_line,tgr_hms.group_hms_receptionist,1,1,1,1
+access_hms_tgr_laboratory_request_receptionist,Patient Lab Request Recep,tgr_laboratory.model_tgr_laboratory_request,tgr_hms.group_hms_receptionist,1,1,1,0
+
+access_patient_laboratory_test_jr_doctor,Patient Lab Test phy,tgr_laboratory.model_patient_laboratory_test,tgr_hms.group_hms_jr_doctor,1,1,1,0
+access_hms_patient_laboratory_test_jr_doctor,TGR Laboratory phy,tgr_laboratory.model_tgr_lab_test,tgr_hms.group_hms_jr_doctor,1,1,1,0
+access_hms_lab_test_critearea_jr_doctor,TGR Test Criteria phy,tgr_laboratory.model_lab_test_critearea,tgr_hms.group_hms_jr_doctor,1,1,1,0

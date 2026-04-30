@@ -1,0 +1,39 @@
+<odoo>
+    <data noupdate="1">
+        <record id="laboratory_area_uroa" model="laboratory.area">
+            <field name="code">UROA</field>
+            <field name="name">UROANALISIS</field>
+            <field name="sequence">10</field>
+        </record>
+        <record id="laboratory_area_bioq" model="laboratory.area">
+            <field name="code">BIOQ</field>
+            <field name="name">BIOQUIMICA</field>
+            <field name="sequence">11</field>
+        </record>
+        <record id="laboratory_area_micr" model="laboratory.area">
+            <field name="code">MICR</field>
+            <field name="name">MICROBIOLOGÍA</field>
+            <field name="sequence">12</field>
+        </record>
+        <record id="laboratory_area_inmu" model="laboratory.area">
+            <field name="code">INMU</field>
+            <field name="name">INMUNOLOGIA</field>
+            <field name="sequence">13</field>
+        </record>
+        <record id="laboratory_area_hemo" model="laboratory.area">
+            <field name="code">HEMO</field>
+            <field name="name">HEMOSTASIA</field>
+            <field name="sequence">14</field>
+        </record>
+        <record id="laboratory_area_hema" model="laboratory.area">
+            <field name="code">HEMA</field>
+            <field name="name">HEMATOLOGÍA</field>
+            <field name="sequence">15</field>
+        </record>
+        <record id="laboratory_area_basa" model="laboratory.area">
+            <field name="code">BASA</field>
+            <field name="name">BANCO DE SANGRE</field>
+            <field name="sequence">16</field>
+        </record>
+    </data>
+</odoo>

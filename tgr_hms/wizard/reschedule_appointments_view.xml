@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_tgr_reschedule_appointments_form" model="ir.ui.view">
+        <field name="name">tgr.reschedule.appointments.form</field>
+        <field name="model">tgr.reschedule.appointments</field>
+        <field name="arch" type="xml">
+            <form string="Reprogramar Citas">
+                <group>
+                    <field name="tgr_reschedule_time" widget="float_time"/>
+                </group>
+                <footer>
+                    <button name="tgr_reschedule_appointments" string="Reprogramar Todas las Citas Seleccionadas" type="object" class="btn-primary" confirm="¿Está seguro de que desea reprogramar todas las citas seleccionadas? Se agregarán las horas indicadas al horario actual, es decir, si el horario actual es 1 PM y agrega 2 horas, serán las 3 PM después de reprogramar."/>
+                    <button string="Cerrar" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_tgr_reschedule_appointments" model="ir.actions.act_window">
+        <field name="name">Reprogramar Citas</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">tgr.reschedule.appointments</field>
+        <field name="binding_model_id" ref="tgr_hms.model_hms_appointment"/>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="report_lab_results_document">
+        <t t-call="tgr_hms_base.tgr_external_layout">
+            <t t-set="o" t-value="o.with_context({'lang':o.patient_id.lang})"></t>
+            <t t-call="tgr_hms_base.report_header_template"></t>
+            <div class="page">
+                <h5 class="fs-2 text-uppercase text-center" t-attf-style="color: #{o.company_id and o.company_id.primary_color or '#000000'}">Resultados de Exámen de Laboratorio: <t t-esc="o.name"></t></h5>
+                <t t-call="tgr_laboratory.report_lab_request_header"></t>
+                <div class="section-box row mt-2">
+                    <table class="table table-sm o_main_table table-borderless mt-n4">
+                        <thead>
+                            <tr>
+                                <th>Exámen</th>
+                                <th>Resultado</th>
+                                <th>Rango Min.</th>
+                                <th>Rango Max.</th>
+                                <th>Observación</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-as="line" t-foreach="o.line_ids">
+                                <tr t-att-class="'bg-200 fw-bold o_line_section' if line.display_type == 'line_section' else 'fst-italic o_line_note' if line.display_type == 'line_note' else 'bg-80'">
+                                    <td colspan="5" name="td_name">
+                                        <span t-field="line.name"></span>
+                                    </td>
+                                </tr>
+                                <t t-if="line.display_type=='line'">
+                                    <t t-as="critearea" t-foreach="line.lab_test_critearea_ids">
+                                        <tr t-att-class="'bg-200 fw-bold o_line_section' if line.display_type == 'line_section' else 'fst-italic o_line_note' if line.display_type == 'line_note' else ''">
+                                            <td>
+                                                <small class="ps-4" t-field="critearea.name"></small>
+                                            </td>
+                                            <td>
+                                                <small t-field="critearea.result"></small>
+                                            </td>
+                                            <td>
+                                                <small t-field="critearea.minimum_range"></small>
+                                            </td>
+                                            <td>
+                                                <small t-field="critearea.maximum_range"></small>
+                                            </td>
+                                            <td>
+                                                <small t-field="critearea.remark"></small>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </t>
+                            </t>
+                        </tbody>
+                    </table>
+                </div>
+                <t t-set="lab_physician" t-value="o.line_ids.patient_lab_ids.lab_physician_id[:1]"/>
+                <div class="row mt-2">
+                    <div class="col-10 pe-1" name="signature">
+                        <div class="section-box">
+                            <b>Sello/Firma del médico</b>
+                            <br></br>
+                            <t t-if="lab_physician and lab_physician.signature">
+                                <span t-field="lab_physician.signature"
+                                  t-options="{'widget': 'image', 'class': 'img-rounded', 'style':'max-height: 100px !important'}"></span>
+                            </t>
+                            <t t-if="lab_physician">
+                                <br/>
+                                <span t-field="lab_physician.name"></span>
+                            </t>
+                        </div>
+                    </div>
+                    <div class="col-2 section-box" name="qrcode"></div>
+                </div>
+            </div>
+            <t t-call="tgr_hms_base.report_footer_template"></t>
+        </t>
+    </template>
+    <template id="report_lab_results">
+        <t t-call="web.html_container">
+            <t t-as="o" t-foreach="docs">
+                <t t-call="tgr_laboratory.report_lab_results_document" t-lang="o.patient_id.partner_id.lang"></t>
+            </t>
+        </t>
+    </template>
+    <record id="action_report_lab_results" model="ir.actions.report">
+        <field name="name">Resultados EL</field>
+        <field name="model">tgr.laboratory.request</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">tgr_laboratory.report_lab_results</field>
+        <field name="report_file">tgr_laboratory.report_lab_results</field>
+        <field name="print_report_name">'Resultados E.L. - %s'%(object.name)</field>
+        <field name="binding_model_id" ref="model_tgr_laboratory_request"></field>
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

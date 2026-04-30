@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="report_attendance_pass">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+
+                        <table class="table table-bordered">
+                            <tr>
+                                <td style="text-align:center" colspan="4">
+                                    <strong style="font-size: 20px;">
+                                        <span>Pase de Visita</span>
+                                    </strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 200;">
+                                    <strong>Sala No:</strong>
+                                </td>
+                                <td style="width: 300;">
+                                    <span t-field="o.ward_id.floor"/>
+                                </td>
+                                <td style="width: 200;">
+                                    <strong>Nombre del Paciente:</strong>
+                                </td>
+                                <td style="width: 300;">
+                                    <span t-field="o.patient_id.name"/>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="width: 200;">
+                                    <strong>Cama No.:</strong>
+                                </td>
+                                <td style="width: 300;">
+                                    <span t-field="o.bed_id.id"/>
+                                </td>
+                                <td style="width: 200;">
+                                    <strong>Nombre del Visitante:</strong>
+                                </td>
+                                <td style="width: 300;">
+                                    <span t-field="o.relative_id"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 200;">
+                                    <strong>Fecha de Hospitalización.:</strong>
+                                </td>
+                                <td style="width: 300;">
+                                    <span t-field="o.hospitalization_date"/>
+                                </td>
+                                <td style="width: 200;">
+                                    <strong>Teléfono del Visitante.:</strong>
+                                </td>
+                                <td style="width: 300;">
+                                    <span t-field="o.relative_number"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <record id="action_report_attendance_pass" model="ir.actions.report">
+        <field name="name">Pase de Visita</field>
+        <field name="model">tgr.hospitalization</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">tgr_hms_hospitalization.report_attendance_pass</field>
+        <field name="report_file">tgr_hms_hospitalization.report_attendance_pass</field>
+        <field name="print_report_name">(object.name or 'Hospitalization').replace('/','_') + '_VisitingPass'</field>
+        <field name="binding_model_id" ref="model_tgr_hospitalization"/>
+        <field name="groups_id" eval="[(4, ref('tgr_hms_hospitalization.group_tgr_hms_hospitalization_executive'))]"/>
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>

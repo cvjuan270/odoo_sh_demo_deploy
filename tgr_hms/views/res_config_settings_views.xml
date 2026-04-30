@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="10"/>
+        <field name="inherit_id" ref="tgr_hms_base.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='patient_data']" position="after">
+                <block title="Paciente" name="patient_setting_container">
+                    <setting help="Establecer este servicio como predeterminado para la Factura de Registro de Paciente." id="default_service_for_patient_registration_invoice_setting">
+                        <field name="patient_registration_product_id" class="o_light_label"/>
+                    </setting>
+                    <setting help="Crear Facturación de Registro de Paciente." id="default_patient_registration_invoice_setting">
+                        <field name="group_patient_registartion_invoicing" class="o_light_label"/>
+                    </setting>
+                    <setting help="Establecer la unidad de medida predeterminada para el Peso del Paciente." id="default_patient_weight_measure_setting">
+                        <field name="patient_weight_measure_uom" class="o_light_label"/>
+                    </setting>
+                    <setting help="Establecer la unidad de medida predeterminada para la Estatura del Paciente." id="default_patient_height_measure_setting">
+                        <field name="patient_height_measure_uom" class="o_light_label"/>
+                    </setting>
+                    <setting help="Establecer la unidad de medida predeterminada para la Temperatura del Paciente." id="default_patient_temp_measure_setting">
+                        <field name="patient_temp_measure_uom" class="o_light_label"/>
+                    </setting>
+                    <setting help="Establecer la unidad de medida predeterminada para el SpO2 del Paciente." id="default_patient_spo2_measure_setting">
+                        <field name="patient_spo2_measure_uom" class="o_light_label"/>
+                    </setting>
+                    <setting help="Establecer la unidad de medida predeterminada para el RBS del Paciente." id="default_patient_rbs_measure_setting">
+                        <field name="patient_rbs_measure_uom" class="o_light_label"/>
+                    </setting>
+                    <setting help="Establecer la unidad de medida predeterminada para la Circunferencia Craneal del Paciente." id="default_patient_head_circumference_measure_setting">
+                        <field name="patient_head_circum_measure_uom" class="o_light_label"/>
+                    </setting>
+                </block>
+
+                <block title="Procedimiento del Paciente" name="patient_procedure_setting_container">
+                    <setting help="Ubicación para tomar productos consumidos en Procedimientos del Paciente." id="procedure_stock_location_id_setting">
+                        <field name="procedure_stock_location_id" class="o_light_label"/>
+                    </setting>
+                    <setting help="Ubicación para gestionar productos consumidos en el Procedimiento del Paciente." id="procedure_usage_location_id_setting">
+                        <field name="procedure_usage_location_id" class="o_light_label"/>
+                    </setting>
+                    <setting help="Ubicación para gestionar productos consumidos en el Procedimiento del Paciente." id="procedure_usage_location_id_setting">
+                        <field name="procedure_usage_location_id" class="o_light_label"/>
+                    </setting>
+                </block>
+            </xpath>
+
+            <xpath expr="//div[@id='prescription_data']" position="before">
+                <block title="Prescripción" name="prescription_setting_container">
+                    <setting string="Autenticación de Prescripción" help="Permitir al usuario autenticar la prescripción escaneando el código QR del informe." id="tgr_prescription_qrcode_setting">
+                        <field name="tgr_prescription_qrcode"/>
+                    </setting>
+                </block>
+
+                <block title="Tratamiento" name="treatment_setting_container">
+                    <setting help="Establecer este servicio como predeterminado para la Factura de Registro de Tratamiento." id="treatment_registration_product_id_setting">
+                        <field name="treatment_registration_product_id" class="o_light_label"/>
+                    </setting>
+                    <setting string="Facturación de Tratamiento" help="Facturación de Tratamiento" id="group_treatment_invoicing_setting">
+                        <field name="group_treatment_invoicing"/>
+                    </setting>
+                </block>
+
+            </xpath>
+
+            <xpath expr="//div[@id='appointment_data']" position="before">
+                <block title="Cita" name="appointment_setting_container">
+                    <setting string="Servicio de Consulta" help="Establecer este servicio como predeterminado para Consultas." id="consultation_product_id_setting">
+                        <field name="consultation_product_id"/><br/>
+                        <span class="o_form_label">Fecha de Seguimiento Automático</span>
+                        <div class="text-muted">
+                            Configurar días para el seguimiento automático en citas.
+                        </div>
+                        <div class="text-muted">
+                            <field name="auto_followup_days"/>
+                        </div>
+                    </setting>
+                    <setting string="Servicio de Seguimiento" help="Establecer este servicio como predeterminado para Seguimientos." id="followup_product_id_setting">
+                        <field name="followup_product_id"/><br/>
+                        <span class="o_form_label">Días de Seguimiento</span>
+                        <div class="text-muted">
+                            Establecer días para considerar la siguiente cita como seguimiento si es menor al número indicado.
+                        </div>
+                        <div class="text-muted">
+                            <field name="followup_days"/>
+                        </div>
+                    </setting>
+                    <setting string="Política de Facturación" help="Establecer la opción de facturación en las citas." id="appointment_invoice_policy_setting">
+                        <field name="appointment_invoice_policy"/>
+                    </setting>
+                    <setting string="Verificar Estado de Pago" help="No permitir aceptar la solicitud antes de completar el pago." id="tgr_check_appo_payment_setting" invisible="appointment_invoice_policy!='advance'">
+                        <field name="tgr_check_appo_payment"/>
+                    </setting>
+                    <setting string="Actividad de Seguimiento" help="Actividad de seguimiento automático para el responsable (Un día antes de la fecha de seguimiento)." id="tgr_followup_activity_type_id_setting">
+                        <field name="tgr_followup_activity_type_id"/>
+                    </setting>
+                    <setting string="Cancelar Automáticamente Citas Antiguas" help="Cancelar automáticamente las citas en borrador y confirmadas creadas antes de hoy." id="tgr_cancel_old_appointment_setting">
+                        <field name="tgr_cancel_old_appointment"/>
+                    </setting>
+                    <setting string="Enviar Correo de Confirmación de Cita Automáticamente" help="Enviar correo de confirmación al confirmar la cita." id="tgr_auto_appo_confirmation_mail_setting">
+                        <field name="tgr_auto_appo_confirmation_mail"/>
+                    </setting>
+                    <setting string="Ubicación de Uso de Stock" help="Ubicación para gestionar productos consumidos en la Consulta." id="appointment_usage_location_id_setting">
+                        <field name="appointment_usage_location_id"/>
+                    </setting>
+                    <setting string="Ubicación de Stock" help="Ubicación para tomar productos consumidos en la Consulta." id="appointment_stock_location_id_setting">
+                        <field name="appointment_stock_location_id"/>
+                    </setting>
+                    <setting string="Recordatorio" help="Enviar recordatorio de cita al paciente." id="tgr_reminder_setting">
+                        <field name="tgr_reminder_day"/>
+                        <span>Días</span>
+                        <field name="tgr_reminder_hours"/>
+                        <span>Horas</span>
+                    </setting>
+                    <setting string="Bandera de Cancelación" help="Mostrar bandera en el paciente cuando el total de citas canceladas supere el número configurado." id="tgr_flag_setting">
+                        <field name="tgr_flag_days"/>
+                        <span>Días</span>
+                        <field name="tgr_flag_count_limit"/>
+                        <span>Citas Canceladas</span>
+                    </setting>
+                    <setting string="Duración planificada predeterminada para citas" help="Establecer la duración planificada predeterminada para citas" id="tgr_appointment_planned_duration_setting">
+                        <field name="tgr_appointment_planned_duration"/>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="report_tgr_lab_prescription_document" inherit_id="tgr_laboratory.report_lab_prescription_document">
+        <xpath expr="//div[@name='signature']" position="before">
+            <div t-if="o.appointment_id" class="col-3 mb-2">
+                <strong>Origin</strong>
+                <p class="m-0" t-field="o.appointment_id"/>
+            </div>
+        </xpath>
+    </template>
+
+</odoo>
